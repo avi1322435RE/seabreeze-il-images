@@ -68,7 +68,7 @@ projectGrid.innerHTML = projects.map(project => `
         USD · ILS · AZN
       </div>
 
-      <a href="#contact"
+   <a href="${project.name === 'BRABUS Island' ? 'brabus.html' : '#contact'}"
          class="gold-btn project-link"
          data-project="${project.selectName}">
         קבלת פרטים ומחירון ←
