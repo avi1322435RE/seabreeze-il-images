@@ -12,4 +12,31 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}/* SEA BREEZE MASTER PLAN */
+
+.masterplan {
+  background: #f8f7f4;
+  padding: 85px 5%;
+  text-align: center;
+}
+
+.masterplan-image {
+  display: block;
+  width: 100%;
+  max-width: 1300px;
+  height: auto;
+  margin: 0 auto;
+  border-radius: 10px;
+  box-shadow: 0 20px 55px rgba(7, 30, 45, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.masterplan-image:hover {
+  transform: scale(1.01);
+}
+
+.masterplan-note {
+  color: #73848d;
+  font-size: 13px;
+  margin-top: 20px;
 }
