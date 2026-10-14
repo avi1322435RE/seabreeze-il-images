@@ -35,10 +35,10 @@ const projects = [
   },
   {
     name: "Arabian Ranches",
-    subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
+    subtitle: "SEA BREEZE",
+    description: "פרויקט מגורים יוקרתי באזור Sea Breeze, בהשראת אדריכלות מזרחית.",
     selectName: "Arabian Ranches",
-    image: "",
+    image: "./arabian-images/arabian-main.jpg",
     link: "#contact"
   },
   {
