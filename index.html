@@ -5,28 +5,36 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SeaBreeze IL | השקעות נדל״ן יוקרתיות בבאקו</title>
+  <title>SeaBreeze IL | נדל״ן יוקרתי בבאקו</title>
 
-  <meta name="description"
-        content="פרויקטי מגורים נבחרים ב-Sea Breeze, באקו. ליווי אישי בעברית, מידע מקצועי והזדמנויות השקעה על חופי הים הכספי.">
+  <meta
+    name="description"
+    content="SeaBreeze IL — פרויקטי נדל״ן נבחרים בבאקו ובחופי הים הכספי. היכרות עם פרויקטים יוקרתיים וליווי אישי בעברית."
+  >
 
-  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-        rel="stylesheet">
+  <meta name="theme-color" content="#061b2a">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
 
   <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- =====================================
+       HEADER
+       ===================================== -->
 
   <header>
 
-    <div class="logo">
+    <a href="#" class="logo" aria-label="SeaBreeze IL — דף הבית">
       SeaBreeze <span>IL</span>
-    </div>
+    </a>
 
-    <nav>
+    <nav aria-label="ניווט ראשי">
       <a href="#">דף הבית</a>
       <a href="#projects">הפרויקטים</a>
       <a href="#about">למה באקו?</a>
@@ -40,17 +48,19 @@
   </header>
 
 
-  <!-- HERO SECTION -->
+  <!-- =====================================
+       HERO SECTION
+       ===================================== -->
 
-  <section class="hero">
+  <section class="hero" aria-labelledby="hero-title">
 
     <div class="hero-content">
 
-      <div class="eyebrow">
-        BAKU | CASPIAN COAST | AZERBAIJAN
+      <div class="eyebrow" dir="ltr">
+        BAKU &nbsp;|&nbsp; CASPIAN COAST &nbsp;|&nbsp; AZERBAIJAN
       </div>
 
-      <h1 class="brand">
+      <h1 class="brand" id="hero-title" dir="ltr">
         SeaBreeze <span>IL</span>
       </h1>
 
@@ -59,9 +69,9 @@
       </h2>
 
       <p>
-        פרויקטי מגורים נבחרים ב־Sea Breeze, באקו.
-        ליווי אישי בעברית, מידע מקצועי והזדמנויות השקעה
-        באחד מאזורי הפיתוח הבולטים בעולם.
+        גלו פרויקטי מגורים ונופש נבחרים באזור Sea Breeze בבאקו.
+        היכרות מעמיקה עם הפרויקטים, מידע מקצועי
+        וליווי אישי בעברית לאורך הדרך.
       </p>
 
       <a href="#projects" class="gold-btn">
@@ -71,7 +81,9 @@
     </div>
 
 
-    <!-- CONTACT FORM -->
+    <!-- =====================================
+         CONTACT FORM
+         ===================================== -->
 
     <div class="contact-box" id="contact">
 
@@ -80,40 +92,63 @@
       </h2>
 
       <p>
-        השאירו פרטים ונחזור אליכם בהקדם
+        מתעניינים בנכס בבאקו?
+        השאירו פרטים ונחזור אליכם.
       </p>
 
       <form id="leadForm">
 
         <input
           type="text"
+          name="fullName"
           placeholder="שם מלא"
+          aria-label="שם מלא"
+          autocomplete="name"
           required
         >
 
         <input
           type="tel"
+          name="phone"
           placeholder="מספר טלפון"
+          aria-label="מספר טלפון"
+          autocomplete="tel"
           required
         >
 
-        <select required>
+        <select
+          name="project"
+          aria-label="בחירת פרויקט"
+          required
+        >
 
           <option value="">
             בחרו פרויקט
           </option>
 
-          <option>BRABUS Island Baku</option>
+          <option value="BRABUS Island Baku">
+            BRABUS Island Baku
+          </option>
 
-          <option>Panorama by ELIE SAAB</option>
+          <option value="Panorama by ELIE SAAB">
+            Panorama by ELIE SAAB
+          </option>
 
-          <option>Reportage Heights</option>
+          <option value="Reportage Heights">
+            Reportage Heights
+          </option>
 
-          <option>Sabah Towers</option>
+          <option value="Sabah Towers">
+            Sabah Towers
+          </option>
 
-          <option>Arabian Ranches</option>
+          <option value="Arabian Ranches">
+            Arabian Ranches
+          </option>
 
-          <option>Marina Village</option>
+          <option value="Marina Village">
+            Marina Village
+          </option>
 
         </select>
 
@@ -132,62 +167,87 @@
   </section>
 
 
-  <!-- PROJECTS SECTION -->
+  <!-- =====================================
+       PROJECTS SECTION
+       ===================================== -->
 
-  <section class="projects" id="projects">
+  <section
+    class="projects"
+    id="projects"
+    aria-labelledby="projects-title"
+  >
 
     <div class="section-heading">
 
-      <span>
-        OUR PROJECTS
-      </span>
-
-      <h2>
+      <h2 id="projects-title">
         הפרויקטים שלנו בבאקו
       </h2>
 
       <p>
-        שישה פרויקטים נבחרים למגורים, נופש והשקעה
+        פרויקטים נבחרים למגורים, נופש והשקעה
+        על חופי הים הכספי.
       </p>
 
     </div>
+
+    <!--
+      Project cards are generated by script.js.
+      Existing images and links are preserved.
+    -->
 
     <div class="project-grid" id="projectGrid"></div>
 
   </section>
 
 
-  <!-- ABOUT SECTION -->
+  <!-- =====================================
+       ABOUT SECTION
+       ===================================== -->
 
-  <section class="about" id="about">
+  <section
+    class="about"
+    id="about"
+    aria-labelledby="about-title"
+  >
 
-    <h2>
-      גלו את באקו ואת חופי הים הכספי
+    <h2 id="about-title">
+      לגלות את באקו. להכיר את ההזדמנות.
     </h2>
 
     <p>
-      באקו משלבת אדריכלות מודרנית, חיי עיר ונוף חופי ייחודי.
-      אנחנו כאן כדי לעזור לכם להכיר את הפרויקטים,
-      להבין את אפשרויות הרכישה ולקבל מידע עדכני.
+      באקו משלבת אדריכלות מודרנית, תרבות עשירה
+      ורצועת חוף מרשימה לאורך הים הכספי.
+      אזור Sea Breeze מציע מגוון פרויקטים
+      למגורים ולנופש בסביבה חופית מתפתחת.
+      אנחנו כאן כדי לעזור לכם להכיר את האפשרויות,
+      לבחון את הפרויקטים ולקבל מידע רלוונטי
+      לפני קבלת החלטה.
     </p>
 
   </section>
 
 
-  <!-- FOOTER -->
+  <!-- =====================================
+       FOOTER
+       ===================================== -->
 
   <footer>
 
-    SeaBreeze IL © 2026
+    <div dir="ltr">
+      SeaBreeze IL © 2026
+    </div>
 
-    <br>
-
-    אתר הדגמה עצמאי בהקמה. שם המותג כפוף לאישור.
+    <div>
+      אתר עצמאי בהקמה.
+      שם המותג כפוף לאישור.
+    </div>
 
   </footer>
 
 
-  <!-- JAVASCRIPT -->
+  <!-- =====================================
+       JAVASCRIPT
+       ===================================== -->
 
   <script src="./script.js"></script>
 
