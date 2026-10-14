@@ -5,88 +5,96 @@ const projects = [
     name: "BRABUS Island",
     subtitle: "BRABUS ISLAND BAKU",
     description: "פרויקט מגורים יוקרתי בבאקו.",
-    selectName: "BRABUS Island Baku"
+    selectName: "BRABUS Island Baku",
+    image: "./SeaBreeze_BRABUS_page/brabus-images/garden.jpg",
+    link: "brabus.html"
   },
   {
     name: "Panorama",
     subtitle: "BY ELIE SAAB",
     description: "פרויקט מגורים בעיצוב ייחודי.",
-    selectName: "Panorama by ELIE SAAB"
+    selectName: "Panorama by ELIE SAAB",
+    image: "./panorama-images/panorama-main.jpg",
+    link: "#contact"
   },
   {
     name: "Reportage Heights",
     subtitle: "BAKU",
     description: "פרויקט מגורים בבאקו.",
-    selectName: "Reportage Heights"
+    selectName: "Reportage Heights",
+    image: "./reportage-images/reportage-main.jpg",
+    link: "#contact"
   },
   {
     name: "Sabah Towers",
     subtitle: "BAKU",
     description: "פרויקט מגורים בבאקו.",
-    selectName: "Sabah Towers"
+    selectName: "Sabah Towers",
+    image: "./sabah-images/sabah-main.jpg",
+    link: "#contact"
   },
   {
     name: "Arabian Ranches",
     subtitle: "BAKU",
     description: "פרויקט מגורים בבאקו.",
-    selectName: "Arabian Ranches"
+    selectName: "Arabian Ranches",
+    image: "",
+    link: "#contact"
   },
   {
     name: "Marina Village",
     subtitle: "SEA BREEZE",
     description: "פרויקט מגורים באזור Sea Breeze.",
-    selectName: "Marina Village"
+    selectName: "Marina Village",
+    image: "./marina-images/marina-main.jpg",
+    link: "#contact"
   }
 ];
 
 // יצירת כרטיסי הפרויקטים
 const projectGrid = document.getElementById("projectGrid");
 
-projectGrid.innerHTML = projects.map(project => `
-  <article class="project-card">
+if (projectGrid) {
+  projectGrid.innerHTML = projects.map(project => `
+    <article class="project-card">
 
-    <div class="project-image">
-      ${project.name === "BRABUS Island"
-        ? '<img src="./SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="BRABUS Island Baku" loading="lazy">'
-        : project.name === "Panorama"
-        ? '<img src="./panorama-images/panorama-main.jpg" alt="Panorama by ELIE SAAB" loading="lazy">'
-        : project.name === "Marina Village"
-        ? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
-        : project.name === "Reportage Heights"
-        ? '<img src="./reportage-images/reportage-main.jpg" alt="Reportage Heights Baku" loading="lazy">'
-        : ''}
-    </div>
-
-    <div class="project-info">
-
-      <h3>${project.name}</h3>
-
-      <div style="
-        color:#b18a52;
-        font-size:11px;
-        letter-spacing:2px;
-        margin-top:5px;
-      ">
-        ${project.subtitle}
+      <div class="project-image">
+        ${project.image
+          ? `<img src="${project.image}" alt="${project.selectName}" loading="lazy">`
+          : ""}
       </div>
 
-      <p>${project.description}</p>
+      <div class="project-info">
 
-      <div class="project-price">
-        מחיר התחלתי: יעודכן לאחר אימות
-        <br>
-        USD · ILS · AZN
+        <h3>${project.name}</h3>
+
+        <div style="
+          color:#b18a52;
+          font-size:11px;
+          letter-spacing:2px;
+          margin-top:5px;
+        ">
+          ${project.subtitle}
+        </div>
+
+        <p>${project.description}</p>
+
+        <div class="project-price">
+          מחיר התחלתי: יעודכן לאחר אימות
+          <br>
+          USD · ILS · AZN
+        </div>
+
+        <a href="${project.link}"
+           class="gold-btn project-link"
+           data-project="${project.selectName}">
+          קבלת פרטים ומחירון ←
+        </a>
+
       </div>
-
-      <a href="${project.name === 'BRABUS Island' ? 'brabus.html' : '#contact'}"
-         class="gold-btn project-link"
-         data-project="${project.selectName}">
-        קבלת פרטים ומחירון ←
-      </a>
-
-    </div>
-  </article>
-`).join("");
+    </article>
+  `).join("");
+}
 
 // לחיצה על פרויקט בוחרת אותו בטופס
 document.querySelectorAll(".project-link").forEach(link => {
