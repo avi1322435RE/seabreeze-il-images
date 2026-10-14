@@ -1,7 +1,5 @@
 /* ==========================================
-   SeaBreeze IL
-   ROYAL LUXURY DESIGN
-   Navy Blue + Polished Jewelry Gold
+   SeaBreeze IL — Deep Champagne Gold
    ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
@@ -11,19 +9,16 @@
   --navy-deep: #041421;
   --navy-card: #102f43;
 
-  --gold-dark: #8a591b;
-  --gold-rich: #d4a33f;
-  --gold-light: #fff0b0;
-  --gold-bright: #e7b84e;
+  --gold: #c6a05b;
+  --gold-light: #e2c68d;
+  --gold-dark: #967039;
+  --champagne: #d8be8c;
 
   --gold-gradient: linear-gradient(
-    125deg,
-    #8a591b 0%,
-    #d4a33f 20%,
-    #fff0b0 43%,
-    #e7b84e 62%,
-    #9b681f 82%,
-    #f3d583 100%
+    115deg,
+    #b58d4d 0%,
+    #d5b779 52%,
+    #c09a5a 100%
   );
 
   --cream: #f7f5ef;
@@ -83,7 +78,7 @@ header {
 
   background: rgba(4, 20, 33, 0.97);
 
-  border-bottom: 1px solid rgba(212, 163, 63, 0.45);
+  border-bottom: 1px solid rgba(198, 160, 91, 0.28);
 
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
 }
@@ -93,31 +88,30 @@ header .logo,
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 32px;
   font-weight: 700;
-  white-space: nowrap;
 
+  white-space: nowrap;
   color: #f7f5ef;
 
-  -webkit-text-stroke: 0.35px #031321;
+  -webkit-text-stroke: 0.15px #173247;
 
-  text-shadow:
-    1px 1px 0 #061b2a,
-    2px 2px 3px rgba(0, 0, 0, 0.65);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
 }
 
-/* METALLIC GOLD LETTERS */
+/* IL — SOFT CHAMPAGNE */
 
 .logo span,
-.brand span {
-  color: #e7b84e;
+.brand span,
+header .logo span {
+  color: var(--champagne);
 
-  background: var(--gold-gradient);
+  background: none;
 
-  -webkit-background-clip: text;
-  background-clip: text;
+  -webkit-text-fill-color: var(--champagne);
+  -webkit-text-stroke: 0;
 
-  -webkit-text-fill-color: transparent;
+  filter: none;
 
-  filter: drop-shadow(1px 2px 2px rgba(0, 0, 0, 0.5));
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* NAVIGATION */
@@ -131,72 +125,65 @@ nav {
 }
 
 nav a {
-  font-family: 'Assistant', Arial, sans-serif;
   font-size: 16px;
   font-weight: 600;
+
   color: #f0f1ef;
 
-  transition: color 0.25s, text-shadow 0.25s;
+  transition: color 0.25s;
 }
 
 nav a:hover {
-  color: #f5d992;
-  text-shadow: 0 0 10px rgba(245, 217, 146, 0.35);
+  color: var(--gold-light);
 }
 
 /* ==========================================
-   GOLD BUTTONS
+   CHAMPAGNE GOLD BUTTONS
    ========================================== */
 
 .gold-btn,
 button.gold-btn,
 .project-link {
-  position: relative;
-
   display: inline-flex;
   align-items: center;
   justify-content: center;
 
   padding: 13px 26px;
 
-  border: 1px solid #f3d583;
+  border: 1px solid #c6a05b;
   border-radius: 5px;
 
   background: var(--gold-gradient);
+  color: #172635;
 
-  color: #182332;
-
-  font-family: 'Assistant', Arial, sans-serif;
-  font-size: 16px;
-  font-weight: 800;
+  font: 800 16px 'Assistant', Arial, sans-serif;
 
   cursor: pointer;
 
-  box-shadow:
-    inset 0 1px 1px rgba(255, 255, 255, 0.65),
-    inset 0 -2px 3px rgba(95, 52, 8, 0.35),
-    0 6px 18px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
 
   transition:
     transform 0.25s,
     box-shadow 0.25s,
-    filter 0.25s;
+    background 0.25s;
 }
 
 .gold-btn:hover,
 .project-link:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 
-  filter: brightness(1.12);
+  background: linear-gradient(
+    115deg,
+    #c09a5a,
+    #dfc48d,
+    #c6a05b
+  );
 
-  box-shadow:
-    inset 0 1px 2px rgba(255, 255, 255, 0.75),
-    0 10px 26px rgba(0, 0, 0, 0.38),
-    0 0 16px rgba(231, 184, 78, 0.28);
+  box-shadow: 0 8px 19px rgba(0, 0, 0, 0.28);
 }
 
 /* ==========================================
-   HERO — BACKGROUND + SMOOTH TRANSITION
+   HERO
    ========================================== */
 
 .hero {
@@ -227,10 +214,10 @@ button.gold-btn,
   overflow: hidden;
 }
 
-/* SMOOTH FADE INTO PROJECT SECTION */
+/* SMOOTH TRANSITION TO PROJECTS */
 
 .hero::after {
-  content: "";
+  content: '';
 
   position: absolute;
   z-index: 0;
@@ -245,14 +232,14 @@ button.gold-btn,
     to bottom,
     rgba(6, 27, 42, 0) 0%,
     rgba(6, 27, 42, 0.18) 25%,
-    rgba(6, 27, 42, 0.60) 60%,
+    rgba(6, 27, 42, 0.6) 60%,
     #0b293b 100%
   );
 
   pointer-events: none;
 }
 
-/* HERO TEXT */
+/* HERO CONTENT */
 
 .hero-content {
   position: relative;
@@ -269,46 +256,52 @@ button.gold-btn,
 
 .eyebrow,
 .kicker {
-  color: #f3d583;
+  color: var(--gold-light);
 
   letter-spacing: 2.5px;
   font-size: 13px;
   font-weight: 700;
 
   text-transform: uppercase;
+
   margin-bottom: 22px;
 }
 
-/* LARGE SEABREEZE LOGO */
+/* SEABREEZE IL MAIN LOGO */
 
 .hero .brand {
   font-family: 'Cormorant Garamond', Georgia, serif;
 
   font-size: clamp(55px, 6.5vw, 100px);
   font-weight: 700;
-  line-height: 0.95;
 
+  line-height: 0.95;
   letter-spacing: 1px;
+
   margin-bottom: 28px;
 
   color: #f7f5ef;
-
   white-space: nowrap;
 
-  -webkit-text-stroke: 0.6px #031321;
+  -webkit-text-stroke: 0.25px #173247;
 
   text-shadow:
-    1px 1px 0 #061b2a,
-    2px 2px 0 #041421,
-    4px 5px 8px rgba(0, 0, 0, 0.8),
-    0 0 22px rgba(8, 39, 62, 0.55);
+    0 3px 8px rgba(0, 0, 0, 0.52),
+    0 0 12px rgba(6, 27, 42, 0.3);
+}
+
+.hero .brand span {
+  color: var(--champagne);
+
+  -webkit-text-fill-color: var(--champagne);
+  -webkit-text-stroke: 0;
+
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
 
 /* HEBREW HEADLINE */
 
 .hero-content h2 {
-  font-family: 'Assistant', Arial, sans-serif;
-
   font-size: clamp(22px, 2.05vw, 34px);
   font-weight: 600;
 
@@ -318,7 +311,6 @@ button.gold-btn,
   color: #fffdf6;
 
   white-space: nowrap;
-
   letter-spacing: -0.3px;
 
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
@@ -352,13 +344,10 @@ button.gold-btn,
 
   background: rgba(5, 27, 43, 0.94);
 
-  border: 1px solid #c99a45;
+  border: 1px solid rgba(198, 160, 91, 0.55);
   border-radius: 12px;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255, 235, 172, 0.22),
-    0 18px 50px rgba(0, 0, 0, 0.48),
-    0 0 18px rgba(212, 163, 63, 0.10);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
 
   backdrop-filter: blur(10px);
 
@@ -366,7 +355,6 @@ button.gold-btn,
 }
 
 .contact-box h2 {
-  font-family: 'Assistant', Arial, sans-serif;
   font-size: 30px;
   font-weight: 700;
   margin-bottom: 8px;
@@ -377,8 +365,6 @@ button.gold-btn,
   color: var(--muted);
   margin-bottom: 20px;
 }
-
-/* FORM FIELDS */
 
 form {
   display: flex;
@@ -406,7 +392,7 @@ textarea {
 input:focus,
 select:focus,
 textarea:focus {
-  outline: 2px solid #e7b84e;
+  outline: 2px solid var(--gold);
   outline-offset: 1px;
 }
 
@@ -430,15 +416,13 @@ section:not(.hero) {
 
 .section-heading span,
 .section-heading .eyebrow {
-  color: #f3d583;
+  color: var(--gold-light);
   font-size: 14px;
   letter-spacing: 2px;
 }
 
 .section-heading h2,
 section > h2 {
-  font-family: 'Assistant', Arial, sans-serif;
-
   font-size: clamp(30px, 3.6vw, 46px);
   font-weight: 700;
 
@@ -466,7 +450,9 @@ section > h2 {
 #projectsGrid,
 #projectsContainer {
   display: grid;
+
   grid-template-columns: repeat(3, minmax(0, 1fr));
+
   gap: 26px;
 }
 
@@ -476,12 +462,10 @@ section > h2 {
 
   background: #102f43;
 
-  border: 1px solid rgba(212, 163, 63, 0.60);
+  border: 1px solid rgba(198, 160, 91, 0.44);
   border-radius: 10px;
 
-  box-shadow:
-    inset 0 1px 0 rgba(255, 235, 172, 0.10),
-    0 12px 35px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
 
   transition:
     transform 0.25s,
@@ -493,11 +477,9 @@ section > h2 {
 .card:hover {
   transform: translateY(-5px);
 
-  border-color: #f3d583;
+  border-color: rgba(226, 198, 141, 0.75);
 
-  box-shadow:
-    0 18px 42px rgba(0, 0, 0, 0.40),
-    0 0 18px rgba(231, 184, 78, 0.13);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
 }
 
 /* PROJECT IMAGES */
@@ -507,7 +489,6 @@ section > h2 {
   height: 280px;
 
   overflow: hidden;
-
   background: #0d2d40;
 }
 
@@ -530,7 +511,6 @@ section > h2 {
 
 .project-card h3,
 .card h3 {
-  font-family: 'Assistant', Arial, sans-serif;
   font-size: 28px;
   font-weight: 700;
 
@@ -548,7 +528,6 @@ section > h2 {
 .project-card p,
 .card p {
   color: #cbd7dc;
-
   font-size: 17px;
 
   margin: 0 0 20px;
@@ -593,7 +572,7 @@ section > h2 {
 footer {
   background: #041421;
 
-  border-top: 1px solid rgba(212, 163, 63, 0.35);
+  border-top: 1px solid rgba(198, 160, 91, 0.28);
 
   padding: 30px 5%;
   text-align: center;
@@ -630,7 +609,7 @@ footer {
 }
 
 /* ==========================================
-   ANIMATIONS
+   ANIMATION
    ========================================== */
 
 @keyframes luxuryFadeUp {
@@ -757,7 +736,9 @@ footer {
   }
 }
 
-/* ACCESSIBILITY */
+/* ==========================================
+   ACCESSIBILITY
+   ========================================== */
 
 @media (prefers-reduced-motion: reduce) {
 
