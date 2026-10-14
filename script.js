@@ -52,19 +52,15 @@ projectGrid.innerHTML = projects.map(project => `
     ? '<img src="./panorama-images/panorama-main.jpg" alt="Panorama by ELIE SAAB" loading="lazy">'
     : ''}
 </div>
-
-    <div class="project-info">
-
-      <h3>${project.name}</h3>
-
-      <div style="
-        color:#b18a52;
-        font-size:11px;
-        letter-spacing:2px;
-        margin-top:5px;
-      ">
-        ${project.subtitle}
-      </div>
+<div class="project-image">
+  ${project.name === "BRABUS Island"
+    ? '<img src="./SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="BRABUS Island Baku" loading="lazy">'
+    : project.name === "Panorama"
+    ? '<img src="./panorama-images/panorama-main.jpg" alt="Panorama by ELIE SAAB" loading="lazy">'
+    : project.name === "Marina Village"
+    ? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
+    : ''}
+</div>
 
       <p>${project.description}</p>
 
