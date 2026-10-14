@@ -38,7 +38,7 @@ const projects = [
     subtitle: "SEA BREEZE",
     description: "פרויקט מגורים יוקרתי באזור Sea Breeze, בהשראת אדריכלות מזרחית.",
     selectName: "Arabian Ranches",
-    image: "./arabian-images/arabian-main.jpg",
+    image: "./arabian-images/arabian-images/arabian-main.jpg",
     link: "#contact"
   },
   {
