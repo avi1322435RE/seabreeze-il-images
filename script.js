@@ -38,42 +38,6 @@ const projects = [
     selectName: "Marina Village"
   }
 ];
-  {
-    name: "Panorama",
-    subtitle: "BY ELIE SAAB",
-    description: "פרויקט מגורים בעיצוב ייחודי.",
-    selectName: "Panorama by ELIE SAAB"
-  },
-  {
- 
-  },
-  {
-    name: "Reportage Heights",
-    subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
-    selectName: "Reportage Heights"
-  },
-  {
-    name: "Sabah Towers",
-    subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
-    selectName: "Sabah Towers"
-  },
-  {
-  {
-    name: "Arabian Ranches",
-    subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
-    selectName: "Arabian Ranches"
-  },
-  {
-    name: "Marina Village",
-    subtitle: "SEA BREEZE",
-    description: "פרויקט מגורים באזור Sea Breeze.",
-    selectName: "Marina Village"
-  }
-  }
-];
 
 // יצירת כרטיסי הפרויקטים
 const projectGrid = document.getElementById("projectGrid");
@@ -86,11 +50,11 @@ projectGrid.innerHTML = projects.map(project => `
         ? '<img src="./SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="BRABUS Island Baku" loading="lazy">'
         : project.name === "Panorama"
         ? '<img src="./panorama-images/panorama-main.jpg" alt="Panorama by ELIE SAAB" loading="lazy">'
-       : project.name === "Marina Village"
-? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
-: project.name === "Reportage Heights"
-? '<img src="./reportage-images/reportage-main.jpg" alt="Reportage Heights Baku" loading="lazy">'
-: ''}
+        : project.name === "Marina Village"
+        ? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
+        : project.name === "Reportage Heights"
+        ? '<img src="./reportage-images/reportage-main.jpg" alt="Reportage Heights Baku" loading="lazy">'
+        : ''}
     </div>
 
     <div class="project-info">
@@ -130,15 +94,21 @@ document.querySelectorAll(".project-link").forEach(link => {
     const selectedProject = link.dataset.project;
     const projectSelect = document.querySelector("#leadForm select");
 
-    projectSelect.value = selectedProject;
+    if (projectSelect) {
+      projectSelect.value = selectedProject;
+    }
   });
 });
 
 // טופס הדגמה — עדיין אינו שולח פניות
-document.getElementById("leadForm").addEventListener("submit", event => {
-  event.preventDefault();
+const leadForm = document.getElementById("leadForm");
 
-  alert(
-    "הטופס פועל בגרסת הדגמה. בשלב הבא נחבר אותו לקבלת פניות אמיתיות."
-  );
-});
+if (leadForm) {
+  leadForm.addEventListener("submit", event => {
+    event.preventDefault();
+
+    alert(
+      "הטופס פועל בגרסת הדגמה. בשלב הבא נחבר אותו לקבלת פניות אמיתיות."
+    );
+  });
+}
