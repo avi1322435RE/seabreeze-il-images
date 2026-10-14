@@ -45,7 +45,11 @@ const projectGrid = document.getElementById("projectGrid");
 projectGrid.innerHTML = projects.map(project => `
   <article class="project-card">
 
-    <div class="project-image"></div>
+    <div class="project-image">
+  ${project.name === "BRABUS Island"
+    ? '<img src="./SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="BRABUS Island Baku" loading="lazy">'
+    : ''}
+</div>
 
     <div class="project-info">
 
