@@ -18,13 +18,9 @@
   --muted: #bdcbd3;
 }
 
-* {
-  box-sizing: border-box;
-}
+* { box-sizing: border-box; }
 
-html {
-  scroll-behavior: smooth;
-}
+html { scroll-behavior: smooth; }
 
 body {
   margin: 0;
@@ -34,47 +30,54 @@ body {
   line-height: 1.75;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+a { color: inherit; text-decoration: none; }
+img { display: block; max-width: 100%; }
+h1, h2, h3, p { margin-top: 0; }
+h1, h2, h3 { line-height: 1.25; }
 
-img {
-  display: block;
-  max-width: 100%;
-}
-
-h1, h2, h3, p {
-  margin-top: 0;
-}
-
-h1, h2, h3 {
-  line-height: 1.25;
-}
-
-/* HEADER */
+/* ==========================================
+   LUXURY HEADER — UPDATED
+   ========================================== */
 
 header {
   position: relative;
   z-index: 10;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 24px;
-  padding: 20px 5%;
-  background: rgba(4, 20, 33, 0.97);
-  border-bottom: 1px solid rgba(198, 160, 91, 0.25);
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
+  min-height: 76px;
+  padding: 12px 5%;
+
+  background: linear-gradient(
+    110deg,
+    #031421 0%,
+    #061b2a 55%,
+    #09283a 100%
+  );
+
+  border-bottom: 1px solid rgba(198,160,91,.38);
+
+  box-shadow: 0 5px 25px rgba(0,0,0,.22);
 }
+
+/* LOGO */
 
 header .logo,
 .logo {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: 32px;
+  font-size: 31px;
   font-weight: 700;
+  line-height: 1;
   white-space: nowrap;
   color: #f7f5ef;
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  letter-spacing: -.4px;
+
+  text-shadow: 0 2px 8px rgba(0,0,0,.18);
+
+  animation: headerFadeIn .85s ease both;
 }
 
 .logo span,
@@ -94,18 +97,40 @@ nav {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 28px;
+  gap: 34px;
 }
 
 nav a {
-  font-size: 16px;
+  position: relative;
+  padding: 8px 0;
+
+  font-size: 15px;
   font-weight: 600;
-  color: #f0f1ef;
-  transition: color 0.25s;
+  color: #e8edf0;
+
+  transition: color .3s ease;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: 2px;
+
+  width: 0;
+  height: 1px;
+
+  background: var(--champagne);
+
+  transition: width .3s ease;
 }
 
 nav a:hover {
   color: var(--gold-light);
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* BUTTONS */
@@ -116,41 +141,88 @@ button.gold-btn,
   display: inline-flex;
   align-items: center;
   justify-content: center;
+
   padding: 13px 26px;
+
   border: 1px solid var(--gold);
   border-radius: 10px;
-  background: linear-gradient(115deg, #b58d4d 0%, #d5b779 52%, #c09a5a 100%);
+
+  background: linear-gradient(
+    115deg,
+    #b58d4d 0%,
+    #d5b779 52%,
+    #c09a5a 100%
+  );
+
   color: #172635;
+
   font: 800 16px 'Assistant', Arial, sans-serif;
+
   cursor: pointer;
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
-  transition: transform 0.25s, box-shadow 0.25s, filter 0.25s;
+
+  box-shadow: 0 5px 14px rgba(0,0,0,.2);
+
+  transition:
+    transform .25s,
+    box-shadow .25s,
+    filter .25s;
 }
 
 .gold-btn:hover,
 .project-link:hover {
   transform: translateY(-2px);
   filter: brightness(1.06);
-  box-shadow: 0 8px 19px rgba(0, 0, 0, 0.27);
+  box-shadow: 0 8px 19px rgba(0,0,0,.27);
 }
 
-/* HERO */
+/* HEADER BUTTON ONLY */
+
+header > .gold-btn {
+  padding: 9px 23px;
+  min-height: 42px;
+
+  border-radius: 9px;
+
+  font-size: 15px;
+
+  background: linear-gradient(
+    110deg,
+    #b48c4e,
+    #d4b778
+  );
+
+  box-shadow: none;
+}
+
+/* ==========================================
+   HERO — EXISTING BACKGROUND PRESERVED
+   ========================================== */
 
 .hero {
   position: relative;
   isolation: isolate;
+
   min-height: 700px;
+
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 35px;
   padding: 85px 5% 145px;
+
   background-image:
-    linear-gradient(90deg, rgba(4, 20, 33, 0.7), rgba(4, 20, 33, 0.25)),
+    linear-gradient(
+      90deg,
+      rgba(4,20,33,.7),
+      rgba(4,20,33,.25)
+    ),
     url('https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png');
+
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+
   overflow: hidden;
 }
 
@@ -158,28 +230,35 @@ button.gold-btn,
   content: '';
   position: absolute;
   z-index: 0;
+
   left: 0;
   right: 0;
   bottom: 0;
+
   height: 320px;
+
   background: linear-gradient(
     to bottom,
-    rgba(6, 27, 42, 0) 0%,
-    rgba(6, 27, 42, 0.08) 15%,
-    rgba(6, 27, 42, 0.22) 32%,
-    rgba(6, 27, 42, 0.48) 55%,
-    rgba(6, 27, 42, 0.78) 78%,
+    rgba(6,27,42,0) 0%,
+    rgba(6,27,42,.08) 15%,
+    rgba(6,27,42,.22) 32%,
+    rgba(6,27,42,.48) 55%,
+    rgba(6,27,42,.78) 78%,
     #061b2a 100%
   );
+
   pointer-events: none;
 }
 
 .hero-content {
   position: relative;
   z-index: 1;
+
   flex: 1 1 auto;
   min-width: 0;
+
   text-align: right;
+
   animation: luxuryFadeUp 1.1s ease-out both;
 }
 
@@ -195,14 +274,19 @@ button.gold-btn,
 
 .hero .brand {
   font-family: 'Cormorant Garamond', Georgia, serif;
-  font-size: clamp(55px, 6.5vw, 100px);
+  font-size: clamp(55px,6.5vw,100px);
   font-weight: 700;
-  line-height: 0.95;
+  line-height: .95;
   letter-spacing: 1px;
+
   margin-bottom: 28px;
+
   color: #f7f5ef;
   white-space: nowrap;
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.5), 0 0 12px rgba(6, 27, 42, 0.25);
+
+  text-shadow:
+    0 3px 8px rgba(0,0,0,.5),
+    0 0 12px rgba(6,27,42,.25);
 }
 
 .hero .brand span {
@@ -211,13 +295,16 @@ button.gold-btn,
 }
 
 .hero-content h2 {
-  font-size: clamp(22px, 2.05vw, 34px);
+  font-size: clamp(22px,2.05vw,34px);
   font-weight: 600;
   line-height: 1.45;
+
   margin-bottom: 22px;
+
   color: #fffdf6;
   white-space: nowrap;
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
+
+  text-shadow: 0 3px 12px rgba(0,0,0,.5);
 }
 
 .hero-content p {
@@ -226,7 +313,8 @@ button.gold-btn,
   font-size: 18px;
   line-height: 1.9;
   margin-bottom: 28px;
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+
+  text-shadow: 0 2px 8px rgba(0,0,0,.4);
 }
 
 /* CONTACT */
@@ -234,15 +322,22 @@ button.gold-btn,
 .contact-box {
   position: relative;
   z-index: 2;
+
   flex: 0 0 355px;
   width: 355px;
+
   padding: 32px 26px;
-  background: rgba(5, 27, 43, 0.94);
-  border: 1px solid rgba(198, 160, 91, 0.55);
+
+  background: rgba(5,27,43,.94);
+
+  border: 1px solid rgba(198,160,91,.55);
   border-radius: 18px;
-  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
+
+  box-shadow: 0 18px 50px rgba(0,0,0,.42);
+
   backdrop-filter: blur(10px);
-  animation: luxuryFadeUp 1.2s ease-out 0.15s both;
+
+  animation: luxuryFadeUp 1.2s ease-out .15s both;
 }
 
 .contact-box h2 {
@@ -268,11 +363,15 @@ select,
 textarea {
   width: 100%;
   min-height: 46px;
+
   padding: 12px 14px;
+
   background: #f7f7f5;
   color: #14283a;
+
   border: 1px solid #c9d2d6;
   border-radius: 10px;
+
   font: 16px 'Assistant', Arial, sans-serif;
 }
 
@@ -283,22 +382,27 @@ textarea:focus {
   outline-offset: 1px;
 }
 
-form button {
-  width: 100%;
-}
+form button { width: 100%; }
 
-/* SECTIONS */
+/* ==========================================
+   SECTIONS
+   ========================================== */
 
 section:not(.hero) {
   padding: 88px 5%;
 }
 
-/* PROJECTS */
-
 #projects,
 .projects {
   position: relative;
-  background: linear-gradient(180deg, #061b2a 0%, #072337 45%, #061b2a 100%);
+
+  background: linear-gradient(
+    180deg,
+    #061b2a 0%,
+    #072337 45%,
+    #061b2a 100%
+  );
+
   padding-top: 115px;
   padding-bottom: 100px;
 }
@@ -309,15 +413,13 @@ section:not(.hero) {
   max-width: 780px;
 }
 
-/* HIDE "OUR PROJECTS" */
-
 #projects .section-heading > span {
   display: none;
 }
 
 .section-heading h2,
 section > h2 {
-  font-size: clamp(30px, 3.6vw, 46px);
+  font-size: clamp(30px,3.6vw,46px);
   font-weight: 700;
   margin: 14px 0 16px;
 }
@@ -327,7 +429,10 @@ section > h2 {
   font-size: 18px;
 }
 
-/* PROJECT GRID */
+/* ==========================================
+   PROJECT CARDS
+   UNCHANGED — SAME SIZE, ORDER AND LAYOUT
+   ========================================== */
 
 .projects-grid,
 .project-grid,
@@ -337,70 +442,83 @@ section > h2 {
 #projectsContainer,
 #projectGrid {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(3,minmax(0,1fr));
   gap: 26px;
   align-items: stretch;
 }
-
-/* PROJECT CARD */
 
 .project-card,
 .card {
   display: flex;
   flex-direction: column;
+
   min-width: 0;
   height: 100%;
+
   overflow: hidden;
-  background: rgba(4, 27, 43, 0.96);
-  border: 1px solid rgba(198, 160, 91, 0.65);
+
+  background: rgba(4,27,43,.96);
+
+  border: 1px solid rgba(198,160,91,.65);
   border-radius: 16px;
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
-  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+
+  box-shadow: 0 12px 32px rgba(0,0,0,.25);
+
+  transition:
+    transform .3s,
+    border-color .3s,
+    box-shadow .3s;
 }
 
 .project-card:hover,
 .card:hover {
   transform: translateY(-5px);
   border-color: var(--gold-light);
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
+  box-shadow: 0 18px 42px rgba(0,0,0,.38);
 }
-
-/* IMAGE — SLIGHTLY SMALLER */
 
 .project-image {
   position: relative;
+
   flex: none;
+
   width: 100%;
   height: 235px;
   min-height: 0;
+
   overflow: hidden;
   background: #0d2d40;
 }
 
 .project-image img {
   display: block;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
   object-position: center;
-  transition: transform 0.5s ease;
+
+  transition: transform .5s ease;
 }
 
 .project-card:hover .project-image img {
   transform: scale(1.035);
 }
 
-/* PROJECT TEXT */
-
 .project-content,
 .card-content,
 .project-info {
   flex: 1 1 auto;
+
   display: flex;
   flex-direction: column;
   align-items: center;
+
   min-width: 0;
+
   padding: 19px 20px 18px;
+
   text-align: center;
 }
 
@@ -428,8 +546,6 @@ section > h2 {
   margin: 0 0 17px;
 }
 
-/* PROJECT BUTTON */
-
 .project-card .gold-btn,
 .project-card .project-link,
 .card .gold-btn,
@@ -437,14 +553,21 @@ section > h2 {
 .project-content .gold-btn,
 .card-content .gold-btn {
   width: 100%;
+
   margin-top: auto;
+
   padding: 11px 15px;
+
   background: #041b2b;
+
   border: 1px solid var(--gold);
   border-radius: 10px;
+
   color: #f7f5ef;
+
   font-size: 15px;
   font-weight: 700;
+
   box-shadow: none;
 }
 
@@ -473,9 +596,13 @@ section > h2 {
 
 footer {
   background: #041421;
-  border-top: 1px solid rgba(198, 160, 91, 0.28);
+
+  border-top: 1px solid rgba(198,160,91,.28);
+
   padding: 30px 5%;
+
   text-align: center;
+
   color: #a9b7bf;
   font-size: 14px;
 }
@@ -491,8 +618,11 @@ footer {
 .masterplan-image {
   width: 100%;
   max-width: 1200px;
+
   margin: 28px auto 0;
+
   border-radius: 10px;
+
   box-shadow: 0 18px 45px #0b253027;
 }
 
@@ -502,7 +632,9 @@ footer {
   margin: auto;
 }
 
-/* ANIMATION */
+/* ==========================================
+   ANIMATIONS
+   ========================================== */
 
 @keyframes luxuryFadeUp {
   from {
@@ -516,9 +648,22 @@ footer {
   }
 }
 
+@keyframes headerFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* TABLET */
 
 @media (max-width: 1100px) {
+
   header {
     flex-wrap: wrap;
     justify-content: center;
@@ -554,15 +699,16 @@ footer {
   #projectsGrid,
   #projectsContainer,
   #projectGrid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(2,minmax(0,1fr));
   }
 }
 
 /* MOBILE */
 
 @media (max-width: 650px) {
+
   header {
-    padding: 17px 5%;
+    padding: 13px 5%;
     gap: 14px;
   }
 
@@ -589,7 +735,7 @@ footer {
   }
 
   .hero .brand {
-    font-size: clamp(45px, 12vw, 60px);
+    font-size: clamp(45px,12vw,60px);
   }
 
   .hero-content h2 {
@@ -635,13 +781,14 @@ footer {
   }
 }
 
-/* REDUCED MOTION */
+/* ACCESSIBILITY */
 
 @media (prefers-reduced-motion: reduce) {
+
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
-    transition-duration: 0.01ms !important;
+    animation-duration: .01ms !important;
+    transition-duration: .01ms !important;
   }
 }
