@@ -1,42 +1,9 @@
-/* SeaBreeze IL — Main Hero Image */
-
-.hero {
-  background-image:
-    linear-gradient(
-      90deg,
-      rgba(5, 24, 38, 0.85),
-      rgba(5, 24, 38, 0.35)
-    ),
-    url("https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}/* SEA BREEZE MASTER PLAN */
-
-.masterplan {
-  background: #f8f7f4;
-  padding: 85px 5%;
-  text-align: center;
-}
-
-.masterplan-image {
-  display: block;
-  width: 100%;
-  max-width: 1300px;
-  height: auto;
-  margin: 0 auto;
-  border-radius: 10px;
-  box-shadow: 0 20px 55px rgba(7, 30, 45, 0.15);
-  transition: transform 0.3s ease;
-}
-
-.masterplan-image:hover {
-  transform: scale(1.01);
-}
-
-.masterplan-note {
-  color: #73848d;
-  font-size: 13px;
-  margin-top: 20px;
-}
+/* SeaBreeze IL — premium RTL design */
+:root{--navy:#071e2d;--navy2:#0d2d40;--gold:#d9ad65;--cream:#f5f3ef;--muted:#b7c6cf}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--navy);color:var(--cream);font-family:Heebo,Arial,sans-serif;line-height:1.75}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}h1,h2,h3,p{margin-top:0}h1,h2,h3{line-height:1.25}
+header{position:relative;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 5%;background:#071e2df5;border-bottom:1px solid #d9ad653d;box-shadow:0 8px 30px #0003}header .logo,.logo{font-family:'Cormorant Garamond',Georgia,serif;font-size:30px;font-weight:700;white-space:nowrap}header .logo span,.brand span,.logo span{color:var(--gold)}nav{display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:25px}nav a{font-size:14px;font-weight:500;color:#e7e9e8}nav a:hover{color:var(--gold)}
+.gold-btn,button.gold-btn,.project-link{display:inline-flex;align-items:center;justify-content:center;padding:13px 25px;border:1px solid var(--gold);border-radius:4px;background:var(--gold);color:#102433;font:700 14px Heebo,Arial,sans-serif;cursor:pointer;transition:transform .2s,background .2s;box-shadow:0 8px 22px #0002}.gold-btn:hover,.project-link:hover{transform:translateY(-2px);background:#edc687}
+.hero{position:relative;min-height:650px;display:flex;align-items:center;justify-content:center;gap:45px;padding:90px 5%;background-image:linear-gradient(90deg,rgba(5,24,38,.85),rgba(5,24,38,.43)),url('https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png');background-size:cover;background-position:center;background-repeat:no-repeat}.hero-content{position:relative;z-index:1;flex:1 1 580px;max-width:760px}.eyebrow,.kicker{color:var(--gold);letter-spacing:2.5px;font-size:12px;font-weight:700;text-transform:uppercase;margin-bottom:22px}.hero .brand{font:700 clamp(55px,8vw,112px)/.95 'Cormorant Garamond',Georgia,serif;letter-spacing:1px;margin-bottom:24px;text-shadow:0 5px 30px #0006}.hero h2{font-size:clamp(25px,3vw,45px);font-weight:500;margin-bottom:22px}.hero p{color:#e1e7e8;max-width:620px;font-size:17px;line-height:1.95;margin-bottom:27px}
+.contact-box{position:relative;z-index:2;flex:0 1 355px;width:100%;padding:32px 26px;background:#082234ed;border:1px solid #d9ad6573;border-radius:12px;box-shadow:0 18px 50px #0007;backdrop-filter:blur(10px)}.contact-box h2{font-size:26px;margin-bottom:8px}.contact-box p{font-size:14px;color:var(--muted);margin-bottom:20px}form{display:flex;flex-direction:column;gap:12px}input,select,textarea{width:100%;min-height:46px;padding:12px 14px;background:#f7f7f5;color:#14283a;border:1px solid #c9d2d6;border-radius:4px;font:15px Heebo,Arial,sans-serif}input:focus,select:focus,textarea:focus{outline:2px solid var(--gold);outline-offset:1px}form button{width:100%}
+section:not(.hero){padding:88px 5%}.section-heading{text-align:center;margin:0 auto 38px;max-width:780px}.section-heading span,.section-heading .eyebrow{color:var(--gold);font-size:13px;letter-spacing:2px}.section-heading h2,section>h2{font-size:clamp(28px,3.6vw,45px);margin:14px 0 16px}.section-heading p{color:var(--muted);font-size:16px}#projects,.projects{background:#0b293b}.projects-grid,.project-grid,.cards-grid,.projects-container,#projectsGrid,#projectsContainer{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px}.project-card,.card{overflow:hidden;background:#113348;border:1px solid #d9ad6533;border-radius:10px;box-shadow:0 12px 35px #0003;transition:transform .25s,border-color .25s}.project-card:hover,.card:hover{transform:translateY(-5px);border-color:#d9ad6599}.project-card img,.card img,.project-image{width:100%;height:235px;object-fit:cover}.project-card h3,.card h3{font-size:23px;margin:20px 20px 10px;color:#fff}.project-card p,.card p{color:#c3d0d5;margin:0 20px 18px}.project-card .gold-btn,.project-card .project-link,.card .gold-btn{margin:0 20px 24px}.project-content,.card-content,.project-info{padding:20px}.project-content h3,.card-content h3,.project-info h3{margin:0 0 12px}.project-content p,.card-content p,.project-info p{margin:0 0 20px}.project-content .gold-btn,.card-content .gold-btn,.project-info .gold-btn{margin:0}#about{background:#071e2d;text-align:center}#about p{max-width:780px;margin:0 auto;color:#c8d4da}footer{background:#041723;border-top:1px solid #d9ad653d;padding:30px 5%;text-align:center;color:#a9b7bf;font-size:13px}.masterplan{background:#f8f7f4!important;color:#172b42;text-align:center}.masterplan-image{width:100%;max-width:1200px;margin:28px auto 0;border-radius:10px;box-shadow:0 18px 45px #0b253027}.masterplan a{display:block;max-width:1200px;margin:auto}
+@media(max-width:1100px){header{flex-wrap:wrap;justify-content:center}.hero{flex-wrap:wrap;min-height:auto}.hero-content{text-align:center}.hero p{margin-inline:auto}.contact-box{flex-basis:520px}.projects-grid,.project-grid,.cards-grid,.projects-container,#projectsGrid,#projectsContainer{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){header{padding:17px 5%;gap:14px}header .logo,.logo{font-size:26px}nav{gap:12px}nav a{font-size:12px}header>.gold-btn{padding:9px 15px}.hero{padding:75px 5% 55px;gap:25px}.hero .brand{font-size:60px}.hero h2{font-size:28px}.hero p{font-size:15px}.contact-box{padding:24px 18px}section:not(.hero){padding:62px 5%}.projects-grid,.project-grid,.cards-grid,.projects-container,#projectsGrid,#projectsContainer{grid-template-columns:1fr}.project-card img,.card img,.project-image{height:220px}}
