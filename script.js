@@ -14,10 +14,7 @@ const projects = [
     selectName: "Panorama by ELIE SAAB"
   },
   {
-    name: "Marina Village",
-    subtitle: "SEA BREEZE",
-    description: "פרויקט מגורים באזור Sea Breeze.",
-    selectName: "Marina Village"
+ 
   },
   {
     name: "Reportage Heights",
@@ -32,10 +29,18 @@ const projects = [
     selectName: "Sabah Towers"
   },
   {
+  {
     name: "Arabian Ranches",
     subtitle: "BAKU",
     description: "פרויקט מגורים בבאקו.",
     selectName: "Arabian Ranches"
+  },
+  {
+    name: "Marina Village",
+    subtitle: "SEA BREEZE",
+    description: "פרויקט מגורים באזור Sea Breeze.",
+    selectName: "Marina Village"
+  }
   }
 ];
 
