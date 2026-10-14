@@ -50,9 +50,11 @@ projectGrid.innerHTML = projects.map(project => `
         ? '<img src="./SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="BRABUS Island Baku" loading="lazy">'
         : project.name === "Panorama"
         ? '<img src="./panorama-images/panorama-main.jpg" alt="Panorama by ELIE SAAB" loading="lazy">'
-        : project.name === "Marina Village"
-        ? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
-        : ''}
+       : project.name === "Marina Village"
+? '<img src="./marina-images/marina-main.jpg" alt="Marina Village Sea Breeze" loading="lazy">'
+: project.name === "Reportage Heights"
+? '<img src="./reportage-images/reportage-main.jpg" alt="Reportage Heights Baku" loading="lazy">'
+: ''}
     </div>
 
     <div class="project-info">
