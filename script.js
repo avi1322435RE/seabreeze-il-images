@@ -1,10 +1,13 @@
-// SeaBreeze IL — Projects
+/* ==========================================
+   SeaBreeze IL
+   Luxury Projects — Clean Card Layout
+   ========================================== */
 
 const projects = [
   {
     name: "BRABUS Island",
     subtitle: "BRABUS ISLAND BAKU",
-    description: "פרויקט מגורים יוקרתי בבאקו.",
+    description: "מגורי יוקרה בסטנדרט בינלאומי",
     selectName: "BRABUS Island Baku",
     image: "./SeaBreeze_BRABUS_page/brabus-images/garden.jpg",
     link: "brabus.html"
@@ -12,7 +15,7 @@ const projects = [
   {
     name: "Panorama",
     subtitle: "BY ELIE SAAB",
-    description: "פרויקט מגורים בעיצוב ייחודי.",
+    description: "מגורים יוקרתיים בעיצוב ייחודי",
     selectName: "Panorama by ELIE SAAB",
     image: "./panorama-images/panorama-main.jpg",
     link: "#contact"
@@ -20,7 +23,7 @@ const projects = [
   {
     name: "Reportage Heights",
     subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
+    description: "דירות מגורים בפרויקט מודרני",
     selectName: "Reportage Heights",
     image: "./reportage-images/reportage-main.jpg",
     link: "#contact"
@@ -28,7 +31,7 @@ const projects = [
   {
     name: "Sabah Towers",
     subtitle: "BAKU",
-    description: "פרויקט מגורים בבאקו.",
+    description: "מגדלי מגורים בעיצוב מודרני",
     selectName: "Sabah Towers",
     image: "./sabah-images/sabah-main.jpg",
     link: "#contact"
@@ -36,7 +39,7 @@ const projects = [
   {
     name: "Arabian Ranches",
     subtitle: "SEA BREEZE",
-    description: "פרויקט מגורים יוקרתי באזור Sea Breeze, בהשראת אדריכלות מזרחית.",
+    description: "מגורי יוקרה בהשראת אדריכלות מזרחית",
     selectName: "Arabian Ranches",
     image: "./arabian-images/arabian-images/arabian-main.jpg",
     link: "#contact"
@@ -44,14 +47,17 @@ const projects = [
   {
     name: "Marina Village",
     subtitle: "SEA BREEZE",
-    description: "פרויקט מגורים באזור Sea Breeze.",
+    description: "מגורים באווירת חוף ומרינה",
     selectName: "Marina Village",
     image: "./marina-images/marina-main.jpg",
     link: "#contact"
   }
 ];
 
-// יצירת כרטיסי הפרויקטים
+/* ==========================================
+   CREATE PROJECT CARDS
+   ========================================== */
+
 const projectGrid = document.getElementById("projectGrid");
 
 if (projectGrid) {
@@ -59,64 +65,75 @@ if (projectGrid) {
     <article class="project-card">
 
       <div class="project-image">
-        ${project.image
-          ? `<img src="${project.image}" alt="${project.selectName}" loading="lazy">`
-          : ""}
+        <img
+          src="${project.image}"
+          alt="${project.selectName}"
+          loading="lazy"
+        >
       </div>
 
       <div class="project-info">
 
         <h3>${project.name}</h3>
 
-        <div style="
-          color:#b18a52;
-          font-size:11px;
-          letter-spacing:2px;
-          margin-top:5px;
-        ">
+        <div class="project-subtitle">
           ${project.subtitle}
         </div>
 
         <p>${project.description}</p>
 
-        <div class="project-price">
-          מחיר התחלתי: יעודכן לאחר אימות
-          <br>
-          USD · ILS · AZN
-        </div>
-
-        <a href="${project.link}"
-           class="gold-btn project-link"
-           data-project="${project.selectName}">
-          קבלת פרטים ומחירון ←
+        <a
+          href="${project.link}"
+          class="gold-btn project-link"
+          data-project="${project.selectName}"
+        >
+          צפייה בפרויקט ←
         </a>
 
       </div>
+
     </article>
   `).join("");
 }
 
-// לחיצה על פרויקט בוחרת אותו בטופס
+/* ==========================================
+   SELECT PROJECT IN CONTACT FORM
+   ========================================== */
+
 document.querySelectorAll(".project-link").forEach(link => {
+
   link.addEventListener("click", () => {
+
     const selectedProject = link.dataset.project;
-    const projectSelect = document.querySelector("#leadForm select");
+
+    const projectSelect = document.querySelector(
+      "#leadForm select"
+    );
 
     if (projectSelect) {
       projectSelect.value = selectedProject;
     }
+
   });
+
 });
 
-// טופס הדגמה — עדיין אינו שולח פניות
+/* ==========================================
+   DEMO CONTACT FORM
+   ========================================== */
+
 const leadForm = document.getElementById("leadForm");
 
 if (leadForm) {
+
   leadForm.addEventListener("submit", event => {
+
     event.preventDefault();
 
     alert(
       "הטופס פועל בגרסת הדגמה. בשלב הבא נחבר אותו לקבלת פניות אמיתיות."
     );
+
   });
+
 }
