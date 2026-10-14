@@ -1,6 +1,7 @@
 /* ==========================================
-   SEABREEZE IL
-   LUXURY NAVY & CHAMPAGNE
+   SeaBreeze IL
+   Luxury Navy & Champagne
+   Vertical Project Cards
    ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
@@ -19,6 +20,8 @@
   --cream: #f7f5ef;
   --muted: #bdcbd3;
 }
+
+/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -80,9 +83,7 @@ header .logo,
   font-size: 32px;
   font-weight: 700;
   white-space: nowrap;
-
   color: #f7f5ef;
-
   text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -117,7 +118,7 @@ nav a:hover {
   color: var(--gold-light);
 }
 
-/* BUTTONS */
+/* GENERAL BUTTONS */
 
 .gold-btn,
 button.gold-btn,
@@ -156,7 +157,6 @@ button.gold-btn,
 .project-link:hover {
   transform: translateY(-2px);
   filter: brightness(1.06);
-
   box-shadow: 0 8px 19px rgba(0, 0, 0, 0.27);
 }
 
@@ -173,7 +173,6 @@ button.gold-btn,
   justify-content: space-between;
 
   gap: 35px;
-
   padding: 85px 5% 145px;
 
   background-image:
@@ -191,7 +190,7 @@ button.gold-btn,
   overflow: hidden;
 }
 
-/* VERY SOFT IMAGE-TO-NAVY TRANSITION */
+/* SOFT IMAGE-TO-NAVY TRANSITION */
 
 .hero::after {
   content: '';
@@ -235,13 +234,10 @@ button.gold-btn,
 .eyebrow,
 .kicker {
   color: var(--gold-light);
-
   letter-spacing: 2.5px;
   font-size: 13px;
   font-weight: 700;
-
   text-transform: uppercase;
-
   margin-bottom: 22px;
 }
 
@@ -277,7 +273,6 @@ button.gold-btn,
   margin-bottom: 22px;
 
   color: #fffdf6;
-
   white-space: nowrap;
 
   text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
@@ -285,7 +280,6 @@ button.gold-btn,
 
 .hero-content p {
   color: #e5ebed;
-
   max-width: 750px;
 
   font-size: 18px;
@@ -371,7 +365,7 @@ section:not(.hero) {
   padding: 88px 5%;
 }
 
-/* PROJECTS */
+/* PROJECTS SECTION */
 
 #projects,
 .projects {
@@ -388,7 +382,7 @@ section:not(.hero) {
   padding-bottom: 100px;
 }
 
-/* KEEP EXISTING SECTION HEADING COMPATIBLE */
+/* SECTION HEADING */
 
 .section-heading {
   text-align: center;
@@ -415,7 +409,7 @@ section > h2 {
   font-size: 18px;
 }
 
-/* 3 CARDS PER ROW */
+/* THREE CARDS PER ROW */
 
 .projects-grid,
 .project-grid,
@@ -425,27 +419,26 @@ section > h2 {
 #projectsContainer,
 #projectGrid {
   display: grid;
-
   grid-template-columns: repeat(3, minmax(0, 1fr));
-
-  gap: 22px;
+  gap: 26px;
+  align-items: stretch;
 }
 
-/* PROJECT CARDS */
+/* PROJECT CARD — VERTICAL LAYOUT */
 
 .project-card,
 .card {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 
   min-width: 0;
-  min-height: 205px;
+  height: 100%;
 
   overflow: hidden;
 
   background: rgba(4, 27, 43, 0.96);
 
-  border: 1px solid rgba(198, 160, 91, 0.75);
+  border: 1px solid rgba(198, 160, 91, 0.65);
   border-radius: 16px;
 
   box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
@@ -459,23 +452,22 @@ section > h2 {
 .project-card:hover,
 .card:hover {
   transform: translateY(-5px);
-
   border-color: var(--gold-light);
-
   box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
 }
 
-/* IMAGE ON ONE SIDE */
+/* PROJECT IMAGE — FULL WIDTH AT TOP */
 
 .project-image {
-  flex: 0 0 48%;
-  width: 48%;
+  position: relative;
 
-  min-height: 205px;
-  height: auto;
+  flex: none;
+
+  width: 100%;
+  height: 260px;
+  min-height: 0;
 
   overflow: hidden;
-
   background: #0d2d40;
 }
 
@@ -487,59 +479,64 @@ section > h2 {
 
   object-fit: cover;
   object-position: center;
+
+  transition: transform 0.5s ease;
 }
 
-/* TEXT ON OTHER SIDE */
+.project-card:hover .project-image img {
+  transform: scale(1.035);
+}
+
+/* PROJECT INFORMATION — BELOW IMAGE */
 
 .project-content,
 .card-content,
 .project-info {
-  flex: 1 1 52%;
+  flex: 1 1 auto;
 
   display: flex;
   flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
+  align-items: center;
 
   min-width: 0;
 
-  padding: 18px 16px;
+  padding: 24px 22px 22px;
+
+  text-align: center;
 }
 
 .project-card h3,
 .card h3 {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 700;
 
-  margin: 0 0 12px;
+  margin: 0 0 6px;
 
   color: #fff;
-
-  overflow-wrap: anywhere;
 }
 
-.project-info h3,
-.project-content h3,
-.card-content h3 {
-  margin: 0 0 12px;
+.project-subtitle {
+  color: var(--champagne);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+
+  margin: 0 0 15px;
 }
 
 .project-card p,
 .card p {
   color: #d1dbe0;
-  font-size: 15px;
-  line-height: 1.55;
 
-  margin: 0 0 16px;
+  font-size: 16px;
+  line-height: 1.6;
+
+  margin: 0 0 22px;
 }
 
-.project-info p,
-.project-content p,
-.card-content p {
-  margin: 0 0 16px;
-}
-
-/* PROJECT BUTTONS — NAVY WITH GOLD BORDER */
+/* PROJECT BUTTONS */
 
 .project-card .gold-btn,
 .project-card .project-link,
@@ -551,7 +548,7 @@ section > h2 {
 
   margin-top: auto;
 
-  padding: 10px 12px;
+  padding: 11px 15px;
 
   background: #041b2b;
 
@@ -560,7 +557,7 @@ section > h2 {
 
   color: #f7f5ef;
 
-  font-size: 14px;
+  font-size: 15px;
   font-weight: 700;
 
   box-shadow: none;
@@ -683,11 +680,6 @@ footer {
   #projectGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-
-  .project-card,
-  .card {
-    min-height: 205px;
-  }
 }
 
 /* MOBILE */
@@ -757,31 +749,14 @@ footer {
     grid-template-columns: 1fr;
   }
 
-  .project-card,
-  .card {
-    min-height: 190px;
-  }
-
   .project-image {
-    flex-basis: 46%;
-    width: 46%;
-    min-height: 190px;
+    height: 245px;
   }
 
   .project-content,
   .card-content,
   .project-info {
-    padding: 15px 12px;
-  }
-
-  .project-card h3,
-  .card h3 {
-    font-size: 18px;
-  }
-
-  .project-card p,
-  .card p {
-    font-size: 14px;
+    padding: 22px 18px;
   }
 }
 
