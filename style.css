@@ -1,31 +1,24 @@
 /* ==========================================
-   SeaBreeze IL — Deep Champagne Gold
+   SEABREEZE IL
+   LUXURY NAVY & CHAMPAGNE
    ========================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap');
 
 :root {
   --navy: #061b2a;
-  --navy-deep: #041421;
-  --navy-card: #102f43;
+  --navy-deep: #031725;
+  --navy-mid: #08273a;
+  --navy-card: #072438;
 
   --gold: #c6a05b;
-  --gold-light: #e2c68d;
+  --gold-light: #dfc48d;
   --gold-dark: #967039;
   --champagne: #d8be8c;
-
-  --gold-gradient: linear-gradient(
-    115deg,
-    #b58d4d 0%,
-    #d5b779 52%,
-    #c09a5a 100%
-  );
 
   --cream: #f7f5ef;
   --muted: #bdcbd3;
 }
-
-/* GENERAL */
 
 * {
   box-sizing: border-box;
@@ -61,9 +54,7 @@ h1, h2, h3 {
   line-height: 1.25;
 }
 
-/* ==========================================
-   HEADER
-   ========================================== */
+/* HEADER */
 
 header {
   position: relative;
@@ -78,9 +69,9 @@ header {
 
   background: rgba(4, 20, 33, 0.97);
 
-  border-bottom: 1px solid rgba(198, 160, 91, 0.28);
+  border-bottom: 1px solid rgba(198, 160, 91, 0.25);
 
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
 header .logo,
@@ -88,30 +79,21 @@ header .logo,
   font-family: 'Cormorant Garamond', Georgia, serif;
   font-size: 32px;
   font-weight: 700;
-
   white-space: nowrap;
+
   color: #f7f5ef;
 
-  -webkit-text-stroke: 0.15px #173247;
-
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.35);
+  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
-
-/* IL — SOFT CHAMPAGNE */
 
 .logo span,
 .brand span,
 header .logo span {
   color: var(--champagne);
-
-  background: none;
-
   -webkit-text-fill-color: var(--champagne);
   -webkit-text-stroke: 0;
-
+  background: none;
   filter: none;
-
-  text-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);
 }
 
 /* NAVIGATION */
@@ -127,9 +109,7 @@ nav {
 nav a {
   font-size: 16px;
   font-weight: 600;
-
   color: #f0f1ef;
-
   transition: color 0.25s;
 }
 
@@ -137,9 +117,7 @@ nav a:hover {
   color: var(--gold-light);
 }
 
-/* ==========================================
-   CHAMPAGNE GOLD BUTTONS
-   ========================================== */
+/* BUTTONS */
 
 .gold-btn,
 button.gold-btn,
@@ -150,41 +128,39 @@ button.gold-btn,
 
   padding: 13px 26px;
 
-  border: 1px solid #c6a05b;
-  border-radius: 5px;
+  border: 1px solid var(--gold);
+  border-radius: 10px;
 
-  background: var(--gold-gradient);
+  background: linear-gradient(
+    115deg,
+    #b58d4d 0%,
+    #d5b779 52%,
+    #c09a5a 100%
+  );
+
   color: #172635;
 
   font: 800 16px 'Assistant', Arial, sans-serif;
 
   cursor: pointer;
 
-  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.22);
+  box-shadow: 0 5px 14px rgba(0, 0, 0, 0.2);
 
   transition:
     transform 0.25s,
     box-shadow 0.25s,
-    background 0.25s;
+    filter 0.25s;
 }
 
 .gold-btn:hover,
 .project-link:hover {
   transform: translateY(-2px);
+  filter: brightness(1.06);
 
-  background: linear-gradient(
-    115deg,
-    #c09a5a,
-    #dfc48d,
-    #c6a05b
-  );
-
-  box-shadow: 0 8px 19px rgba(0, 0, 0, 0.28);
+  box-shadow: 0 8px 19px rgba(0, 0, 0, 0.27);
 }
 
-/* ==========================================
-   HERO
-   ========================================== */
+/* HERO */
 
 .hero {
   position: relative;
@@ -197,13 +173,14 @@ button.gold-btn,
   justify-content: space-between;
 
   gap: 35px;
-  padding: 85px 5% 120px;
+
+  padding: 85px 5% 145px;
 
   background-image:
     linear-gradient(
       90deg,
-      rgba(4, 20, 33, 0.72),
-      rgba(4, 20, 33, 0.28)
+      rgba(4, 20, 33, 0.7),
+      rgba(4, 20, 33, 0.25)
     ),
     url('https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png');
 
@@ -214,7 +191,7 @@ button.gold-btn,
   overflow: hidden;
 }
 
-/* SMOOTH TRANSITION TO PROJECTS */
+/* VERY SOFT IMAGE-TO-NAVY TRANSITION */
 
 .hero::after {
   content: '';
@@ -226,20 +203,22 @@ button.gold-btn,
   right: 0;
   bottom: 0;
 
-  height: 240px;
+  height: 320px;
 
   background: linear-gradient(
     to bottom,
     rgba(6, 27, 42, 0) 0%,
-    rgba(6, 27, 42, 0.18) 25%,
-    rgba(6, 27, 42, 0.6) 60%,
-    #0b293b 100%
+    rgba(6, 27, 42, 0.08) 15%,
+    rgba(6, 27, 42, 0.22) 32%,
+    rgba(6, 27, 42, 0.48) 55%,
+    rgba(6, 27, 42, 0.78) 78%,
+    #061b2a 100%
   );
 
   pointer-events: none;
 }
 
-/* HERO CONTENT */
+/* HERO TEXT */
 
 .hero-content {
   position: relative;
@@ -247,7 +226,6 @@ button.gold-btn,
 
   flex: 1 1 auto;
   min-width: 0;
-  max-width: none;
 
   text-align: right;
 
@@ -267,8 +245,6 @@ button.gold-btn,
   margin-bottom: 22px;
 }
 
-/* SEABREEZE IL MAIN LOGO */
-
 .hero .brand {
   font-family: 'Cormorant Garamond', Georgia, serif;
 
@@ -283,23 +259,15 @@ button.gold-btn,
   color: #f7f5ef;
   white-space: nowrap;
 
-  -webkit-text-stroke: 0.25px #173247;
-
   text-shadow:
-    0 3px 8px rgba(0, 0, 0, 0.52),
-    0 0 12px rgba(6, 27, 42, 0.3);
+    0 3px 8px rgba(0, 0, 0, 0.5),
+    0 0 12px rgba(6, 27, 42, 0.25);
 }
 
 .hero .brand span {
   color: var(--champagne);
-
   -webkit-text-fill-color: var(--champagne);
-  -webkit-text-stroke: 0;
-
-  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.4);
 }
-
-/* HEBREW HEADLINE */
 
 .hero-content h2 {
   font-size: clamp(22px, 2.05vw, 34px);
@@ -311,9 +279,8 @@ button.gold-btn,
   color: #fffdf6;
 
   white-space: nowrap;
-  letter-spacing: -0.3px;
 
-  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.55);
+  text-shadow: 0 3px 12px rgba(0, 0, 0, 0.5);
 }
 
 .hero-content p {
@@ -326,12 +293,10 @@ button.gold-btn,
 
   margin-bottom: 28px;
 
-  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.45);
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
 }
 
-/* ==========================================
-   CONTACT FORM
-   ========================================== */
+/* CONTACT BOX */
 
 .contact-box {
   position: relative;
@@ -345,7 +310,7 @@ button.gold-btn,
   background: rgba(5, 27, 43, 0.94);
 
   border: 1px solid rgba(198, 160, 91, 0.55);
-  border-radius: 12px;
+  border-radius: 18px;
 
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.42);
 
@@ -384,7 +349,7 @@ textarea {
   color: #14283a;
 
   border: 1px solid #c9d2d6;
-  border-radius: 4px;
+  border-radius: 10px;
 
   font: 16px 'Assistant', Arial, sans-serif;
 }
@@ -400,13 +365,30 @@ form button {
   width: 100%;
 }
 
-/* ==========================================
-   SECTIONS
-   ========================================== */
+/* SECTIONS */
 
 section:not(.hero) {
   padding: 88px 5%;
 }
+
+/* PROJECTS */
+
+#projects,
+.projects {
+  position: relative;
+
+  background: linear-gradient(
+    180deg,
+    #061b2a 0%,
+    #072337 45%,
+    #061b2a 100%
+  );
+
+  padding-top: 115px;
+  padding-bottom: 100px;
+}
+
+/* KEEP EXISTING SECTION HEADING COMPATIBLE */
 
 .section-heading {
   text-align: center;
@@ -425,7 +407,6 @@ section:not(.hero) {
 section > h2 {
   font-size: clamp(30px, 3.6vw, 46px);
   font-weight: 700;
-
   margin: 14px 0 16px;
 }
 
@@ -434,61 +415,67 @@ section > h2 {
   font-size: 18px;
 }
 
-/* ==========================================
-   PROJECTS
-   ========================================== */
-
-#projects,
-.projects {
-  background: #0b293b;
-}
+/* 3 CARDS PER ROW */
 
 .projects-grid,
 .project-grid,
 .cards-grid,
 .projects-container,
 #projectsGrid,
-#projectsContainer {
+#projectsContainer,
+#projectGrid {
   display: grid;
 
   grid-template-columns: repeat(3, minmax(0, 1fr));
 
-  gap: 26px;
+  gap: 22px;
 }
+
+/* PROJECT CARDS */
 
 .project-card,
 .card {
+  display: flex;
+  flex-direction: row;
+
+  min-width: 0;
+  min-height: 205px;
+
   overflow: hidden;
 
-  background: #102f43;
+  background: rgba(4, 27, 43, 0.96);
 
-  border: 1px solid rgba(198, 160, 91, 0.44);
-  border-radius: 10px;
+  border: 1px solid rgba(198, 160, 91, 0.75);
+  border-radius: 16px;
 
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
 
   transition:
-    transform 0.25s,
-    border-color 0.25s,
-    box-shadow 0.25s;
+    transform 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
 }
 
 .project-card:hover,
 .card:hover {
   transform: translateY(-5px);
 
-  border-color: rgba(226, 198, 141, 0.75);
+  border-color: var(--gold-light);
 
-  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 18px 42px rgba(0, 0, 0, 0.38);
 }
 
-/* PROJECT IMAGES */
+/* IMAGE ON ONE SIDE */
 
 .project-image {
-  width: 100%;
-  height: 280px;
+  flex: 0 0 48%;
+  width: 48%;
+
+  min-height: 205px;
+  height: auto;
 
   overflow: hidden;
+
   background: #0d2d40;
 }
 
@@ -499,24 +486,36 @@ section > h2 {
   height: 100%;
 
   object-fit: cover;
+  object-position: center;
 }
 
-/* PROJECT CONTENT */
+/* TEXT ON OTHER SIDE */
 
 .project-content,
 .card-content,
 .project-info {
-  padding: 24px;
+  flex: 1 1 52%;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+
+  min-width: 0;
+
+  padding: 18px 16px;
 }
 
 .project-card h3,
 .card h3 {
-  font-size: 28px;
+  font-size: 20px;
   font-weight: 700;
 
   margin: 0 0 12px;
 
   color: #fff;
+
+  overflow-wrap: anywhere;
 }
 
 .project-info h3,
@@ -527,17 +526,20 @@ section > h2 {
 
 .project-card p,
 .card p {
-  color: #cbd7dc;
-  font-size: 17px;
+  color: #d1dbe0;
+  font-size: 15px;
+  line-height: 1.55;
 
-  margin: 0 0 20px;
+  margin: 0 0 16px;
 }
 
 .project-info p,
 .project-content p,
 .card-content p {
-  margin: 0 0 22px;
+  margin: 0 0 16px;
 }
+
+/* PROJECT BUTTONS — NAVY WITH GOLD BORDER */
 
 .project-card .gold-btn,
 .project-card .project-link,
@@ -545,12 +547,33 @@ section > h2 {
 .project-info .gold-btn,
 .project-content .gold-btn,
 .card-content .gold-btn {
-  margin: 0;
+  width: 100%;
+
+  margin-top: auto;
+
+  padding: 10px 12px;
+
+  background: #041b2b;
+
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+
+  color: #f7f5ef;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  box-shadow: none;
 }
 
-/* ==========================================
-   ABOUT
-   ========================================== */
+.project-card .gold-btn:hover,
+.project-card .project-link:hover,
+.card .gold-btn:hover {
+  background: #0c3047;
+  border-color: var(--gold-light);
+}
+
+/* ABOUT */
 
 #about {
   background: #061b2a;
@@ -565,9 +588,7 @@ section > h2 {
   font-size: 18px;
 }
 
-/* ==========================================
-   FOOTER
-   ========================================== */
+/* FOOTER */
 
 footer {
   background: #041421;
@@ -575,15 +596,14 @@ footer {
   border-top: 1px solid rgba(198, 160, 91, 0.28);
 
   padding: 30px 5%;
+
   text-align: center;
 
   color: #a9b7bf;
   font-size: 14px;
 }
 
-/* ==========================================
-   MASTERPLAN
-   ========================================== */
+/* MASTERPLAN */
 
 .masterplan {
   background: #f8f7f4 !important;
@@ -608,9 +628,7 @@ footer {
   margin: auto;
 }
 
-/* ==========================================
-   ANIMATION
-   ========================================== */
+/* ANIMATION */
 
 @keyframes luxuryFadeUp {
   from {
@@ -624,9 +642,7 @@ footer {
   }
 }
 
-/* ==========================================
-   TABLET
-   ========================================== */
+/* TABLET */
 
 @media (max-width: 1100px) {
 
@@ -663,14 +679,18 @@ footer {
   .cards-grid,
   .projects-container,
   #projectsGrid,
-  #projectsContainer {
+  #projectsContainer,
+  #projectGrid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .project-card,
+  .card {
+    min-height: 205px;
   }
 }
 
-/* ==========================================
-   MOBILE
-   ========================================== */
+/* MOBILE */
 
 @media (max-width: 650px) {
 
@@ -697,7 +717,7 @@ footer {
   }
 
   .hero {
-    padding: 75px 5% 80px;
+    padding: 75px 5% 95px;
     gap: 25px;
   }
 
@@ -722,23 +742,50 @@ footer {
     padding: 62px 5%;
   }
 
+  #projects,
+  .projects {
+    padding-top: 85px;
+  }
+
   .projects-grid,
   .project-grid,
   .cards-grid,
   .projects-container,
   #projectsGrid,
-  #projectsContainer {
+  #projectsContainer,
+  #projectGrid {
     grid-template-columns: 1fr;
   }
 
+  .project-card,
+  .card {
+    min-height: 190px;
+  }
+
   .project-image {
-    height: 250px;
+    flex-basis: 46%;
+    width: 46%;
+    min-height: 190px;
+  }
+
+  .project-content,
+  .card-content,
+  .project-info {
+    padding: 15px 12px;
+  }
+
+  .project-card h3,
+  .card h3 {
+    font-size: 18px;
+  }
+
+  .project-card p,
+  .card p {
+    font-size: 14px;
   }
 }
 
-/* ==========================================
-   ACCESSIBILITY
-   ========================================== */
+/* REDUCED MOTION */
 
 @media (prefers-reduced-motion: reduce) {
 
