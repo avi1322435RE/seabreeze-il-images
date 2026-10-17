@@ -1,0 +1,29 @@
+/* SeaBreeze IL — Hero-only visual refinement.
+   Load AFTER style.css; leaves header and project cards untouched. */
+.hero {
+  background-image:
+    linear-gradient(90deg, rgba(4,20,33,.52), rgba(4,20,33,.13)),
+    url('https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png');
+}
+.hero::after {
+  background: linear-gradient(to bottom,
+    rgba(6,27,42,0) 0%, rgba(6,27,42,.04) 15%,
+    rgba(6,27,42,.16) 32%, rgba(6,27,42,.4) 55%,
+    rgba(6,27,42,.73) 78%, #061b2a 100%);
+}
+.hero .hero-content { max-width: 850px; }
+.hero .eyebrow { letter-spacing: 2.5px; margin-bottom: 18px; }
+.hero .brand { font-size: clamp(55px,5.6vw,86px); line-height: 1.05; margin-bottom: 24px; }
+.hero .hero-content h2 { font-size: clamp(22px,2vw,32px); margin-bottom: 18px; }
+.hero .hero-content p { max-width: 680px; line-height: 1.85; margin-bottom: 28px; }
+.hero .hero-content > .gold-btn { transition: transform .3s ease, box-shadow .3s ease, filter .3s ease; }
+.hero .hero-content > .gold-btn:hover { transform: translateY(-3px); }
+@media (max-width:1100px) {
+  .hero .hero-content { max-width: 100%; }
+  .hero .hero-content p { margin-inline: auto; }
+}
+@media (max-width:650px) {
+  .hero .brand { font-size: clamp(45px,12vw,60px); white-space: normal; }
+  .hero .hero-content h2 { font-size: 25px; white-space: normal; }
+  .hero .hero-content p { font-size: 16px; }
+}
