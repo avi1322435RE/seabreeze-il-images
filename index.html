@@ -1,29 +1,442 @@
-/* SeaBreeze IL — Hero-only visual refinement.
-   Load AFTER style.css; leaves header and project cards untouched. */
-.hero {
-  background-image:
-    linear-gradient(90deg, rgba(4,20,33,.52), rgba(4,20,33,.13)),
-    url('https://raw.githubusercontent.com/avi1322435RE/seabreeze-il-images/main/Final%20Render%20%281%29.png');
-}
-.hero::after {
-  background: linear-gradient(to bottom,
-    rgba(6,27,42,0) 0%, rgba(6,27,42,.04) 15%,
-    rgba(6,27,42,.16) 32%, rgba(6,27,42,.4) 55%,
-    rgba(6,27,42,.73) 78%, #061b2a 100%);
-}
-.hero .hero-content { max-width: 850px; }
-.hero .eyebrow { letter-spacing: 2.5px; margin-bottom: 18px; }
-.hero .brand { font-size: clamp(55px,5.6vw,86px); line-height: 1.05; margin-bottom: 24px; }
-.hero .hero-content h2 { font-size: clamp(22px,2vw,32px); margin-bottom: 18px; }
-.hero .hero-content p { max-width: 680px; line-height: 1.85; margin-bottom: 28px; }
-.hero .hero-content > .gold-btn { transition: transform .3s ease, box-shadow .3s ease, filter .3s ease; }
-.hero .hero-content > .gold-btn:hover { transform: translateY(-3px); }
-@media (max-width:1100px) {
-  .hero .hero-content { max-width: 100%; }
-  .hero .hero-content p { margin-inline: auto; }
-}
-@media (max-width:650px) {
-  .hero .brand { font-size: clamp(45px,12vw,60px); white-space: normal; }
-  .hero .hero-content h2 { font-size: 25px; white-space: normal; }
-  .hero .hero-content p { font-size: 16px; }
-}
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SeaBreeze IL | נדל״ן יוקרתי בבאקו</title>
+
+  <meta
+    name="description"
+    content="SeaBreeze IL — פרויקטי נדל״ן נבחרים בבאקו ובחופי הים הכספי. היכרות עם פרויקטים יוקרתיים וליווי אישי בעברית."
+  >
+
+  <meta name="theme-color" content="#061b2a">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Assistant:wght@300;400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="./style.css">
+
+  <!--
+    עיצוב ממוקד לחלק העליון בלבד.
+    אינו משנה את כרטיסי הפרויקטים.
+  -->
+
+  <style>
+
+    /* HERO TYPOGRAPHY */
+
+    .hero .hero-content {
+      max-width: 850px;
+    }
+
+    .hero .eyebrow {
+      display: inline-block;
+      color: #dfc48d;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 3px;
+      margin-bottom: 20px;
+      direction: ltr;
+      text-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+
+    .hero .brand {
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: clamp(58px, 6vw, 94px);
+      font-weight: 600;
+      letter-spacing: -1px;
+      line-height: 1.05;
+      margin-bottom: 22px;
+      color: #fffaf0;
+    }
+
+    .hero .brand span {
+      color: #d8be8c;
+      -webkit-text-fill-color: #d8be8c;
+    }
+
+    .hero .hero-content h2 {
+      font-size: clamp(24px, 2.2vw, 34px);
+      font-weight: 600;
+      line-height: 1.45;
+      margin-bottom: 17px;
+      color: #ffffff;
+    }
+
+    .hero .hero-content p {
+      max-width: 650px;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.85;
+      margin-bottom: 28px;
+      color: #e7edf0;
+    }
+
+    /* HERO BUTTON */
+
+    .hero .hero-content > .gold-btn {
+      min-width: 190px;
+      padding: 12px 28px;
+      border-radius: 9px;
+      font-size: 16px;
+      box-shadow: 0 7px 22px rgba(0,0,0,.2);
+    }
+
+    .hero .hero-content > .gold-btn:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 11px 28px rgba(0,0,0,.28);
+    }
+
+    /* CONTACT FORM */
+
+    .hero .contact-box {
+      border: 1px solid rgba(216,190,140,.5);
+      border-radius: 18px;
+      background: rgba(4,24,39,.93);
+      padding: 29px 25px 24px;
+      box-shadow: 0 20px 48px rgba(0,0,0,.3);
+    }
+
+    .hero .contact-box h2 {
+      font-size: 27px;
+      font-weight: 700;
+      margin-bottom: 9px;
+      color: #fffaf0;
+    }
+
+    .hero .contact-box p {
+      color: #c8d4db;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-bottom: 19px;
+    }
+
+    .hero .contact-box form {
+      gap: 11px;
+    }
+
+    .hero .contact-box input,
+    .hero .contact-box select {
+      min-height: 45px;
+      background: #f5f6f5;
+      border: 1px solid rgba(216,190,140,.2);
+      border-radius: 8px;
+      padding: 11px 13px;
+      font-size: 15px;
+    }
+
+    .hero .contact-box button {
+      min-height: 46px;
+      border-radius: 8px;
+      font-size: 16px;
+      margin-top: 3px;
+    }
+
+    .hero .contact-box small {
+      display: block;
+      margin-top: 15px;
+      color: #aebbc3;
+      font-size: 12px;
+      line-height: 1.6;
+      text-align: center;
+    }
+
+    /* SUBTLE ENTRANCE ANIMATIONS */
+
+    @keyframes seaBreezeReveal {
+      from {
+        opacity: 0;
+        transform: translateY(18px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero .hero-content {
+      animation: seaBreezeReveal 1s ease-out both;
+    }
+
+    .hero .contact-box {
+      animation: seaBreezeReveal 1s ease-out .18s both;
+    }
+
+    /* TABLET */
+
+    @media (max-width: 1100px) {
+
+      .hero .hero-content {
+        max-width: 100%;
+      }
+
+      .hero .hero-content p {
+        margin-right: auto;
+        margin-left: auto;
+      }
+
+    }
+
+    /* MOBILE */
+
+    @media (max-width: 650px) {
+
+      .hero .brand {
+        font-size: clamp(45px, 12vw, 60px);
+        white-space: normal;
+      }
+
+      .hero .eyebrow {
+        font-size: 10px;
+        letter-spacing: 1.5px;
+      }
+
+      .hero .hero-content h2 {
+        font-size: 25px;
+        white-space: normal;
+      }
+
+      .hero .hero-content p {
+        font-size: 16px;
+        line-height: 1.8;
+      }
+
+      .hero .contact-box {
+        padding: 24px 19px;
+      }
+
+      .hero .contact-box h2 {
+        font-size: 25px;
+      }
+
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+
+      .hero .hero-content,
+      .hero .contact-box {
+        animation: none;
+      }
+
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  <!-- HEADER -->
+
+  <header>
+
+    <a href="#" class="logo" aria-label="SeaBreeze IL — דף הבית">
+      SeaBreeze <span>IL</span>
+    </a>
+
+    <nav aria-label="ניווט ראשי">
+      <a href="#">דף הבית</a>
+      <a href="#projects">הפרויקטים</a>
+      <a href="#about">למה באקו?</a>
+      <a href="#contact">צור קשר</a>
+    </nav>
+
+    <a href="#contact" class="gold-btn">
+      דברו איתנו
+    </a>
+
+  </header>
+
+
+  <!-- HERO -->
+
+  <section class="hero" aria-labelledby="hero-title">
+
+    <div class="hero-content">
+
+      <div class="eyebrow" dir="ltr">
+        BAKU &nbsp;|&nbsp; CASPIAN COAST &nbsp;|&nbsp; AZERBAIJAN
+      </div>
+
+      <h1 class="brand" id="hero-title" dir="ltr">
+        SeaBreeze <span>IL</span>
+      </h1>
+
+      <h2>
+        השקעות נדל״ן יוקרתיות על חופי הים הכספי
+      </h2>
+
+      <p>
+        גלו פרויקטי מגורים ונופש נבחרים באזור Sea Breeze בבאקו.
+        היכרות מעמיקה עם הפרויקטים, מידע מקצועי
+        וליווי אישי בעברית לאורך הדרך.
+      </p>
+
+      <a href="#projects" class="gold-btn">
+        גלו את הפרויקטים ←
+      </a>
+
+    </div>
+
+
+    <!-- CONTACT FORM -->
+
+    <div class="contact-box" id="contact">
+
+      <h2>
+        קבלו מחירון ותוכניות
+      </h2>
+
+      <p>
+        מתעניינים בנכס בבאקו?
+        השאירו פרטים ונחזור אליכם.
+      </p>
+
+      <form id="leadForm">
+
+        <input
+          type="text"
+          name="fullName"
+          placeholder="שם מלא"
+          aria-label="שם מלא"
+          autocomplete="name"
+          required
+        >
+
+        <input
+          type="tel"
+          name="phone"
+          placeholder="מספר טלפון"
+          aria-label="מספר טלפון"
+          autocomplete="tel"
+          required
+        >
+
+        <select
+          name="project"
+          aria-label="בחירת פרויקט"
+          required
+        >
+
+          <option value="">בחרו פרויקט</option>
+
+          <option value="BRABUS Island Baku">
+            BRABUS Island Baku
+          </option>
+
+          <option value="Panorama by ELIE SAAB">
+            Panorama by ELIE SAAB
+          </option>
+
+          <option value="Reportage Heights">
+            Reportage Heights
+          </option>
+
+          <option value="Sabah Towers">
+            Sabah Towers
+          </option>
+
+          <option value="Arabian Ranches">
+            Arabian Ranches
+          </option>
+
+          <option value="Marina Village">
+            Marina Village
+          </option>
+
+        </select>
+
+        <button type="submit" class="gold-btn">
+          שליחת פרטים
+        </button>
+
+      </form>
+
+      <small>
+        גרסת הדגמה — הטופס עדיין אינו שולח פניות.
+      </small>
+
+    </div>
+
+  </section>
+
+
+  <!-- PROJECTS — UNCHANGED -->
+
+  <section
+    class="projects"
+    id="projects"
+    aria-labelledby="projects-title"
+  >
+
+    <div class="section-heading">
+
+      <h2 id="projects-title">
+        הפרויקטים שלנו בבאקו
+      </h2>
+
+      <p>
+        פרויקטים נבחרים למגורים, נופש והשקעה
+        על חופי הים הכספי.
+      </p>
+
+    </div>
+
+    <div class="project-grid" id="projectGrid"></div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+
+  <section
+    class="about"
+    id="about"
+    aria-labelledby="about-title"
+  >
+
+    <h2 id="about-title">
+      לגלות את באקו. להכיר את ההזדמנות.
+    </h2>
+
+    <p>
+      באקו משלבת אדריכלות מודרנית, תרבות עשירה
+      ורצועת חוף מרשימה לאורך הים הכספי.
+      אזור Sea Breeze מציע מגוון פרויקטים
+      למגורים ולנופש בסביבה חופית מתפתחת.
+      אנחנו כאן כדי לעזור לכם להכיר את האפשרויות,
+      לבחון את הפרויקטים ולקבל מידע רלוונטי
+      לפני קבלת החלטה.
+    </p>
+
+  </section>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div dir="ltr">
+      SeaBreeze IL © 2026
+    </div>
+
+    <div>
+      אתר עצמאי בהקמה.
+      שם המותג כפוף לאישור.
+    </div>
+
+  </footer>
+
+
+  <!-- JAVASCRIPT -->
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
