@@ -20,14 +20,8 @@
   >
 
   <link rel="stylesheet" href="./style.css">
-<link rel="stylesheet" href="./seabreeze-hero-refinement.css">
-  <!--
-    עיצוב ממוקד לחלק העליון בלבד.
-    אינו משנה את כרטיסי הפרויקטים.
-  -->
 
   <style>
-
     /* HERO TYPOGRAPHY */
 
     .hero .hero-content {
@@ -171,7 +165,6 @@
     /* TABLET */
 
     @media (max-width: 1100px) {
-
       .hero .hero-content {
         max-width: 100%;
       }
@@ -180,13 +173,11 @@
         margin-right: auto;
         margin-left: auto;
       }
-
     }
 
     /* MOBILE */
 
     @media (max-width: 650px) {
-
       .hero .brand {
         font-size: clamp(45px, 12vw, 60px);
         white-space: normal;
@@ -214,19 +205,21 @@
       .hero .contact-box h2 {
         font-size: 25px;
       }
-
     }
 
     @media (prefers-reduced-motion: reduce) {
-
       .hero .hero-content,
       .hero .contact-box {
         animation: none;
       }
-
     }
-
   </style>
+
+  <!-- עיצוב המרינה נטען אחרון כדי לקבל עדיפות -->
+  <link
+    rel="stylesheet"
+    href="./seabreeze-hero-refinement.css"
+  >
 
 </head>
 
@@ -252,7 +245,6 @@
     </a>
 
   </header>
-
 
   <!-- HERO -->
 
@@ -283,7 +275,6 @@
       </a>
 
     </div>
-
 
     <!-- CONTACT FORM -->
 
@@ -323,7 +314,6 @@
           aria-label="בחירת פרויקט"
           required
         >
-
           <option value="">בחרו פרויקט</option>
 
           <option value="BRABUS Island Baku">
@@ -349,7 +339,6 @@
           <option value="Marina Village">
             Marina Village
           </option>
-
         </select>
 
         <button type="submit" class="gold-btn">
@@ -365,7 +354,6 @@
     </div>
 
   </section>
-
 
   <!-- PROJECTS — UNCHANGED -->
 
@@ -392,7 +380,6 @@
 
   </section>
 
-
   <!-- ABOUT -->
 
   <section
@@ -417,7 +404,6 @@
 
   </section>
 
-
   <!-- FOOTER -->
 
   <footer>
@@ -433,8 +419,7 @@
 
   </footer>
 
-
-  <!-- JAVASCRIPT -->
+  <!-- JAVASCRIPT — UNCHANGED -->
 
   <script src="./script.js"></script>
 
