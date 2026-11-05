@@ -1,0 +1,272 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>מאמרים ומדריכים | OHAYON PROPERTIES BAKU</title>
+  <meta name="description" content="מאמרים ומדריכים מקצועיים על באקו, אזרבייג'ן, השקעות נדל״ן, תיירות, מיסוי ופרויקטים ב-Sea Breeze.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy: #0b2239;
+      --deep: #061522;
+      --gold: #c9a76a;
+      --cream: #f6f3ed;
+      --muted: #64748b;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: 'Heebo', sans-serif;
+      background: var(--cream);
+      color: var(--navy);
+    }
+    a { text-decoration: none; color: inherit; }
+    .container { width: min(1160px, 92%); margin: auto; }
+    header {
+      background: var(--deep);
+      border-bottom: 1px solid rgba(201,167,106,.35);
+    }
+    .nav {
+      min-height: 90px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+    .logo {
+      font-family: 'Manrope', sans-serif;
+      font-size: 23px;
+      font-weight: 800;
+      color: white;
+      letter-spacing: -1px;
+      direction: ltr;
+      text-align: left;
+    }
+    .logo span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--gold);
+      margin-top: 4px;
+    }
+    .back {
+      color: #e8e2d6;
+      font-weight: 600;
+    }
+    .hero {
+      background: linear-gradient(135deg, #061522, #123653);
+      color: white;
+      padding: 90px 0 100px;
+      text-align: center;
+    }
+    .eyebrow {
+      color: var(--gold);
+      font-family: 'Manrope', sans-serif;
+      letter-spacing: 3px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+    h1 {
+      font-size: clamp(38px, 5vw, 66px);
+      line-height: 1.2;
+      margin: 22px 0;
+    }
+    .hero p {
+      max-width: 650px;
+      margin: auto;
+      color: #d4dde6;
+      font-size: 19px;
+      line-height: 1.9;
+    }
+    .gold-line {
+      width: 65px;
+      height: 3px;
+      background: var(--gold);
+      margin: 30px auto;
+    }
+    main { padding: 75px 0 100px; }
+    .section-title {
+      font-size: 30px;
+      margin: 0 0 12px;
+    }
+    .intro {
+      color: var(--muted);
+      margin-bottom: 35px;
+      line-height: 1.8;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 25px;
+    }
+    .card {
+      background: white;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e5e7eb;
+      transition: transform .25s, box-shadow .25s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 16px 35px rgba(6,21,34,.12);
+    }
+    .visual {
+      height: 175px;
+      background: linear-gradient(135deg, #0b2239, #235171);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--gold);
+      font: 800 42px 'Manrope', sans-serif;
+      letter-spacing: -2px;
+    }
+    .card-body { padding: 26px; }
+    .category {
+      color: #9a763f;
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .card h2 {
+      font-size: 23px;
+      line-height: 1.45;
+      margin: 12px 0;
+    }
+    .card p {
+      color: var(--muted);
+      line-height: 1.8;
+      font-size: 15px;
+    }
+    .status {
+      display: inline-block;
+      margin-top: 16px;
+      padding-top: 14px;
+      border-top: 1px solid #eee;
+      color: #8a6a39;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .notice {
+      margin-top: 40px;
+      padding: 22px;
+      background: #ebe6dc;
+      border-right: 3px solid var(--gold);
+      line-height: 1.8;
+      color: #435064;
+    }
+    footer {
+      background: var(--deep);
+      color: #cbd5e1;
+      padding: 35px 0;
+      text-align: center;
+    }
+    footer strong {
+      font-family: 'Manrope', sans-serif;
+      color: white;
+    }
+    @media (max-width: 850px) {
+      .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 600px) {
+      .grid { grid-template-columns: 1fr; }
+      .nav { min-height: 76px; }
+      .logo { font-size: 17px; }
+      .logo span { font-size: 8px; letter-spacing: 2px; }
+      .hero { padding: 65px 0; }
+      main { padding: 50px 0; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a href="./index.html" class="logo">
+        OHAYON
+        <span>PROPERTIES | BAKU</span>
+      </a>
+      <a class="back" href="./index.html">חזרה לאתר הראשי ←</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <div class="eyebrow">OHAYON PROPERTIES | BAKU</div>
+      <h1>מאמרים ומדריכים</h1>
+      <div class="gold-line"></div>
+      <p>
+        כל מה שחשוב להכיר על באקו, אזרבייג'ן
+        ושוק הנדל״ן המתפתח לחופי הים הכספי.
+        מידע, סקירות ותובנות למשקיע הישראלי.
+      </p>
+    </div>
+  </section>
+
+  <main class="container">
+    <h2 class="section-title">לגלות. להבין. להשקיע.</h2>
+    <p class="intro">
+      סדרת מאמרים על הכלכלה, התיירות,
+      ההזדמנויות וההיבטים המשפטיים
+      של השקעות נדל״ן באזרבייג'ן.
+    </p>
+
+    <div class="grid">
+
+      <article class="card">
+        <div class="visual">01</div>
+        <div class="card-body">
+          <div class="category">באקו ואזרבייג'ן</div>
+          <h2>באקו 2026: העיר שבה המזרח פוגש את המערב</h2>
+          <p>
+            היכרות עם בירת אזרבייג'ן:
+            תרבות, תיירות, כלכלה ושוק הנדל״ן.
+          </p>
+          <div class="status">המאמר המלא יעלה בקרוב</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">06</div>
+        <div class="card-body">
+          <div class="category">מיסוי והשקעות</div>
+          <h2>מיסוי נדל״ן באזרבייג'ן ובישראל</h2>
+          <p>
+            מה חשוב למשקיע ישראלי לבדוק
+            לפני רכישה, השכרה או מכירת נכס בחו״ל?
+          </p>
+          <div class="status">המאמר המלא יעלה בקרוב</div>
+        </div>
+      </article>
+
+      <article class="card">
+        <div class="visual">15</div>
+        <div class="card-body">
+          <div class="category">מדריכי השקעה</div>
+          <h2>מאמר נוסף בסדרת המדריכים</h2>
+          <p>
+            תכנים נוספים מתוך סדרת 15 המאמרים
+            נמצאים בהכנה לפרסום באתר.
+          </p>
+          <div class="status">בקרוב</div>
+        </div>
+      </article>
+
+    </div>
+
+    <div class="notice">
+      המאמרים מיועדים למידע כללי בלבד ואינם מהווים
+      ייעוץ משפטי, מיסויי או השקעות. לפני קבלת
+      החלטות יש להיעזר באנשי מקצוע מוסמכים.
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <strong>OHAYON PROPERTIES | BAKU</strong>
+      <p>© 2026 כל הזכויות שמורות</p>
+    </div>
+  </footer>
+</body>
+</html>
