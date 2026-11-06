@@ -52,7 +52,7 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .hero{position:relative;height:940px;min-height:680px;overflow:hidden;background:#000;}
 .hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.15) contrast(1.08) brightness(.7);animation:kb 18s ease-out both;}
 @keyframes kb{from{transform:scale(1.1);}to{transform:scale(1);}}
-.sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.2) 55%,#000 100%);}
+.sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.2) 55%,#0C0C0D 100%);}
 .hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:84px;}
 .crumb{font-size:13px;color:#9A9A9A;margin-bottom:26px;}
 .crumb a{color:#9A9A9A;}
@@ -64,7 +64,7 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .d1{animation-delay:.12s;}.d2{animation-delay:.24s;}.d3{animation-delay:.36s;}.d4{animation-delay:.5s;}
 @keyframes up{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:none;}}
 /* data strip */
-.data{border-top:1px solid #232325;border-bottom:1px solid #232325;background:#0C0C0D;}
+.data{background:#0C0C0D;}
 .data-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
 .di{padding:28px 26px;border-left:1px solid #262626;position:relative;}
 .di:last-child{border-left:0;}
@@ -75,8 +75,8 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .dsrc{font-size:12px;color:#6E6E6E;padding:14px 0;text-align:left;direction:rtl;}
 .dsrc a{color:#9A9A9A;text-decoration:underline;}
 /* sections */
-.sec{padding:130px 0;}
-.alt{background:#151517;}
+.sec{padding:104px 0 76px;}
+.alt{background:linear-gradient(180deg,#0C0C0D 0,#151517 120px,#151517 calc(100% - 120px),#0C0C0D 100%);}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:56px;}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:80px;align-items:center;}
 .ov-img{position:relative;height:480px;clip-path:polygon(0 0,100% 0,100% 100%,60px 100%,0 calc(100% - 60px));}
@@ -134,6 +134,9 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .draft{display:inline-block;margin-top:24px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#000;background:#fff;padding:6px 12px;}
 /* contact */
 .ct{position:relative;overflow:hidden;}
+.ct::before,.ct::after{content:"";position:absolute;left:0;right:0;height:140px;z-index:1;pointer-events:none;}
+.ct::before{top:0;background:linear-gradient(180deg,#0C0C0D,rgba(12,12,13,0));}
+.ct::after{bottom:0;background:linear-gradient(0deg,#0C0C0D,rgba(12,12,13,0));}
 .ct-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.25);}
 .ct-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:80px;align-items:center;}
 .form{background:rgba(0,0,0,.85);border:1px solid #3A3A3A;padding:44px;display:flex;flex-direction:column;gap:18px;}
@@ -149,7 +152,7 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .rc:hover img{filter:none;}
 .rc div{position:absolute;right:0;left:0;bottom:0;padding:24px 28px;}
 .rc strong{font-family:'Barlow Condensed',sans-serif;font-weight:600;font-style:normal;letter-spacing:.04em;font-size:24px;color:#fff;direction:ltr;display:block;text-align:right;text-transform:uppercase;}
-.ftr{background:#000;border-top:1px solid #262626;padding:56px 0 32px;}
+.ftr{background:#0C0C0D;padding:56px 0 32px;}
 .legal{display:flex;justify-content:space-between;gap:24px;font-size:12px;color:#6E6E6E;line-height:1.7;margin-top:36px;padding-top:24px;border-top:1px solid #1C1C1C;}
 .fab{position:fixed;left:28px;bottom:28px;z-index:50;width:60px;height:60px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.6);}
 .fab:hover{background:#DDD;color:#000;}
@@ -184,7 +187,7 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .di::before{right:18px;}
 .dn{font-size:32px;}
 .dn small{font-size:14px;}
-.sec{padding:84px 0;}
+.sec{padding:80px 0 56px;}
 .h2{font-size:32px;}
 #c-title{font-size:34px !important;}
 #r-title{font-size:28px !important;}

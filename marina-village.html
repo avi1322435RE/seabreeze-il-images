@@ -57,6 +57,7 @@ a{color:inherit;text-decoration:none;}
 .d1{animation-delay:.15s;}.d2{animation-delay:.3s;}.d3{animation-delay:.45s;}
 @keyframes up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:none;}}
 .data{background:var(--dark);color:var(--dark-ink);}
+.hero-sh::after{content:"";position:absolute;left:0;right:0;bottom:0;height:140px;background:linear-gradient(180deg,rgba(0,0,0,0),var(--dark));}
 .data-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
 .di{padding:30px 26px;border-left:1px solid rgba(255,255,255,.12);}
 .di:last-child{border-left:0;}
@@ -65,7 +66,7 @@ a{color:inherit;text-decoration:none;}
 .dl{font-size:14px;opacity:.75;margin-top:8px;}
 .dsrc{font-size:12px;opacity:.6;padding:12px 0;text-align:left;}
 .dsrc a{text-decoration:underline;}
-.sec{padding:110px 0;}
+.sec{padding:104px 0 70px;}
 .alt{background:var(--alt);}
 .head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:44px;}
 .split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:80px;align-items:center;}
@@ -159,7 +160,7 @@ a{color:inherit;text-decoration:none;}
 .di{padding:22px 16px;}
 .dn{font-size:28px;}
 .dn.he{font-size:18px;}
-.sec{padding:76px 0;}
+.sec{padding:88px 0 56px;}
 .h2{font-size:30px;}
 .head{flex-direction:column;align-items:flex-start;gap:16px;margin-bottom:30px;}
 .ov-img{height:340px;}
@@ -212,7 +213,7 @@ a{color:inherit;text-decoration:none;}
 
 <section class="data" aria-label="נתוני הפרויקט"><div class="wrap"><div class="data-g"><div class="di"><div class="dn he">מרינה</div><div class="dl">ויאכטות מול הבית, לפי ההדמיות</div></div><div class="di"><div class="dn he">לגונה</div><div class="dl">בריכות וגשרונים בין הבניינים</div></div><div class="di"><div class="dn">2–3<span style="font-size:.5em"> MIN</span></div><div class="dl">הליכה לים, לקזינו ול-Dream Arena</div></div><div class="di"><div class="dn">Sabah</div><div class="dl">Sabah Development</div></div></div><div class="dsrc">מקורות: קטלוג הפרויקט · <a href="https://report.az/en/infrastructure/sabah-development-a-step-into-the-future-how-sabah-shapes-tomorrow" rel="noopener">Report.az</a> · <a href="https://www.khaleejtimes.com/property/reportage-group-and-sabah-investment-group-showcase-their-sea-breeze-projects-and-highlight-investment-opportunities-in-azerbaijan" rel="noopener">Khaleej Times</a>. נבדק 6.11.2026</div></div></section>
 
-<section class="sec" id="overview" aria-labelledby="ov-t">
+<section class="sec" style="background:linear-gradient(180deg,#0F3049 0px,#193951 14px,#345065 28px,#5B7183 41px,#8798A4 55px,#B3BEC5 69px,#DADFE3 82px,#F5F6F7 96px,#FFFFFF 110px,#FFFFFF 100%)" id="overview" aria-labelledby="ov-t">
 <div class="wrap split">
 <div class="rv">
 <div class="eb">The Project</div><div class="ln"></div>
@@ -225,7 +226,7 @@ a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<section class="sec alt" id="gallery" aria-labelledby="g-t">
+<section class="sec alt" style="background:linear-gradient(180deg,#FFFFFF 0px,#FEFFFF 14px,#FCFEFE 28px,#FAFCFC 41px,#F6FAFA 55px,#F3F9F9 69px,#F1F7F7 82px,#EFF6F6 96px,#EEF6F6 110px,#EEF6F6 100%)" id="gallery" aria-labelledby="g-t">
 <div class="wrap">
 <div class="head rv"><div><div class="eb">Gallery</div><div class="ln"></div><h2 class="h2" id="g-t">מבט מקרוב</h2></div><p class="p">הדמיות מתוך קטלוג הפרויקט, להמחשה בלבד.</p></div>
 <div class="gmain rv"><img id="gimg" src="assets/img/marina/hero.jpg" alt="Marina Village – הדמיה">
@@ -237,14 +238,14 @@ a{color:inherit;text-decoration:none;}
 
 
 
-<section class="sec" aria-labelledby="am-t">
+<section class="sec" style="background:linear-gradient(180deg,#EEF6F6 0px,#EFF6F6 14px,#F1F7F7 28px,#F3F9F9 41px,#F6FAFA 55px,#FAFCFC 69px,#FCFEFE 82px,#FEFFFF 96px,#FFFFFF 110px,#FFFFFF 100%)" aria-labelledby="am-t">
 <div class="wrap">
 <div class="head rv"><div><div class="eb">Resort Life</div><div class="ln"></div><h2 class="h2" id="am-t">נופש כל השנה</h2></div><p class="p">שטחים משותפים לפי הקטלוג. ההיקף כפוף למסמכי הפרויקט.</p></div>
 <div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/marina/p12.jpg" alt="לגונת הבריכות – הדמיה" loading="lazy"></div><div class="cap"><span>LAGOON</span><strong>לגונת בריכות</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/marina/p8.jpg" alt="טיילת המרינה – הדמיה" loading="lazy"></div><div class="cap"><span>MARINA</span><strong>טיילת המרינה</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/marina/p15.jpg" alt="דירה לדוגמה – הדמיה" loading="lazy"></div><div class="cap"><span>INTERIORS</span><strong>דירות מוארות</strong></div></div></div>
 </div>
 </section>
 
-<section class="sec alt" id="pricing" aria-label="מחירים והערכה מקצועית">
+<section class="sec alt" style="background:linear-gradient(180deg,#FFFFFF 0px,#FEFFFF 14px,#FCFEFE 28px,#FAFCFC 41px,#F6FAFA 55px,#F3F9F9 69px,#F1F7F7 82px,#EFF6F6 96px,#EEF6F6 110px,#EEF6F6 100%)" id="pricing" aria-label="מחירים והערכה מקצועית">
 <div class="wrap two">
 <div class="box rv">
 <div class="eb">Pricing</div>
@@ -265,7 +266,7 @@ a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<section class="sec ct" id="contact" aria-labelledby="ct-t">
+<section class="sec ct" style="background:linear-gradient(180deg,#EEF6F6 0px,#E4EDEF 14px,#CBD7DB 28px,#A7B7BF 41px,#7E93A0 55px,#566F80 69px,#324F64 82px,#193950 96px,#0F3049 110px,#0F3049 100%)" id="contact" aria-labelledby="ct-t">
 <div class="wrap ct-g">
 <div class="rv">
 <div class="eb" style="color:#F2C594">Marina Village</div><div class="ln" style="background:#F2C594"></div>
@@ -284,14 +285,14 @@ a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<section class="sec alt" style="padding:90px 0" aria-labelledby="r-t">
+<section class="sec alt" style="background:linear-gradient(180deg,#0F3049 0px,#193950 14px,#324F64 28px,#566F80 41px,#7E93A0 55px,#A7B7BF 69px,#CBD7DB 82px,#E4EDEF 96px,#EEF6F6 110px,#EEF6F6 100%); padding:90px 0 60px" aria-labelledby="r-t">
 <div class="wrap">
 <div class="head" style="margin-bottom:30px"><div><div class="eb">More Projects</div><div class="ln"></div><h2 class="h2" id="r-t" style="font-size:34px">פרויקטים נוספים</h2></div><a href="index.html#projects" class="btn b-ghost" style="color:var(--ink)">לכל הפרויקטים</a></div>
 <div class="rel"><a class="rc rv" href="arabian-ranches.html"><div class="shape"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy"></div><strong>Arabian Ranches Baku</strong></a><a class="rc rv" href="brabus.html"><div class="shape"><img src="assets/img/projects/brabus-island.jpg" alt="BRABUS Island – הדמיה" loading="lazy"></div><strong>BRABUS Island</strong></a><a class="rc rv" href="sabah-towers.html"><div class="shape"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy"></div><strong>Sabah Towers</strong></a></div>
 </div>
 </section>
 
-<footer class="ftr"><div class="wrap">
+<footer class="ftr" style="background:linear-gradient(180deg,#EEF6F6 0px,#E4EDED 12px,#CAD4D7 25px,#A5B1B6 38px,#7B8892 50px,#51606D 62px,#2C3D4C 75px,#122436 88px,#081B2D 100px,#081B2D 100%);padding-top:120px"><div class="wrap">
 <img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height:44px;width:auto">
 <div class="legal"><span>OHAYON PROPERTIES | BAKU הוא משווק עצמאי, ואינו האתר הרשמי של היזמים או של המותגים. שמות המותגים שייכים לבעליהם. הדמיות מתוך קטלוג הפרויקט, להמחשה בלבד. אין לראות במידע הצעה מחייבת.</span><span dir="ltr">© 2026 OHAYON PROPERTIES | BAKU</span></div>
 </div></footer>
