@@ -207,8 +207,16 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <style id="contrast-v1">
+.hero .eb{white-space:nowrap;margin-bottom:34px!important}
+.hero .brands i{font-style:normal;font-family:'Heebo',sans-serif;font-weight:200;color:#CBB089;margin:0 .7em;letter-spacing:0}
+.hero .lead{margin:22px 0 34px!important}
 @media (max-width:860px){
-.hero .eb,.hero .ln,.hero .htrust,.hero .scroll{display:none!important}
+.hero .eb{display:block!important;font-size:10px!important;letter-spacing:.1em!important;margin-bottom:22px!important;white-space:nowrap}
+.hero .lead{font-size:inherit!important}
+.hero .h1{font-size:28px!important}
+}
+@media (max-width:860px){
+.hero .ln,.hero .htrust,.hero .scroll{display:none!important}
 .hero .lead{font-size:0!important;margin:14px 0 26px!important}
 .hero .lead .brands{font-size:12px!important;margin:0!important;letter-spacing:.14em!important}
 .hero .ctas .b-line{display:none!important}
@@ -373,8 +381,8 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div style="max-width: 760px">
 <div class="eb up">Luxury Residences · Sea Breeze · Baku</div>
 <div class="ln up d1"></div>
-<h1 class="h1 up d1" id="hero-title">המותגים הגדולים בעולם.<br><span>על חוף הים הכספי.</span></h1>
-<p class="lead up d2"><span class="brands" dir="ltr">BRABUS · ELIE SAAB · REPORTAGE</span>פרויקטי היוקרה של Sea Breeze בבאקו, בשיווק ישיר מול היזם, ללא דמי תיווך ובליווי אישי בעברית.</p>
+<h1 class="h1 up d1" id="hero-title">השקעות נדל״ן<br>על חוף הים הכספי<br><span>ביעד החם בעולם – באקו</span></h1>
+<p class="lead up d2"><span class="brands" dir="ltr">BRABUS <i aria-hidden="true">|</i> ELIE SAAB <i aria-hidden="true">|</i> REPORTAGE</span></p>
 <div class="ctas up d3" style="display: flex; gap: 16px">
 <a href="#projects" class="btn b-gold">לגלות את הפרויקטים</a>
 <a href="#contact" class="btn b-line">
