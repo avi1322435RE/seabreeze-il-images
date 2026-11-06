@@ -341,6 +341,11 @@ html.a11y-noanim .card.zm,html.a11y-noanim .card.zm img{transform:none!important
 /* hero headline emphasis */
 .hero h1{color:#FFFFFF;font-weight:500!important;text-shadow:0 2px 22px rgba(4,15,27,.55)}
 .hero h1 span{font-weight:400!important;text-shadow:0 2px 20px rgba(4,15,27,.6)}
+
+/* mobile: tighten hero -> collection gap; stronger section eyebrows */
+@media (max-width:860px){.hero{height:auto!important;min-height:0!important}.hero-in{height:auto!important;padding-top:210px!important;padding-bottom:64px!important}#projects{--f:110px;padding-top:118px!important}}
+.sec .eb,.cream .eb{font-weight:600;font-size:14px!important;letter-spacing:.24em!important;color:#7A531A!important;-webkit-text-stroke:.35px currentColor}
+.sec:not(.cream) .eb{color:#D9BC85!important}
 </style>
 <style id="a11y-css">
 .skip{position:fixed;top:-80px;right:16px;z-index:10000;background:#FFFFFF;color:#081B2D;padding:12px 22px;border-radius:999px;font:500 15px 'Heebo',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:top .2s ease;text-decoration:none}
