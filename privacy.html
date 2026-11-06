@@ -214,7 +214,6 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 </section>
 <section class="cbody"><div class="wrap"><div class="doc">
 
-<div class="draft">טיוטה: מסמך זה נכתב כבסיס, ויש להעביר אותו לבדיקת עורך דין לפני העלייה לאוויר.</div>
 
 <h2>כללי</h2>
 <p>אנו ב-OHAYON PROPERTIES | BAKU (עוסק מורשה מס' 203561782) מכבדים את פרטיותכם. מדיניות זו מסבירה איזה מידע נאסף באתר, למה, ומה הזכויות שלכם. המדיניות נכתבה בהתאם לחוק הגנת הפרטיות, התשמ"א-1981, כפי שתוקן בתיקון 13 שנכנס לתוקף באוגוסט 2025.</p>
@@ -236,10 +235,10 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <p>אינכם חייבים למסור לנו מידע, אך בלי פרטי קשר לא נוכל לחזור אליכם.</p>
 
 <h2>עם מי המידע משותף</h2>
-<p>איננו מוכרים את המידע שלכם. המידע עשוי להיות מועבר רק לגורמים שעוזרים לנו לתת את השירות, כמו ספק שירות הטפסים או מערכת ניהול הפניות (<span class="ph">[שם הספק, למשל Formspree / Google Forms / CRM]</span>), ובמקרה שתבקשו זאת, לנציגי היזם של הפרויקט שבו התעניינתם. ייתכן שספקים אלה שומרים מידע מחוץ לישראל.</p>
+<p>איננו מוכרים את המידע שלכם. המידע עשוי להיות מועבר רק לגורמים שעוזרים לנו לתת את השירות, כמו שירות הדוא״ל שבו מתקבלות הפניות (Gmail של Google), ובמקרה שתבקשו זאת, לנציגי היזם של הפרויקט שבו התעניינתם. ייתכן שספקים אלה שומרים מידע מחוץ לישראל.</p>
 
 <h2>אבטחת מידע ושמירה</h2>
-<p>האתר מוגש בחיבור מוצפן (HTTPS). אנו נוקטים אמצעים סבירים כדי להגן על המידע, ושומרים אותו רק כל עוד הוא נחוץ למטרות שלשמן נמסר: <span class="ph">[תקופת שמירה, למשל 24 חודשים מהפנייה האחרונה]</span>.</p>
+<p>האתר מוגש בחיבור מוצפן (HTTPS). אנו נוקטים אמצעים סבירים כדי להגן על המידע, ושומרים אותו רק כל עוד הוא נחוץ למטרות שלשמן נמסר.</p>
 
 <h2>הזכויות שלכם</h2>
 <p>אתם זכאים לעיין במידע שנשמר עליכם, לבקש לתקן אותו, ולבקש למחוק אותו, בהתאם לחוק. לכל בקשה בנושא פרטיות: <a href="mailto:ohayon.baku@gmail.com">ohayon.baku@gmail.com</a>.</p>
@@ -297,5 +296,15 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
 </body>
 </html>

@@ -219,7 +219,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 
 <h2>רמת הנגישות באתר</h2>
 <p>התאמות הנגישות באתר בוצעו בהתאם לתקנה 35 לתקנות שוויון זכויות לאנשים עם מוגבלות (התאמות נגישות לשירות), התשע"ג-2013, ולתקן הישראלי ת"י 5568 המבוסס על הנחיות WCAG 2.0, לרמה AA, ככל שהדבר ניתן.</p>
-<p>בדיקת האתר על ידי מורשה נגישות או מומחה נגישות חיצוני: <span class="ph">[טרם בוצעה / תאריך הבדיקה ושם הבודק]</span>.</p>
+<p>בדיקת האתר על ידי מורשה נגישות או מומחה נגישות חיצוני: טרם בוצעה.</p>
 
 <h2>מה עשינו כדי להנגיש את האתר</h2>
 <ul>
@@ -250,13 +250,9 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 </ul>
 <p>אנו ממשיכים לשפר את נגישות האתר באופן שוטף.</p>
 
-<h2>הסדרי נגישות פיזיים</h2>
-<p><span class="ph">[אם יש משרד או מקום לקבלת קהל: כתובת והסדרי הנגישות במקום. אם אין, אפשר למחוק סעיף זה]</span></p>
-
 <h2>נתקלתם בבעיה? פנו אלינו</h2>
 <p>אם מצאתם באתר תוכן שאינו נגיש, או שאתם זקוקים למידע בדרך אחרת, נשמח לשמוע ולתקן. כדי שנוכל לטפל בפנייה, נשמח לקבל תיאור הבעיה, כתובת העמוד, והדפדפן או הטכנולוגיה המסייעת שבה השתמשתם.</p>
 <p><strong>רכז/ת הנגישות:</strong> אבי בן דוד<br>
-<strong>טלפון:</strong> <span class="ph">[יעודכן בקרוב]</span><br>
 <strong>דוא"ל:</strong> <a href="mailto:ohayon.baku@gmail.com">ohayon.baku@gmail.com</a></p>
 
 <p><strong>הצהרת הנגישות עודכנה לאחרונה:</strong> 6 בנובמבר 2026</p>
@@ -310,5 +306,15 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
 </body>
 </html>

@@ -265,7 +265,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <a class="mi" href="#why" onclick="tm()">למה באקו</a>
 <a class="mi" href="#process" onclick="tm()">תהליך הרכישה</a>
 <a class="mi" href="#contact" onclick="tm()">צור קשר</a>
-<a href="#contact" class="btn b-gold" style="margin-top: 36px" onclick="tm()">שיחה ב-WhatsApp</a>
+<a href="#contact" class="btn b-gold" style="margin-top: 36px" onclick="tm()">השאירו פרטים</a>
 </nav>
 </div>
 
@@ -301,7 +301,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <a href="#projects" class="btn b-gold">לגלות את הפרויקטים</a>
 <a href="#contact" class="btn b-line">
 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>
-WhatsApp
+השאירו פרטים
 </a>
 </div>
 </div>
@@ -336,10 +336,7 @@ WhatsApp
 <div class="ab-img rv">
 <div class="ab-fr"></div>
 <img src="assets/img/about-interior.jpg" alt="חלל מגורים בפרויקט BRABUS Island – הדמיה" loading="lazy" decoding="async">
-<div class="ab-por">
-<svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-<span>[התמונה המקצועית שלך]</span>
-</div>
+
 </div>
 <div class="rv">
 <div class="eb">About</div>
@@ -368,10 +365,10 @@ WhatsApp
 <a href="#why" class="btn b-navy">למדריך המלא למשקיע</a>
 </div>
 <div class="why">
-<div class="wi rv"><div class="wn">01</div><h3>כלכלה מתפתחת</h3><p>מעבר הדרגתי מנפט וגז להשקעה בתשתיות, בתיירות ובפיתוח עירוני.</p><span class="src">[נתון + מקור]</span></div>
-<div class="wi rv"><div class="wn">02</div><h3>תיירות בצמיחה</h3><p>עיר עתיקה מוכרת על ידי UNESCO, טיילת חוף ואירועים בינלאומיים.</p><span class="src">[נתון + מקור]</span></div>
-<div class="wi rv"><div class="wn">03</div><h3>קרבה לישראל</h3><p>יחסים ארוכי שנים, וטיסה קצרה יחסית מישראל.</p><span class="src">[משך טיסה מאומת]</span></div>
-<div class="wi rv"><div class="wn">04</div><h3>חוף בפיתוח</h3><p>מתחמים חדשים כמו Sea Breeze משנים את קו החוף של באקו.</p><span class="src">[נתון + מקור]</span></div>
+<div class="wi rv"><div class="wn">01</div><h3>כלכלה מתפתחת</h3><p>מעבר הדרגתי מנפט וגז להשקעה בתשתיות, בתיירות ובפיתוח עירוני.</p></div>
+<div class="wi rv"><div class="wn">02</div><h3>תיירות בצמיחה</h3><p>עיר עתיקה מוכרת על ידי UNESCO, טיילת חוף ואירועים בינלאומיים.</p></div>
+<div class="wi rv"><div class="wn">03</div><h3>קרבה לישראל</h3><p>יחסים ארוכי שנים, וטיסה קצרה יחסית מישראל.</p></div>
+<div class="wi rv"><div class="wn">04</div><h3>חוף בפיתוח</h3><p>מתחמים חדשים כמו Sea Breeze משנים את קו החוף של באקו.</p></div>
 </div>
 </div>
 </section>
@@ -404,12 +401,12 @@ WhatsApp
 <div class="ln"></div>
 <h2 class="h2" id="contact-title">בואו נדבר על<br>ההשקעה הבאה שלכם</h2>
 <p class="p" style="margin-top: 28px">שיחת ייעוץ אישית של 20 דקות, בלי התחייבות. נבין מה אתם מחפשים, ונגיד לכם בכנות אם יש פרויקט שמתאים.</p>
-<a class="wa" href="#contact">
+<a class="wa" href="mailto:ohayon.baku@gmail.com">
 <span class="wa-ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg></span>
-<span><strong style="display: block; font-weight: 500; font-size: 16px">WhatsApp</strong><span style="font-size: 14px; color: #5C646E">[המספר שלך] · מענה אישי בעברית</span></span>
+<span><strong style="display: block; font-weight: 500; font-size: 16px">דוא״ל</strong><span style="font-size: 14px; color: #5C646E" dir="ltr">ohayon.baku@gmail.com</span></span>
 </a>
 </div>
-<form class="form rv" aria-label="טופס יצירת קשר">
+<form onsubmit="sendLead(this.querySelector('button'));return false" class="form rv" aria-label="טופס יצירת קשר">
 <div style="font-weight: 300; font-size: 22px; color: #0A2238; margin-bottom: 6px">קבלו מחירון ותוכניות</div>
 <label>שם מלא<input type="text" name="name" autocomplete="name" required aria-required="true"></label>
 <label>טלפון<input type="tel" name="phone" autocomplete="tel" required aria-required="true" dir="ltr" style="text-align: right"></label>
@@ -424,7 +421,7 @@ WhatsApp
 <option>Marina Village</option>
 </select>
 </label>
-<button type="button" onclick="alert('הטופס יחובר לקבלת פניות בשלב הבא.')" class="btn b-gold" style="margin-top: 16px; background: #0A2238; color: #F4EFE6; border-color: #0A2238">שליחה</button>
+<button type="button" onclick="sendLead(this)" class="btn b-gold" style="margin-top: 16px; background: #0A2238; color: #F4EFE6; border-color: #0A2238">שליחה</button>
 <p class="small">הפרטים ישמשו ליצירת קשר בלבד. <a href="privacy.html" style="color: #8A6A35; text-decoration: underline">מדיניות פרטיות</a></p>
 </form>
 </div>
@@ -450,11 +447,11 @@ WhatsApp
 </div>
 </footer>
 
-<a class="fab" href="#contact" aria-label="שיחה ב-WhatsApp">
+<a class="fab" href="#contact" aria-label="השאירו פרטים">
 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>
 </a>
 <nav class="mbar" aria-label="יצירת קשר מהירה">
-<a href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>WhatsApp</a>
+<a href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>השאירו פרטים</a>
 <a href="#contact"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"></path></svg>התקשרו</a>
 <a href="#projects"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M3 21h18M5 21V8l7-5 7 5v13"></path></svg>פרויקטים</a>
 </nav>
@@ -490,5 +487,15 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
 </body>
 </html>

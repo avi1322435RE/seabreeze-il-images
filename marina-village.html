@@ -251,7 +251,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <p class="htag up d2">כפר מגורים בסגנון ים-תיכוני, בין המרינה ללגונה של בריכות.</p>
 <div class="ctas up d3" style="display:flex;gap:14px">
 <a href="#contact" class="btn b-main">קבלו מחירון ותוכניות</a>
-<a href="#contact" class="btn b-ghost" style="color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> WhatsApp</a>
+<a href="#contact" class="btn b-ghost" style="color:#fff"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> השאירו פרטים</a>
 </div>
 </div>
 </section>
@@ -291,22 +291,13 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 </section>
 
 <section class="sec alt" style="background:linear-gradient(180deg,#FFFFFF 0px,#FEFFFF 14px,#FCFEFE 28px,#FAFCFC 41px,#F6FAFA 55px,#F3F9F9 69px,#F1F7F7 82px,#EFF6F6 96px,#EEF6F6 110px,#EEF6F6 100%)" id="pricing" aria-label="מחירים והערכה מקצועית">
-<div class="wrap two">
+<div class="wrap" style="max-width:860px">
 <div class="box rv">
 <div class="eb">Pricing</div>
 <h3>מחירון ותוכנית תשלום</h3>
 <p class="p">אנחנו לא מפרסמים מחירים שלא אומתו מול היזם. השאירו פרטים, ונשלח לכם את המחירון ואת תוכנית התשלום העדכניים, עם תאריך העדכון.</p>
 <ul class="lst"><li><i></i>מחירון עדכני לפי סוג יחידה</li><li><i></i>פריסת תשלומים מול שלבי הבנייה</li><li><i></i>עלויות נלוות: דמי ניהול, מיסים ועמלות</li></ul>
 <a href="#contact" class="btn b-main" style="margin-top:28px">שלחו לי מחירון</a>
-</div>
-<div class="box dk rv">
-<div class="eb" style="color:#F2C594">Ohayon View</div>
-<h3>ההערכה המקצועית שלנו</h3>
-<div style="display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px">
-<div><div style="font-weight:500;font-size:14px">מה מושך</div><ul class="lst"><li><i></i>אווירת נופש ים-תיכונית</li><li><i></i>מרינה ובריכות בתוך המתחם</li><li><i></i>מתאים גם לשימוש עצמי בחופשות</li></ul></div>
-<div><div style="font-weight:500;font-size:14px">מה לבדוק</div><ul class="lst"><li><i style="background:currentColor;opacity:.6"></i>תמהיל ושטחי הדירות</li><li><i style="background:currentColor;opacity:.6"></i>מועדי מסירה ולוח תשלומים</li><li><i style="background:currentColor;opacity:.6"></i>דמי ניהול לבריכות ולמרינה</li></ul></div>
-</div>
-<span class="draft">טיוטה – לניסוח סופי שלך</span>
 </div>
 </div>
 </section>
@@ -317,14 +308,14 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="eb" style="color:#F2C594">Marina Village</div><div class="ln" style="background:#F2C594"></div>
 <h2 class="h2" id="ct-t">רוצים לשמוע עוד<br>על Marina Village?</h2>
 <p class="p" style="margin-top:22px">נשלח לכם מחירון ותוכניות עדכניים, ונענה על כל שאלה בשיחה אישית בעברית.</p>
-<a href="#contact" class="btn b-main" style="margin-top:28px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> WhatsApp: [המספר שלך]</a>
+<a href="#contact" class="btn b-main" style="margin-top:28px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> השאירו פרטים</a>
 </div>
-<form class="form rv" aria-label="טופס פנייה על Marina Village" onsubmit="return false">
+<form onsubmit="sendLead(this.querySelector('button'));return false" class="form rv" aria-label="טופס פנייה על Marina Village">
 <div style="font-family:var(--hfont);font-weight:var(--hweight);font-size:24px;margin-bottom:4px">קבלו מחירון ותוכניות</div>
 <label>שם מלא<input type="text" name="name" autocomplete="name" required aria-required="true"></label>
 <label>טלפון<input type="tel" name="phone" autocomplete="tel" required aria-required="true" dir="ltr" style="text-align:right"></label>
 <label>סוג יחידה<select><option>עוד לא החלטתי</option><option>דירה קטנה</option><option>דירה משפחתית</option><option>אשמח להמלצה</option></select></label>
-<button type="button" class="btn b-main" style="margin-top:10px" onclick="alert('הטופס יחובר לקבלת פניות בשלב הבא.')">שלחו לי מחירון</button>
+<button type="button" class="btn b-main" style="margin-top:10px" onclick="sendLead(this)">שלחו לי מחירון</button>
 <p class="small">הפרויקט נבחר אוטומטית: Marina Village.</p>
 </form>
 </div>
@@ -343,8 +334,8 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="legal"><span>OHAYON PROPERTIES | BAKU הוא משווק עצמאי, ואינו האתר הרשמי של היזמים או של המותגים. שמות המותגים שייכים לבעליהם. הדמיות מתוך קטלוג הפרויקט, להמחשה בלבד. אין לראות במידע הצעה מחייבת.</span><span dir="ltr">© 2026 OHAYON PROPERTIES | BAKU</span></div>
 </div></footer>
 
-<a class="fab" href="#contact" aria-label="שיחה ב-WhatsApp"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg></a>
-<nav class="mbar" aria-label="יצירת קשר מהירה"><a href="#contact">WhatsApp</a><a href="#contact">קבלו מחירון</a></nav>
+<a class="fab" href="#contact" aria-label="השאירו פרטים"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg></a>
+<nav class="mbar" aria-label="יצירת קשר מהירה"><a href="#contact">השאירו פרטים</a><a href="#contact">קבלו מחירון</a></nav>
 </div>
 <script>var G=[["assets/img/marina/hero.jpg", "המרינה"], ["assets/img/marina/p7.jpg", "הטיילת"], ["assets/img/marina/p10.jpg", "הלגונה"], ["assets/img/marina/p11.jpg", "בין הבניינים"], ["assets/img/marina/p12.jpg", "הבריכות מלמעלה"], ["assets/img/marina/p27.jpg", "חדר שינה"], ["assets/img/marina/p28.jpg", "סלון"], ["assets/img/marina/p29.jpg", "מטבח"]],gi=0;function gs(i){gi=(i+G.length)%G.length;document.getElementById("gimg").src=G[gi][0];document.getElementById("glab").textContent=G[gi][1];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");document.querySelectorAll(".th").forEach(function(e,k){e.classList.toggle("on",k==gi);});}function tm(){var m=document.getElementById("mnav");m.hidden=!m.hidden;}</script>
 <script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
@@ -375,5 +366,15 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
 </body>
 </html>
