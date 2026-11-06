@@ -68,9 +68,13 @@ img{max-width:100%}
 .nav a{color:#F4EFE6;position:relative;padding:6px 0}
 .nav a::after{content:"";position:absolute;bottom:0;right:0;width:0;height:1px;background:#CBB089;transition:width .4s ease}
 .nav a:hover::after,.nav a[aria-current="page"]::after{width:100%}
-#mnav{position:fixed;inset:0;z-index:80;background:#081B2D;overflow:auto}
-.mnav{padding:24px 28px 40px;display:flex;flex-direction:column}
-.mi{display:block;padding:16px 0;border-bottom:1px solid rgba(203,176,137,.2);font-size:20px;font-weight:300;color:#F4EFE6}
+#mnav{position:fixed;inset:0;z-index:80;background:radial-gradient(120% 70% at 100% 0%,#13304D 0%,#0A2238 45%,#081B2D 100%);overflow:auto}
+.mnav{padding:22px 26px 30px;display:flex;flex-direction:column;min-height:100%}
+.mi{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding:19px 0;border-bottom:1px solid rgba(203,176,137,.18);color:#F4EFE6}
+.mi-t{font-weight:300;font-size:25px;color:#FBF8F2;letter-spacing:-.01em}
+.mi-e{font-family:'Cinzel',serif;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D9BC85;direction:ltr}
+.mn-foot{margin-top:auto;padding-top:34px;display:flex;flex-direction:column;gap:16px;text-align:center}
+.mn-mail{font-size:14px;color:#C9C3B8;text-decoration:underline;text-underline-offset:4px}
 /* hero */
 .ahero{position:relative;padding:190px 0 150px;overflow:hidden}
 .ahero img.bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
@@ -207,12 +211,13 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height:42px;width:auto">
 <button class="menu-btn" style="display:inline-flex" aria-label="סגירת התפריט" onclick="tm()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button>
 </div>
-<a class="mi" href="index.html">דף הבית</a>
-<a class="mi" href="index.html#projects">הפרויקטים</a>
-<a class="mi" href="index.html#about">אודות</a>
-<a class="mi" href="index.html#process">תהליך הרכישה</a>
-<a class="mi" href="articles.html" aria-current="page">מאמרים ומדריכים</a>
-<a class="btn b-gold" href="index.html#contact" style="margin-top:32px">שיחת ייעוץ</a>
+<a class="mi" href="index.html"><span class="mi-t">דף הבית</span><span class="mi-e" aria-hidden="true">Home</span></a>
+<a class="mi" href="index.html#projects"><span class="mi-t">הפרויקטים</span><span class="mi-e" aria-hidden="true">The Collection</span></a>
+<a class="mi" href="index.html#about"><span class="mi-t">אודות</span><span class="mi-e" aria-hidden="true">About</span></a>
+<a class="mi" href="index.html#process"><span class="mi-t">תהליך הרכישה</span><span class="mi-e" aria-hidden="true">The Process</span></a>
+<a class="mi" href="articles.html" aria-current="page"><span class="mi-t">מאמרים ומדריכים</span><span class="mi-e" aria-hidden="true">Journal</span></a>
+<a class="mi" href="index.html#contact"><span class="mi-t">צור קשר</span><span class="mi-e" aria-hidden="true">Contact</span></a>
+<div class="mn-foot"><a class="btn b-gold" href="index.html#contact">השאירו פרטים לשיחת ייעוץ</a><a class="mn-mail" href="mailto:ohayon.baku@gmail.com" dir="ltr">ohayon.baku@gmail.com</a></div>
 </nav>
 </div>
 <header class="hdr">

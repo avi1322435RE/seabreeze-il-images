@@ -207,6 +207,13 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <style id="contrast-v1">
+.mnav{background:radial-gradient(120% 70% at 100% 0%,#13304D 0%,#0A2238 45%,#081B2D 100%)!important;padding:22px 26px 30px!important;overflow:auto}
+.mnav a.mi{display:flex!important;align-items:baseline;justify-content:space-between;gap:16px;padding:19px 0!important;border-bottom:1px solid rgba(203,176,137,.18)!important;font-size:inherit!important}
+.mi-t{font-family:'Heebo',sans-serif;font-weight:300;font-size:25px;color:#FBF8F2;letter-spacing:-.01em}
+.mi-e{font-family:'Cinzel',serif;font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:#D9BC85;direction:ltr}
+.mnav a.mi:active .mi-t,.mnav a.mi:hover .mi-t{color:#E4D3B4}
+.mn-foot{margin-top:auto;padding-top:34px;display:flex;flex-direction:column;gap:16px;align-items:stretch;text-align:center}
+.mn-mail{font-size:14px;color:#C9C3B8;text-decoration:underline;text-underline-offset:4px}
 .h2{font-weight:300!important}
 .cream .h2{font-weight:300!important}
 .p{font-weight:400}
@@ -302,12 +309,13 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg>
 </button>
 </div>
-<a class="mi" href="#projects" onclick="tm()">הפרויקטים</a>
-<a class="mi" href="#about" onclick="tm()">אודות</a>
-<a class="mi" href="#why" onclick="tm()">למה באקו</a>
-<a class="mi" href="#process" onclick="tm()">תהליך הרכישה</a>
-<a class="mi" href="#contact" onclick="tm()">צור קשר</a>
-<a href="#contact" class="btn b-gold" style="margin-top: 36px" onclick="tm()">השאירו פרטים</a>
+<a class="mi" href="#projects" onclick="tm()"><span class="mi-t">הפרויקטים</span><span class="mi-e" aria-hidden="true">The Collection</span></a>
+<a class="mi" href="#about" onclick="tm()"><span class="mi-t">אודות</span><span class="mi-e" aria-hidden="true">About</span></a>
+<a class="mi" href="#why" onclick="tm()"><span class="mi-t">למה באקו</span><span class="mi-e" aria-hidden="true">Why Baku</span></a>
+<a class="mi" href="#process" onclick="tm()"><span class="mi-t">תהליך הרכישה</span><span class="mi-e" aria-hidden="true">The Process</span></a>
+<a class="mi" href="articles.html" onclick="tm()"><span class="mi-t">מאמרים ומדריכים</span><span class="mi-e" aria-hidden="true">Journal</span></a>
+<a class="mi" href="#contact" onclick="tm()"><span class="mi-t">צור קשר</span><span class="mi-e" aria-hidden="true">Contact</span></a>
+<div class="mn-foot"><a href="#contact" class="btn b-gold" onclick="tm()">השאירו פרטים לשיחת ייעוץ</a><a class="mn-mail" href="mailto:ohayon.baku@gmail.com" dir="ltr">ohayon.baku@gmail.com</a></div>
 </nav>
 </div>
 
