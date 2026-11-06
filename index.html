@@ -17,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/hero-baku.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "RealEstateAgent", "name": "OHAYON PROPERTIES | BAKU", "url": "https://ohayon-baku.co.il/", "logo": "https://ohayon-baku.co.il/assets/img/logo-navy.png", "image": "https://ohayon-baku.co.il/assets/img/og-image.jpg", "description": "נדל״ן יוקרה בבאקו בליווי אישי בעברית. פרויקטים נבחרים ב-Sea Breeze ועל חוף הים הכספי, מידע מאומת והשקעות נדל״ן באזרבייג׳ן למשקיעים ישראלים.", "areaServed": [{"@type": "City", "name": "Baku"}, {"@type": "Country", "name": "Azerbaijan"}], "knowsLanguage": ["he", "en"]}</script>
@@ -29,7 +30,7 @@ body{margin:0;background:#081B2D;}
 a{color:#E4D3B4;text-decoration:none;}a:hover{color:#ffffff;}
 .pg{font-family:'Heebo',sans-serif;font-weight:300;color:#F4EFE6;background:#081B2D;direction:rtl;overflow-x:hidden;}
 .wrap{max-width:1264px;margin:0 auto;padding:0 48px;}
-.eb{font-family:'Julius Sans One',sans-serif;font-size:11px;letter-spacing:.4em;text-transform:uppercase;color:#CBB089;direction:ltr;text-align:right;}
+.eb{font-family:'Julius Sans One',sans-serif;font-size:12px;letter-spacing:.4em;text-transform:uppercase;color:#CBB089;direction:ltr;text-align:right;}
 .ln{width:48px;height:1px;background:#CBB089;margin:20px 0 22px auto;}
 .lat{font-family:'Cinzel',serif;direction:ltr;unicode-bidi:isolate;}
 .h2{font-weight:200;font-size:44px;line-height:1.12;letter-spacing:-.02em;margin:0;color:#FBF8F2;}
@@ -70,7 +71,7 @@ a{color:#E4D3B4;text-decoration:none;}a:hover{color:#ffffff;}
 @keyframes up{from{opacity:0;transform:translateY(24px);}to{opacity:1;transform:none;}}
 .feat{position:absolute;left:48px;bottom:64px;z-index:3;width:340px;background:rgba(8,27,45,.8);border:2px solid transparent;border-radius:20px;background:linear-gradient(rgba(8,27,45,.86),rgba(8,27,45,.86)) padding-box,linear-gradient(135deg,#F3E6C8,#B8955F 30%,#EFDDB6 55%,#9C7A43 80%,#E4D3B4) border-box;padding:24px 28px;backdrop-filter:blur(6px);display:block;}
 .feat:hover{border-color:#CBB089;}
-.scroll{position:absolute;right:50%;bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'Julius Sans One',sans-serif;font-size:11px;letter-spacing:.4em;color:#CBB089;}
+.scroll{position:absolute;right:50%;bottom:36px;z-index:3;display:flex;flex-direction:column;align-items:center;gap:10px;font-family:'Julius Sans One',sans-serif;font-size:12px;letter-spacing:.4em;color:#CBB089;}
 .scroll i{display:block;width:1px;height:46px;background:linear-gradient(#CBB089,rgba(203,176,137,0));animation:drip 2.4s ease-in-out infinite;}
 @keyframes drip{0%{transform:scaleY(0);transform-origin:top;}50%{transform:scaleY(1);transform-origin:top;}51%{transform-origin:bottom;}100%{transform:scaleY(0);transform-origin:bottom;}}
 /* sections */
@@ -85,7 +86,7 @@ a{color:#E4D3B4;text-decoration:none;}a:hover{color:#ffffff;}
 .card .cs{position:absolute;inset:0;background:linear-gradient(180deg,rgba(8,27,45,0) 45%,rgba(8,27,45,.9) 100%);transition:background .6s ease;}
 .card:hover .cs{background:linear-gradient(180deg,rgba(8,27,45,.15) 20%,rgba(8,27,45,.94) 100%);}
 .cb{position:absolute;right:0;left:0;bottom:0;padding:30px 34px;color:#F4EFE6;z-index:2;}
-.ct{font-family:'Julius Sans One',sans-serif;font-size:10px;letter-spacing:.34em;color:#CBB089;direction:ltr;text-align:right;}
+.ct{font-family:'Julius Sans One',sans-serif;font-size:12px;letter-spacing:.34em;color:#CBB089;direction:ltr;text-align:right;}
 .cn{font-family:'Cinzel',serif;font-size:22px;font-weight:400;letter-spacing:.06em;color:#FBF8F2;margin:10px 0 6px;direction:ltr;text-align:right;line-height:1.15;}
 .cd{font-size:14px;color:#CFCAC0;margin:0;}
 .cl{height:1px;background:#CBB089;width:36px;margin-top:18px;transition:width .6s ease;}
@@ -190,6 +191,16 @@ a{color:#E4D3B4;text-decoration:none;}a:hover{color:#ffffff;}
 .mbar a:first-child{background:#CBB089;color:#081B2D;font-weight:400;}
 .ftr{padding-bottom:110px;}
 }
+
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:84px;}
+.hdr{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;}
+.hdr.solid{position:fixed;background:rgba(8,27,45,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.hdr .hdr-in{transition:height .35s ease;}
+.hdr.solid .hdr-in{height:72px;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #CBB089;outline-offset:3px;}
+.small a{display:inline-block;padding:10px 2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 
 <style>[hidden]{display:none !important}</style>
@@ -234,7 +245,7 @@ a{color:#E4D3B4;text-decoration:none;}a:hover{color:#ffffff;}
 </header>
 
 <section class="hero" id="top" aria-labelledby="hero-title">
-<img class="hero-img" src="assets/img/hero-baku.jpg" alt="מבט אווירי על חוף באקו והים הכספי – הדמיה">
+<img class="hero-img" fetchpriority="high" src="assets/img/hero-baku.jpg" alt="מבט אווירי על חוף באקו והים הכספי – הדמיה">
 <div class="sh1"></div>
 <div class="sh2"></div>
 <div class="wrap hero-in">
@@ -266,12 +277,12 @@ WhatsApp
 <p class="p">פרויקטי מגורים ונופש שנבחרו בקפידה לאורך חוף הים הכספי. לכל פרויקט עמוד מלא עם גלריה, תוכניות דירה ומידע על היזם.</p>
 </div>
 <div class="pgrid">
-<a class="card rv" href="brabus.html"><img src="assets/img/projects/brabus-island.jpg" alt="BRABUS Island Baku – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE · BAKU</div><div class="cn">BRABUS ISLAND</div><p class="cd">מגורי יוקרה בסטנדרט בינלאומי</p><div class="cl"></div></div></a>
-<a class="card rv" href="panorama-elie-saab.html"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">BY ELIE SAAB</div><div class="cn">PANORAMA</div><p class="cd">מגורים יוקרתיים בעיצוב ייחודי</p><div class="cl"></div></div></a>
-<a class="card rv" href="reportage-heights.html"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">BAKU</div><div class="cn">REPORTAGE HEIGHTS</div><p class="cd">דירות מגורים בפרויקט מודרני</p><div class="cl"></div></div></a>
-<a class="card rv" href="sabah-towers.html"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">BAKU</div><div class="cn">SABAH TOWERS</div><p class="cd">מגדלי מגורים בעיצוב מודרני</p><div class="cl"></div></div></a>
-<a class="card rv" href="arabian-ranches.html"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">ARABIAN RANCHES</div><p class="cd">מגורי יוקרה בהשראת אדריכלות מזרחית</p><div class="cl"></div></div></a>
-<a class="card rv" href="marina-village.html"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">MARINA VILLAGE</div><p class="cd">מגורים באווירת חוף ומרינה</p><div class="cl"></div></div></a>
+<a class="card rv" href="brabus.html"><img src="assets/img/projects/brabus-island.jpg" alt="BRABUS Island Baku – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE · BAKU</div><div class="cn">BRABUS ISLAND</div><p class="cd">מגורי יוקרה בסטנדרט בינלאומי</p><div class="cl"></div></div></a>
+<a class="card rv" href="panorama-elie-saab.html"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">BY ELIE SAAB</div><div class="cn">PANORAMA</div><p class="cd">מגורים יוקרתיים בעיצוב ייחודי</p><div class="cl"></div></div></a>
+<a class="card rv" href="reportage-heights.html"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">BAKU</div><div class="cn">REPORTAGE HEIGHTS</div><p class="cd">דירות מגורים בפרויקט מודרני</p><div class="cl"></div></div></a>
+<a class="card rv" href="sabah-towers.html"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">BAKU</div><div class="cn">SABAH TOWERS</div><p class="cd">מגדלי מגורים בעיצוב מודרני</p><div class="cl"></div></div></a>
+<a class="card rv" href="arabian-ranches.html"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">ARABIAN RANCHES</div><p class="cd">מגורי יוקרה בהשראת אדריכלות מזרחית</p><div class="cl"></div></div></a>
+<a class="card rv" href="marina-village.html"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">MARINA VILLAGE</div><p class="cd">מגורים באווירת חוף ומרינה</p><div class="cl"></div></div></a>
 </div>
 <p class="note">הדמיות מתוך קטלוגי היזמים, להמחשה בלבד.</p>
 </div>
@@ -281,7 +292,7 @@ WhatsApp
 <div class="wrap split">
 <div class="ab-img rv">
 <div class="ab-fr"></div>
-<img src="assets/img/about-interior.jpg" alt="חלל מגורים בפרויקט BRABUS Island – הדמיה" loading="lazy">
+<img src="assets/img/about-interior.jpg" alt="חלל מגורים בפרויקט BRABUS Island – הדמיה" loading="lazy" decoding="async">
 <div class="ab-por">
 <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" aria-hidden="true"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
 <span>[התמונה המקצועית שלך]</span>
@@ -408,5 +419,7 @@ WhatsApp
 
 <script>function tm(){var m=document.getElementById("mnav");if(m)m.hidden=!m.hidden;}
 </script>
+<script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+<!--ux-v1-->
 </body>
 </html>

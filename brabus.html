@@ -17,6 +17,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/brabus/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://ohayon-baku.co.il/"}, {"@type": "ListItem", "position": 2, "name": "BRABUS Island Baku", "item": "https://ohayon-baku.co.il/brabus.html"}]}</script>
@@ -45,7 +46,7 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .topbar{height:0;}
 .hdr{position:absolute;top:0;right:0;left:0;z-index:20;}
 .hdr-in{height:88px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
-.nav{display:flex;gap:32px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;}
+.nav{display:flex;gap:30px;font-family:'Heebo',sans-serif;font-weight:400;font-size:15px;}
 .nav a{color:#fff;}
 .nav a:hover{color:#BDBDBD;}
 /* hero */
@@ -217,6 +218,18 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 .mbar a:first-child{background:#F2F2F2;color:#0C0C0D;}
 .ftr{padding-bottom:100px;}
 }
+.mnav{position:fixed;inset:0;z-index:60;background:#0C0C0D;padding:24px;display:flex;flex-direction:column;}
+.mnav a.mi{font-family:'Heebo',sans-serif;font-weight:500;font-size:26px;color:#fff;padding:14px 0;border-bottom:1px solid #222;}
+
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:84px;}
+.hdr{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;}
+.hdr.solid{position:fixed;background:rgba(12,12,13,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.hdr .hdr-in{transition:height .35s ease;}
+.hdr.solid .hdr-in{height:72px;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #F2F2F2;outline-offset:3px;}
+.small a{display:inline-block;padding:10px 2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 
 <style>[hidden]{display:none !important}</style>
@@ -225,26 +238,30 @@ a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
 
 
 <div class="pg">
+<nav class="mnav" id="mnav" hidden aria-label="תפריט נייד">
+<div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:24px"><img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height:40px;width:auto"><button class="menu-btn" style="display:inline-flex" aria-label="סגירת התפריט" onclick="tm()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18"></path></svg></button></div>
+<a class="mi" href="#overview" onclick="tm()">הפרויקט</a><a class="mi" href="#gallery" onclick="tm()">גלריה</a><a class="mi" href="#units" onclick="tm()">דירות ותוכניות</a><a class="mi" href="#pricing" onclick="tm()">מחירים</a><a class="mi" href="#contact" onclick="tm()">צור קשר</a><a class="mi" href="index.html">כל הפרויקטים</a>
+</nav>
 <div class="topbar"></div>
 <header class="hdr">
 <div class="wrap hdr-in">
 <a href="index.html" aria-label="OHAYON PROPERTIES | BAKU – דף הבית"><img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height: 42px; width: auto; display: block"></a>
 <nav class="nav" aria-label="ניווט בעמוד">
-<a href="#overview">Project</a>
-<a href="#gallery">Gallery</a>
-<a href="#units">Residences</a>
-<a href="#pricing">Pricing</a>
-<a href="#contact">Contact</a>
+<a href="#overview">הפרויקט</a>
+<a href="#gallery">גלריה</a>
+<a href="#units">דירות ותוכניות</a>
+<a href="#pricing">מחירים</a>
+<a href="index.html#projects">כל הפרויקטים</a>
 </nav>
 <a href="#contact" class="btn b-white" style="height: 46px; padding: 0 22px; font-size: 14px">קבלו מחירון</a>
-<button class="menu-btn" aria-label="פתיחת התפריט">
+<button class="menu-btn" aria-label="פתיחת התפריט" onclick="tm()">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"></path></svg>
 </button>
 </div>
 </header>
 
 <section class="hero" aria-labelledby="ptitle">
-<img class="hero-img" src="assets/img/brabus/hero.jpg" alt="BRABUS Island Baku מהאוויר – הדמיה">
+<img class="hero-img" fetchpriority="high" src="assets/img/brabus/hero.jpg" alt="BRABUS Island Baku מהאוויר – הדמיה">
 <div class="sh"></div>
 <div class="wrap hero-in">
 <div class="crumb up"><a href="index.html">דף הבית</a> &nbsp;/&nbsp; <a href="index.html">הפרויקטים</a> &nbsp;/&nbsp; BRABUS Island</div>
@@ -268,9 +285,9 @@ WhatsApp
 <div class="di up d3"><div class="dn">592</div><div class="dl">דירות יוקרה, מסטודיו ועד דופלקס</div></div>
 <div class="di up d3"><div class="dn">16</div><div class="dl">וילות תאומות</div></div>
 <div class="di up d4"><div class="dn">~115,000<small>M²</small></div><div class="dl">שטח הפרויקט</div></div>
-<div class="di up d4"><div class="dn">2–3<small>MIN</small></div><div class="dl">הליכה לים, לקזינו ול-Dream Arena</div></div>
+<div class="di up d4"><div class="dn">Nardaran</div><div class="dl">על חוף הים הכספי, ב-Sea Breeze</div></div>
 </div>
-<div class="dsrc">מקור למספרי הדירות והשטח: <a href="https://www.brabus.com/en-be/real-estate/island-baku.html">עמוד הפרויקט באתר BRABUS</a>, נבדק 6.11.2026. זמני ההליכה: היכרות שלנו בשטח.</div>
+<div class="dsrc">מקור למספרי הדירות והשטח: <a href="https://www.brabus.com/en-be/real-estate/island-baku.html">עמוד הפרויקט באתר BRABUS</a>, נבדק 6.11.2026.</div>
 </div>
 </section>
 
@@ -287,7 +304,7 @@ WhatsApp
 <div class="fr"><span>מועד מסירה</span><span class="pend">בבירור מול היזם</span></div>
 </div>
 </div>
-<div class="ov-img rv"><img src="assets/img/brabus/coast.jpg" alt="BRABUS Island על קו החוף – הדמיה" loading="lazy"></div>
+<div class="ov-img rv"><img src="assets/img/brabus/coast.jpg" alt="BRABUS Island על קו החוף – הדמיה" loading="lazy" decoding="async"></div>
 </div>
 </section>
 
@@ -355,9 +372,9 @@ WhatsApp
 <p class="p">מתקנים משותפים שמוצגים בקטלוג. ההיקף והזכויות לשימוש בהם כפופים למסמכי הפרויקט.</p>
 </div>
 <div class="am">
-<div class="amc rv"><img src="assets/img/brabus/pool.jpg" alt="בריכת השחייה – הדמיה" loading="lazy"><div><div class="n">01</div><strong>בריכת שחייה</strong></div></div>
-<div class="amc rv"><img src="assets/img/brabus/fitness.jpg" alt="חדר הכושר – הדמיה" loading="lazy"><div><div class="n">02</div><strong>כושר וספא</strong></div></div>
-<div class="amc rv"><img src="assets/img/brabus/lounge.jpg" alt="הלאונג׳ – הדמיה" loading="lazy"><div><div class="n">03</div><strong>לאונג׳ לדיירים</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/pool.jpg" alt="בריכת השחייה – הדמיה" loading="lazy" decoding="async"><div><div class="n">01</div><strong>בריכת שחייה</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/fitness.jpg" alt="חדר הכושר – הדמיה" loading="lazy" decoding="async"><div><div class="n">02</div><strong>כושר וספא</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/lounge.jpg" alt="הלאונג׳ – הדמיה" loading="lazy" decoding="async"><div><div class="n">03</div><strong>לאונג׳ לדיירים</strong></div></div>
 </div>
 </div>
 </section>
@@ -441,9 +458,9 @@ WhatsApp: [המספר שלך]
 <a href="index.html" class="btn b-white">לכל הפרויקטים</a>
 </div>
 <div class="rel">
-<a class="rc" href="panorama-elie-saab.html"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy"><div><strong>Panorama</strong></div></a>
-<a class="rc" href="reportage-heights.html"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy"><div><strong>Reportage Heights</strong></div></a>
-<a class="rc" href="sabah-towers.html"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy"><div><strong>Sabah Towers</strong></div></a>
+<a class="rc" href="panorama-elie-saab.html"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy" decoding="async"><div><strong>Panorama</strong></div></a>
+<a class="rc" href="reportage-heights.html"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy" decoding="async"><div><strong>Reportage Heights</strong></div></a>
+<a class="rc" href="sabah-towers.html"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy" decoding="async"><div><strong>Sabah Towers</strong></div></a>
 </div>
 </div>
 </section>
@@ -472,5 +489,7 @@ var G=["הפרויקט מהאוויר", "קו החוף והמרינה", "חזי�
 function gs(i){gi=(i+G.length)%G.length;var t=document.querySelectorAll(".th");document.getElementById("gimg").src=t[gi].querySelector("img").src;document.getElementById("glab").textContent=G[gi];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");t.forEach(function(e,k){e.setAttribute("style",k==gi?"box-shadow:inset 0 -2px 0 #F2F2F2":"filter:none");e.querySelector("img").setAttribute("style",k==gi?"box-shadow:none":"filter:grayscale(1) brightness(.6)");});}
 function us(i){var u=U[i];document.getElementById("uimg").src=P[i];document.getElementById("ucode").textContent=u[1];document.getElementById("uhe").textContent=u[0];document.getElementById("uin").textContent=u[3];document.getElementById("uout").textContent=u[4];document.getElementById("utot").textContent=u[5];document.getElementById("uwh").textContent=u[6];document.querySelectorAll(".tab").forEach(function(e,k){e.setAttribute("style",k==i?"background:#fff;color:#000":"background:#000;color:#8A8A8A");});}
 P=[].map.call(document.querySelectorAll("#plans img"),function(i){return i.src});gs(0);us(0);</script>
+<script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+<!--ux-v1-->
 </body>
 </html>

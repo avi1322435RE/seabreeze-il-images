@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/panorama/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&amp;display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@ a{color:inherit;text-decoration:none;}
 .amc .shape{height:100%;}
 .amc:hover img{transform:scale(1.05);}
 .amc .cap{position:absolute;right:0;left:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.6));border-radius:0 0 var(--img-radius-b) var(--img-radius-b);}
-.amc .cap span{font-family:var(--lfont);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
+.amc .cap span{font-family:var(--lfont);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
 .amc .cap strong{display:block;font-family:var(--hfont);font-weight:var(--hweight);font-size:22px;margin-top:4px;}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;}
 .box{background:var(--card);border:1px solid var(--line);border-radius:var(--card-radius);padding:44px;}
@@ -181,7 +182,17 @@ a{color:inherit;text-decoration:none;}
 .mbar a:first-child{background:var(--accent);color:var(--accent-ink);}
 .ftr{padding-bottom:96px;}
 }
-.ov-img{outline:1px solid var(--accent);outline-offset:14px;}.title small{letter-spacing:.42em;}</style>
+.ov-img{outline:1px solid var(--accent);outline-offset:14px;}.title small{letter-spacing:.42em;}
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:84px;}
+.hdr{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;}
+.hdr.solid{position:fixed;background:rgba(42,35,29,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.hdr .hdr-in{transition:height .35s ease;}
+.hdr.solid .hdr-in{height:72px;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #9C7448;outline-offset:3px;}
+.small a{display:inline-block;padding:10px 2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
 </head>
 <body>
 <div class="pg">
@@ -197,7 +208,7 @@ a{color:inherit;text-decoration:none;}
 </div></header>
 
 <section class="hero" aria-labelledby="ptitle">
-<img class="hero-img" src="assets/img/panorama/hero.jpg" alt="Panorama by ELIE SAAB – הדמיה">
+<img class="hero-img" fetchpriority="high" src="assets/img/panorama/hero.jpg" alt="Panorama by ELIE SAAB – הדמיה">
 <div class="hero-sh"></div>
 <div class="wrap hero-in">
 <div class="crumb up"><a href="index.html">דף הבית</a> &nbsp;/&nbsp; <a href="index.html#projects">הפרויקטים</a> &nbsp;/&nbsp; Panorama by ELIE SAAB</div>
@@ -211,7 +222,7 @@ a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<section class="data" aria-label="נתוני הפרויקט"><div class="wrap"><div class="data-g"><div class="di"><div class="dn">582</div><div class="dl">יחידות דיור בפרויקט</div></div><div class="di"><div class="dn he">ראשון</div><div class="dl">פרויקט מגורים ממותג באזרבייג׳ן</div></div><div class="di"><div class="dn">ELIE SAAB</div><div class="dl">עיצוב פנים של ELIE SAAB Maison</div></div><div class="di"><div class="dn">2–3<span style="font-size:.5em"> MIN</span></div><div class="dl">הליכה לים, לקזינו ול-Dream Arena</div></div></div><div class="dsrc">מקורות: <a href="https://invest-gate.me/news/sabah-investment-reportage-group-elie-saab-launch-azerbaijans-first-branded-residence-panorama-by-elie-saab/" rel="noopener">Invest-Gate</a> · <a href="https://www.khaleejtimes.com/property/reportage-group-and-sabah-investment-group-showcase-their-sea-breeze-projects-and-highlight-investment-opportunities-in-azerbaijan" rel="noopener">Khaleej Times</a>. נבדק 6.11.2026</div></div></section>
+<section class="data" aria-label="נתוני הפרויקט"><div class="wrap"><div class="data-g"><div class="di"><div class="dn">582</div><div class="dl">יחידות דיור בפרויקט</div></div><div class="di"><div class="dn he">ראשון</div><div class="dl">פרויקט מגורים ממותג באזרבייג׳ן</div></div><div class="di"><div class="dn">ELIE SAAB</div><div class="dl">עיצוב פנים של ELIE SAAB Maison</div></div><div class="di"><div class="dn">3<span style="font-size:.5em"> MIN</span></div><div class="dl">הליכה לים, לקזינו ול-Dream Arena</div></div></div><div class="dsrc">מקורות: <a href="https://invest-gate.me/news/sabah-investment-reportage-group-elie-saab-launch-azerbaijans-first-branded-residence-panorama-by-elie-saab/" rel="noopener">Invest-Gate</a> · <a href="https://www.khaleejtimes.com/property/reportage-group-and-sabah-investment-group-showcase-their-sea-breeze-projects-and-highlight-investment-opportunities-in-azerbaijan" rel="noopener">Khaleej Times</a>. נבדק 6.11.2026</div></div></section>
 
 <section class="sec" style="background:linear-gradient(180deg,#2A231D 0px,#332C26 14px,#4A443D 28px,#6B655E 41px,#918B84 55px,#B7B1AB 69px,#D8D2CC 82px,#EFEAE3 96px,#F8F3EC 110px,#F8F3EC 100%)" id="overview" aria-labelledby="ov-t">
 <div class="wrap split">
@@ -222,7 +233,7 @@ a{color:inherit;text-decoration:none;}
 <p class="p" style="margin-top:16px">[כאן תיכנס פסקה בקול שלך: למי הפרויקט מתאים, ומה ראית בו בשטח.]</p>
 <div class="facts"><div class="fr"><span>מיקום</span><span>Sea Breeze, באקו</span></div><div class="fr"><span>יזמים</span><span>Sabah Investment Group ו-Reportage Group</span></div><div class="fr"><span>עיצוב פנים</span><span>ELIE SAAB Maison</span></div><div class="fr"><span>מועד מסירה</span><span class="pend">בבירור מול היזם</span></div></div>
 </div>
-<div class="shape ov-img rv"><img src="assets/img/panorama/p19.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy"></div>
+<div class="shape ov-img rv"><img src="assets/img/panorama/p19.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy" decoding="async"></div>
 </div>
 </section>
 
@@ -232,7 +243,7 @@ a{color:inherit;text-decoration:none;}
 <div class="gmain rv"><img id="gimg" src="assets/img/panorama/hero.jpg" alt="Panorama by ELIE SAAB – הדמיה">
 <div class="gcap"><div><div class="gnum lat" id="gcnt">01 / 08</div><strong id="glab">הפרויקט בשקיעה</strong></div>
 <div class="garr"><button aria-label="התמונה הקודמת" onclick="gs(gi-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button aria-label="התמונה הבאה" onclick="gs(gi+1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button></div></div></div>
-<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="הפרויקט בשקיעה"><img src="assets/img/panorama/hero.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(1)" aria-label="מרפסות מול הים"><img src="assets/img/panorama/p44.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(2)" aria-label="בריכת אינסוף"><img src="assets/img/panorama/p24.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(3)" aria-label="נוף מהדירה"><img src="assets/img/panorama/p27.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(4)" aria-label="לאונג׳ על הגג"><img src="assets/img/panorama/p28.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(5)" aria-label="חדר שינה"><img src="assets/img/panorama/p34.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(6)" aria-label="פינת אוכל"><img src="assets/img/panorama/p36.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(7)" aria-label="סלון"><img src="assets/img/panorama/p37.jpg" alt="" loading="lazy"></button></div>
+<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="הפרויקט בשקיעה"><img src="assets/img/panorama/hero.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(1)" aria-label="מרפסות מול הים"><img src="assets/img/panorama/p44.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(2)" aria-label="בריכת אינסוף"><img src="assets/img/panorama/p24.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(3)" aria-label="נוף מהדירה"><img src="assets/img/panorama/p27.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(4)" aria-label="לאונג׳ על הגג"><img src="assets/img/panorama/p28.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(5)" aria-label="חדר שינה"><img src="assets/img/panorama/p34.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(6)" aria-label="פינת אוכל"><img src="assets/img/panorama/p36.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(7)" aria-label="סלון"><img src="assets/img/panorama/p37.jpg" alt="" loading="lazy" decoding="async"></button></div>
 </div>
 </section>
 
@@ -241,7 +252,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#F8F3EC 0px,#F8F2EB 14px,#F7F1E9 28px,#F5EFE5 41px,#F4ECE1 55px,#F2E9DD 69px,#F0E7D9 82px,#EFE6D7 96px,#EFE5D6 110px,#EFE5D6 100%)" aria-labelledby="am-t">
 <div class="wrap">
 <div class="head rv"><div><div class="eb">Amenities</div><div class="ln"></div><h2 class="h2" id="am-t">חיים בסטנדרט של בית אופנה</h2></div><p class="p">לפי הודעת היזמים: לאונג׳ים, מרכז עסקים, כושר, ספא פרטי, בריכות אינסוף, משחקייה, מגרש סקווש ומרכז מים.</p></div>
-<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p24.jpg" alt="בריכת אינסוף – הדמיה" loading="lazy"></div><div class="cap"><span>INFINITY POOLS</span><strong>בריכות אינסוף</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p28.jpg" alt="לאונג׳ על הגג – הדמיה" loading="lazy"></div><div class="cap"><span>LOUNGES</span><strong>לאונג׳ים</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p40.jpg" alt="הלובי – הדמיה" loading="lazy"></div><div class="cap"><span>LOBBY</span><strong>לובי בעיצוב ELIE SAAB</strong></div></div></div>
+<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p24.jpg" alt="בריכת אינסוף – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>INFINITY POOLS</span><strong>בריכות אינסוף</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p28.jpg" alt="לאונג׳ על הגג – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>LOUNGES</span><strong>לאונג׳ים</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/panorama/p40.jpg" alt="הלובי – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>LOBBY</span><strong>לובי בעיצוב ELIE SAAB</strong></div></div></div>
 </div>
 </section>
 
@@ -288,7 +299,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#2A231D 0px,#322B25 14px,#49413A 28px,#686058 41px,#8C847A 55px,#B1A89B 69px,#D0C7B9 82px,#E7DDCE 96px,#EFE5D6 110px,#EFE5D6 100%); padding:90px 0 60px" aria-labelledby="r-t">
 <div class="wrap">
 <div class="head" style="margin-bottom:30px"><div><div class="eb">More Projects</div><div class="ln"></div><h2 class="h2" id="r-t" style="font-size:34px">פרויקטים נוספים</h2></div><a href="index.html#projects" class="btn b-ghost" style="color:var(--ink)">לכל הפרויקטים</a></div>
-<div class="rel"><a class="rc rv" href="brabus.html"><div class="shape"><img src="assets/img/projects/brabus-island.jpg" alt="BRABUS Island – הדמיה" loading="lazy"></div><strong>BRABUS Island</strong></a><a class="rc rv" href="reportage-heights.html"><div class="shape"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy"></div><strong>Reportage Heights</strong></a><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy"></div><strong>Marina Village</strong></a></div>
+<div class="rel"><a class="rc rv" href="brabus.html"><div class="shape"><img src="assets/img/projects/brabus-island.jpg" alt="BRABUS Island – הדמיה" loading="lazy" decoding="async"></div><strong>BRABUS Island</strong></a><a class="rc rv" href="reportage-heights.html"><div class="shape"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy" decoding="async"></div><strong>Reportage Heights</strong></a><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy" decoding="async"></div><strong>Marina Village</strong></a></div>
 </div>
 </section>
 
@@ -301,5 +312,7 @@ a{color:inherit;text-decoration:none;}
 <nav class="mbar" aria-label="יצירת קשר מהירה"><a href="#contact">WhatsApp</a><a href="#contact">קבלו מחירון</a></nav>
 </div>
 <script>var G=[["assets/img/panorama/hero.jpg", "הפרויקט בשקיעה"], ["assets/img/panorama/p44.jpg", "מרפסות מול הים"], ["assets/img/panorama/p24.jpg", "בריכת אינסוף"], ["assets/img/panorama/p27.jpg", "נוף מהדירה"], ["assets/img/panorama/p28.jpg", "לאונג׳ על הגג"], ["assets/img/panorama/p34.jpg", "חדר שינה"], ["assets/img/panorama/p36.jpg", "פינת אוכל"], ["assets/img/panorama/p37.jpg", "סלון"]],gi=0;function gs(i){gi=(i+G.length)%G.length;document.getElementById("gimg").src=G[gi][0];document.getElementById("glab").textContent=G[gi][1];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");document.querySelectorAll(".th").forEach(function(e,k){e.classList.toggle("on",k==gi);});}function tm(){var m=document.getElementById("mnav");m.hidden=!m.hidden;}</script>
+<script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+<!--ux-v1-->
 </body>
 </html>

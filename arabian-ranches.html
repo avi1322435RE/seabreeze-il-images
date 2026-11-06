@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/arabian/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=David+Libre:wght@400;500;700&family=Marcellus&amp;display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@ a{color:inherit;text-decoration:none;}
 .amc .shape{height:100%;}
 .amc:hover img{transform:scale(1.05);}
 .amc .cap{position:absolute;right:0;left:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.6));border-radius:0 0 var(--img-radius-b) var(--img-radius-b);}
-.amc .cap span{font-family:var(--lfont);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
+.amc .cap span{font-family:var(--lfont);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
 .amc .cap strong{display:block;font-family:var(--hfont);font-weight:var(--hweight);font-size:22px;margin-top:4px;}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;}
 .box{background:var(--card);border:1px solid var(--line);border-radius:var(--card-radius);padding:44px;}
@@ -181,7 +182,17 @@ a{color:inherit;text-decoration:none;}
 .mbar a:first-child{background:var(--accent);color:var(--accent-ink);}
 .ftr{padding-bottom:96px;}
 }
-.box,.form{border-radius:14px;}.cards{grid-template-columns:repeat(2,minmax(0,1fr));}.cardx{padding:70px 40px 34px;text-align:center;}.cardx .k{text-align:center;}.ov-img{height:600px;}@media (max-width:760px){.cards{grid-template-columns:minmax(0,1fr);}.ov-img{height:420px;}}</style>
+.box,.form{border-radius:14px;}.cards{grid-template-columns:repeat(2,minmax(0,1fr));}.cardx{padding:70px 40px 34px;text-align:center;}.cardx .k{text-align:center;}.ov-img{height:600px;}@media (max-width:760px){.cards{grid-template-columns:minmax(0,1fr);}.ov-img{height:420px;}}
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:84px;}
+.hdr{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;}
+.hdr.solid{position:fixed;background:rgba(59,43,31,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.hdr .hdr-in{transition:height .35s ease;}
+.hdr.solid .hdr-in{height:72px;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #A4552F;outline-offset:3px;}
+.small a{display:inline-block;padding:10px 2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
+</style>
 </head>
 <body>
 <div class="pg">
@@ -197,7 +208,7 @@ a{color:inherit;text-decoration:none;}
 </div></header>
 
 <section class="hero" aria-labelledby="ptitle">
-<img class="hero-img" src="assets/img/arabian/hero.jpg" alt="Arabian Ranches Baku – הדמיה">
+<img class="hero-img" fetchpriority="high" src="assets/img/arabian/hero.jpg" alt="Arabian Ranches Baku – הדמיה">
 <div class="hero-sh"></div>
 <div class="wrap hero-in">
 <div class="crumb up"><a href="index.html">דף הבית</a> &nbsp;/&nbsp; <a href="index.html#projects">הפרויקטים</a> &nbsp;/&nbsp; Arabian Ranches Baku</div>
@@ -211,7 +222,7 @@ a{color:inherit;text-decoration:none;}
 </div>
 </section>
 
-<section class="data" aria-label="נתוני הפרויקט"><div class="wrap"><div class="data-g"><div class="di"><div class="dn he">דירות ובתים טוריים</div><div class="dl">לחיי משפחה</div></div><div class="di"><div class="dn he">השראה מזרחית</div><div class="dl">קשתות וחזיתות בגוון חול</div></div><div class="di"><div class="dn">2–3<span style="font-size:.5em"> MIN</span></div><div class="dl">הליכה לים, לקזינו ול-Dream Arena</div></div><div class="di"><div class="dn">Reportage</div><div class="dl">בשותפות עם Sabah Investment Group</div></div></div><div class="dsrc">מקורות: <a href="https://www.thenationalnews.com/advertorial/2026/10/19/reportage-group-and-sabah-investment-group-showcase-sea-breeze-projects-in-azerbaijan/" rel="noopener">The National</a> · <a href="https://www.khaleejtimes.com/property/reportage-group-and-sabah-investment-group-showcase-their-sea-breeze-projects-and-highlight-investment-opportunities-in-azerbaijan" rel="noopener">Khaleej Times</a>. נבדק 6.11.2026</div></div></section>
+<section class="data" aria-label="נתוני הפרויקט"><div class="wrap"><div class="data-g"><div class="di"><div class="dn he">דירות ובתים טוריים</div><div class="dl">לחיי משפחה</div></div><div class="di"><div class="dn he">השראה מזרחית</div><div class="dl">קשתות וחזיתות בגוון חול</div></div><div class="di"><div class="dn">~500</div><div class="dl">הקטאר: שטח מתחם Sea Breeze</div></div><div class="di"><div class="dn">Reportage</div><div class="dl">בשותפות עם Sabah Investment Group</div></div></div><div class="dsrc">מקורות: <a href="https://www.thenationalnews.com/advertorial/2026/10/19/reportage-group-and-sabah-investment-group-showcase-sea-breeze-projects-in-azerbaijan/" rel="noopener">The National</a> · <a href="https://www.khaleejtimes.com/property/reportage-group-and-sabah-investment-group-showcase-their-sea-breeze-projects-and-highlight-investment-opportunities-in-azerbaijan" rel="noopener">Khaleej Times</a>. נבדק 6.11.2026</div></div></section>
 
 <section class="sec" style="background:linear-gradient(180deg,#3B2B1F 0px,#433327 14px,#58493D 28px,#76695D 41px,#988C80 55px,#BBB0A4 69px,#D9D0C4 82px,#EEE6DA 96px,#F6EEE2 110px,#F6EEE2 100%)" id="overview" aria-labelledby="ov-t">
 <div class="wrap split">
@@ -222,7 +233,7 @@ a{color:inherit;text-decoration:none;}
 <p class="p" style="margin-top:16px">[כאן תיכנס פסקה בקול שלך: למי הפרויקט מתאים, ומה ראית בו בשטח.]</p>
 <div class="facts"><div class="fr"><span>מיקום</span><span>Sea Breeze, Nardaran</span></div><div class="fr"><span>יזמים</span><span>Reportage Group ו-Sabah Investment Group</span></div><div class="fr"><span>סוגי יחידות</span><span>דירות ובתים טוריים</span></div><div class="fr"><span>מועד מסירה</span><span class="pend">בבירור מול היזם</span></div></div>
 </div>
-<div class="shape ov-img rv"><img src="assets/img/arabian/towers.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy"></div>
+<div class="shape ov-img rv"><img src="assets/img/arabian/towers.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy" decoding="async"></div>
 </div>
 </section>
 
@@ -232,7 +243,7 @@ a{color:inherit;text-decoration:none;}
 <div class="gmain rv"><img id="gimg" src="assets/img/arabian/hero.jpg" alt="Arabian Ranches Baku – הדמיה">
 <div class="gcap"><div><div class="gnum lat" id="gcnt">01 / 07</div><strong id="glab">הפרויקט מהמים</strong></div>
 <div class="garr"><button aria-label="התמונה הקודמת" onclick="gs(gi-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button aria-label="התמונה הבאה" onclick="gs(gi+1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button></div></div></div>
-<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="הפרויקט מהמים"><img src="assets/img/arabian/hero.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(1)" aria-label="בנייני הדירות"><img src="assets/img/arabian/towers.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(2)" aria-label="הבתים הטוריים"><img src="assets/img/arabian/residences.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(3)" aria-label="הבריכה"><img src="assets/img/arabian/pool.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(4)" aria-label="הכניסה והמסחר"><img src="assets/img/arabian/entrance.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(5)" aria-label="מטבח לדוגמה"><img src="assets/img/arabian/interior.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(6)" aria-label="תוכנית האב"><img src="assets/img/arabian/masterplan.jpg" alt="" loading="lazy"></button></div>
+<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="הפרויקט מהמים"><img src="assets/img/arabian/hero.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(1)" aria-label="בנייני הדירות"><img src="assets/img/arabian/towers.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(2)" aria-label="הבתים הטוריים"><img src="assets/img/arabian/residences.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(3)" aria-label="הבריכה"><img src="assets/img/arabian/pool.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(4)" aria-label="הכניסה והמסחר"><img src="assets/img/arabian/entrance.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(5)" aria-label="מטבח לדוגמה"><img src="assets/img/arabian/interior.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(6)" aria-label="תוכנית האב"><img src="assets/img/arabian/masterplan.jpg" alt="" loading="lazy" decoding="async"></button></div>
 </div>
 </section>
 
@@ -241,7 +252,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#F6EEE2 0px,#F6EDE1 14px,#F4EBDE 28px,#F3E9DA 41px,#F0E6D6 55px,#EEE2D1 69px,#EDE0CD 82px,#EBDECA 96px,#EBDDC9 110px,#EBDDC9 100%)" aria-labelledby="am-t">
 <div class="wrap">
 <div class="head rv"><div><div class="eb">Resort Living</div><div class="ln"></div><h2 class="h2" id="am-t">חיי ריזורט למשפחה</h2></div><p class="p">מתקנים ושטחים משותפים לפי הקטלוג. ההיקף כפוף למסמכי הפרויקט.</p></div>
-<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/arabian/pool.jpg" alt="הבריכה – הדמיה" loading="lazy"></div><div class="cap"><span>POOL</span><strong>בריכה ואזורי צל</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/arabian/residences.jpg" alt="הבתים הטוריים – הדמיה" loading="lazy"></div><div class="cap"><span>TOWNHOUSES</span><strong>רחוב הבתים</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/arabian/entrance.jpg" alt="הכניסה – הדמיה" loading="lazy"></div><div class="cap"><span>RETAIL</span><strong>כניסה ומסחר</strong></div></div></div>
+<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/arabian/pool.jpg" alt="הבריכה – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>POOL</span><strong>בריכה ואזורי צל</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/arabian/residences.jpg" alt="הבתים הטוריים – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>TOWNHOUSES</span><strong>רחוב הבתים</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/arabian/entrance.jpg" alt="הכניסה – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>RETAIL</span><strong>כניסה ומסחר</strong></div></div></div>
 </div>
 </section>
 
@@ -288,7 +299,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#3B2B1F 0px,#433326 14px,#56473A 28px,#736355 41px,#938474 55px,#B3A593 69px,#D0C1AE 82px,#E3D5C2 96px,#EBDDC9 110px,#EBDDC9 100%); padding:90px 0 60px" aria-labelledby="r-t">
 <div class="wrap">
 <div class="head" style="margin-bottom:30px"><div><div class="eb">More Projects</div><div class="ln"></div><h2 class="h2" id="r-t" style="font-size:34px">פרויקטים נוספים</h2></div><a href="index.html#projects" class="btn b-ghost" style="color:var(--ink)">לכל הפרויקטים</a></div>
-<div class="rel"><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy"></div><strong>Marina Village</strong></a><a class="rc rv" href="sabah-towers.html"><div class="shape"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy"></div><strong>Sabah Towers</strong></a><a class="rc rv" href="panorama-elie-saab.html"><div class="shape"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy"></div><strong>Panorama by ELIE SAAB</strong></a></div>
+<div class="rel"><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy" decoding="async"></div><strong>Marina Village</strong></a><a class="rc rv" href="sabah-towers.html"><div class="shape"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy" decoding="async"></div><strong>Sabah Towers</strong></a><a class="rc rv" href="panorama-elie-saab.html"><div class="shape"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy" decoding="async"></div><strong>Panorama by ELIE SAAB</strong></a></div>
 </div>
 </section>
 
@@ -301,5 +312,7 @@ a{color:inherit;text-decoration:none;}
 <nav class="mbar" aria-label="יצירת קשר מהירה"><a href="#contact">WhatsApp</a><a href="#contact">קבלו מחירון</a></nav>
 </div>
 <script>var G=[["assets/img/arabian/hero.jpg", "הפרויקט מהמים"], ["assets/img/arabian/towers.jpg", "בנייני הדירות"], ["assets/img/arabian/residences.jpg", "הבתים הטוריים"], ["assets/img/arabian/pool.jpg", "הבריכה"], ["assets/img/arabian/entrance.jpg", "הכניסה והמסחר"], ["assets/img/arabian/interior.jpg", "מטבח לדוגמה"], ["assets/img/arabian/masterplan.jpg", "תוכנית האב"]],gi=0;function gs(i){gi=(i+G.length)%G.length;document.getElementById("gimg").src=G[gi][0];document.getElementById("glab").textContent=G[gi][1];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");document.querySelectorAll(".th").forEach(function(e,k){e.classList.toggle("on",k==gi);});}function tm(){var m=document.getElementById("mnav");m.hidden=!m.hidden;}</script>
+<script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+<!--ux-v1-->
 </body>
 </html>

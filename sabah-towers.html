@@ -18,6 +18,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" as="image" href="assets/img/sabah/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&amp;display=swap" rel="stylesheet">
@@ -102,7 +103,7 @@ a{color:inherit;text-decoration:none;}
 .amc .shape{height:100%;}
 .amc:hover img{transform:scale(1.05);}
 .amc .cap{position:absolute;right:0;left:0;bottom:0;padding:26px 28px;color:#fff;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.6));border-radius:0 0 var(--img-radius-b) var(--img-radius-b);}
-.amc .cap span{font-family:var(--lfont);font-size:11px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
+.amc .cap span{font-family:var(--lfont);font-size:12px;letter-spacing:.3em;text-transform:uppercase;opacity:.9;}
 .amc .cap strong{display:block;font-family:var(--hfont);font-weight:var(--hweight);font-size:22px;margin-top:4px;}
 .two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;}
 .box{background:var(--card);border:1px solid var(--line);border-radius:var(--card-radius);padding:44px;}
@@ -181,6 +182,16 @@ a{color:inherit;text-decoration:none;}
 .mbar a:first-child{background:var(--accent);color:var(--accent-ink);}
 .ftr{padding-bottom:96px;}
 }
+
+html{scroll-behavior:smooth;}
+[id]{scroll-margin-top:84px;}
+.hdr{transition:background .35s ease,box-shadow .35s ease,backdrop-filter .35s ease;}
+.hdr.solid{position:fixed;background:rgba(20,54,69,.88);-webkit-backdrop-filter:blur(14px);backdrop-filter:blur(14px);box-shadow:0 10px 30px rgba(0,0,0,.18);}
+.hdr .hdr-in{transition:height .35s ease;}
+.hdr.solid .hdr-in{height:72px;}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid #1F5D70;outline-offset:3px;}
+.small a{display:inline-block;padding:10px 2px;}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;}}
 </style>
 </head>
 <body>
@@ -197,7 +208,7 @@ a{color:inherit;text-decoration:none;}
 </div></header>
 
 <section class="hero" aria-labelledby="ptitle">
-<img class="hero-img" src="assets/img/sabah/hero.jpg" alt="Sabah Towers – הדמיה">
+<img class="hero-img" fetchpriority="high" src="assets/img/sabah/hero.jpg" alt="Sabah Towers – הדמיה">
 <div class="hero-sh"></div>
 <div class="wrap hero-in">
 <div class="crumb up"><a href="index.html">דף הבית</a> &nbsp;/&nbsp; <a href="index.html#projects">הפרויקטים</a> &nbsp;/&nbsp; Sabah Towers</div>
@@ -222,7 +233,7 @@ a{color:inherit;text-decoration:none;}
 <p class="p" style="margin-top:16px">[כאן תיכנס פסקה בקול שלך: למי הפרויקט מתאים, ומה ראית בו בשטח.]</p>
 <div class="facts"><div class="fr"><span>מיקום</span><span>Sea Breeze, באקו</span></div><div class="fr"><span>יזם</span><span>Sabah Development</span></div><div class="fr"><span>קונספט</span><span>Longevity Wellness</span></div><div class="fr"><span>מועד מסירה</span><span class="pend">בבירור מול היזם</span></div></div>
 </div>
-<div class="shape ov-img rv"><img src="assets/img/sabah/balcony.jpg" alt="Sabah Towers – הדמיה" loading="lazy"></div>
+<div class="shape ov-img rv"><img src="assets/img/sabah/balcony.jpg" alt="Sabah Towers – הדמיה" loading="lazy" decoding="async"></div>
 </div>
 </section>
 
@@ -232,7 +243,7 @@ a{color:inherit;text-decoration:none;}
 <div class="gmain rv"><img id="gimg" src="assets/img/sabah/hero.jpg" alt="Sabah Towers – הדמיה">
 <div class="gcap"><div><div class="gnum lat" id="gcnt">01 / 06</div><strong id="glab">המגדלים מול המים</strong></div>
 <div class="garr"><button aria-label="התמונה הקודמת" onclick="gs(gi-1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button><button aria-label="התמונה הבאה" onclick="gs(gi+1)"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button></div></div></div>
-<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="המגדלים מול המים"><img src="assets/img/sabah/hero.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(1)" aria-label="הבריכה"><img src="assets/img/sabah/pool.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(2)" aria-label="הכניסה לפרויקט"><img src="assets/img/sabah/entrance.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(3)" aria-label="מרפסת מול הים"><img src="assets/img/sabah/balcony.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(4)" aria-label="הבניינים בערב"><img src="assets/img/sabah/night.jpg" alt="" loading="lazy"></button><button class="th" onclick="gs(5)" aria-label="מיקום הפרויקט"><img src="assets/img/sabah/location.jpg" alt="" loading="lazy"></button></div>
+<div class="thumbs"><button class="th on" onclick="gs(0)" aria-label="המגדלים מול המים"><img src="assets/img/sabah/hero.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(1)" aria-label="הבריכה"><img src="assets/img/sabah/pool.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(2)" aria-label="הכניסה לפרויקט"><img src="assets/img/sabah/entrance.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(3)" aria-label="מרפסת מול הים"><img src="assets/img/sabah/balcony.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(4)" aria-label="הבניינים בערב"><img src="assets/img/sabah/night.jpg" alt="" loading="lazy" decoding="async"></button><button class="th" onclick="gs(5)" aria-label="מיקום הפרויקט"><img src="assets/img/sabah/location.jpg" alt="" loading="lazy" decoding="async"></button></div>
 </div>
 </section>
 
@@ -241,7 +252,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#F7F2E6 0px,#F6F2E6 14px,#F5F2E7 28px,#F3F2E9 41px,#F0F2EA 55px,#EDF1EC 69px,#EBF1EE 82px,#EAF1EF 96px,#E9F1EF 110px,#E9F1EF 100%)" aria-labelledby="am-t">
 <div class="wrap">
 <div class="head rv"><div><div class="eb">Wellness</div><div class="ln"></div><h2 class="h2" id="am-t">חיי נופש כל השנה</h2></div><p class="p">שטחים משותפים לפי הקטלוג. ההיקף כפוף למסמכי הפרויקט.</p></div>
-<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/sabah/pool.jpg" alt="הבריכה – הדמיה" loading="lazy"></div><div class="cap"><span>POOL</span><strong>בריכה ושטחי רביצה</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/sabah/entrance.jpg" alt="הכניסה – הדמיה" loading="lazy"></div><div class="cap"><span>ARRIVAL</span><strong>כניסה ומסחר</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/sabah/night.jpg" alt="הבניינים בערב – הדמיה" loading="lazy"></div><div class="cap"><span>EVENING</span><strong>הפרויקט בשעות הערב</strong></div></div></div>
+<div class="am"><div class="amc rv"><div class="shape"><img src="assets/img/sabah/pool.jpg" alt="הבריכה – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>POOL</span><strong>בריכה ושטחי רביצה</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/sabah/entrance.jpg" alt="הכניסה – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>ARRIVAL</span><strong>כניסה ומסחר</strong></div></div><div class="amc rv"><div class="shape"><img src="assets/img/sabah/night.jpg" alt="הבניינים בערב – הדמיה" loading="lazy" decoding="async"></div><div class="cap"><span>EVENING</span><strong>הפרויקט בשעות הערב</strong></div></div></div>
 </div>
 </section>
 
@@ -288,7 +299,7 @@ a{color:inherit;text-decoration:none;}
 <section class="sec alt" style="background:linear-gradient(180deg,#143645 0px,#1D3E4C 14px,#355360 28px,#57717B 41px,#7E949A 55px,#A6B6B9 69px,#C8D4D4 82px,#E0E9E8 96px,#E9F1EF 110px,#E9F1EF 100%); padding:90px 0 60px" aria-labelledby="r-t">
 <div class="wrap">
 <div class="head" style="margin-bottom:30px"><div><div class="eb">More Projects</div><div class="ln"></div><h2 class="h2" id="r-t" style="font-size:34px">פרויקטים נוספים</h2></div><a href="index.html#projects" class="btn b-ghost" style="color:var(--ink)">לכל הפרויקטים</a></div>
-<div class="rel"><a class="rc rv" href="arabian-ranches.html"><div class="shape"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy"></div><strong>Arabian Ranches Baku</strong></a><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy"></div><strong>Marina Village</strong></a><a class="rc rv" href="reportage-heights.html"><div class="shape"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy"></div><strong>Reportage Heights</strong></a></div>
+<div class="rel"><a class="rc rv" href="arabian-ranches.html"><div class="shape"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy" decoding="async"></div><strong>Arabian Ranches Baku</strong></a><a class="rc rv" href="marina-village.html"><div class="shape"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy" decoding="async"></div><strong>Marina Village</strong></a><a class="rc rv" href="reportage-heights.html"><div class="shape"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy" decoding="async"></div><strong>Reportage Heights</strong></a></div>
 </div>
 </section>
 
@@ -301,5 +312,7 @@ a{color:inherit;text-decoration:none;}
 <nav class="mbar" aria-label="יצירת קשר מהירה"><a href="#contact">WhatsApp</a><a href="#contact">קבלו מחירון</a></nav>
 </div>
 <script>var G=[["assets/img/sabah/hero.jpg", "המגדלים מול המים"], ["assets/img/sabah/pool.jpg", "הבריכה"], ["assets/img/sabah/entrance.jpg", "הכניסה לפרויקט"], ["assets/img/sabah/balcony.jpg", "מרפסת מול הים"], ["assets/img/sabah/night.jpg", "הבניינים בערב"], ["assets/img/sabah/location.jpg", "מיקום הפרויקט"]],gi=0;function gs(i){gi=(i+G.length)%G.length;document.getElementById("gimg").src=G[gi][0];document.getElementById("glab").textContent=G[gi][1];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");document.querySelectorAll(".th").forEach(function(e,k){e.classList.toggle("on",k==gi);});}function tm(){var m=document.getElementById("mnav");m.hidden=!m.hidden;}</script>
+<script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
+<!--ux-v1-->
 </body>
 </html>
