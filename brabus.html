@@ -1,79 +1,473 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="he" dir="rtl">
 <head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>BRABUS Island Baku | SeaBreeze IL</title>
-<meta name="description" content="BRABUS Island Baku — גלריית הפרויקט, מתקנים ותוכניות דירה מתוך הקטלוג. SeaBreeze IL.">
-<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&family=Barlow+Condensed:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&family=Cormorant+Garamond:wght@500;600&display=swap" rel="stylesheet">
-<style>
-:root{--black:#070809;--panel:#101315;--white:#f8f8f6;--muted:#b8c0c4;--red:#d91631;--line:#343638}
-*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--black);color:var(--white);font-family:Assistant,Arial,sans-serif;line-height:1.75}a{color:inherit;text-decoration:none}button{font:inherit}img{display:block;max-width:100%}h1,h2,h3,p{margin-top:0}.wrap{width:min(1400px,90%);margin:auto}
-header{height:74px;display:flex;align-items:center;justify-content:space-between;gap:22px;padding:0 5%;background:#08090a;border-bottom:1px solid #252525;position:relative;z-index:10}.logo{font:700 30px 'Cormorant Garamond',Georgia,serif;direction:ltr;white-space:nowrap}.logo span{color:#d5ae72}nav{display:flex;gap:28px}nav a{font-weight:600;font-size:15px;transition:color .2s}nav a:hover{color:#f04b5e}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:45px;padding:10px 23px;background:#fff;color:#101010;border:1px solid #fff;border-radius:9px;font-weight:800;transition:transform .25s,background .25s}.btn:hover{transform:translateY(-2px);background:#e8e8e8}
-.hero{position:relative;min-height:760px;display:flex;align-items:flex-start;overflow:hidden;isolation:isolate;background-image:linear-gradient(90deg,rgba(0,0,0,.05),rgba(0,0,0,.24)),url('SeaBreeze_BRABUS_page/brabus-images/hero.jpg');background-size:cover;background-position:center 48%}.hero:after{content:"";position:absolute;z-index:0;inset:auto 0 0;height:43%;background:linear-gradient(180deg,transparent 0%,rgba(7,8,9,.18) 28%,rgba(7,8,9,.62) 63%,#070809 100%);pointer-events:none}.hero-inner{position:relative;z-index:1;width:min(1400px,90%);margin:0 auto;padding:68px 0 220px;text-align:right}.hero-copy{max-width:790px;margin-right:0;margin-left:auto}.eyebrow,.kicker{display:flex;align-items:center;gap:12px;direction:ltr;justify-content:flex-end;font:700 15px 'Barlow Condensed',sans-serif;letter-spacing:4px;text-transform:uppercase}.eyebrow:before,.kicker:before{content:"";display:inline-block;width:28px;height:3px;background:var(--red)}.hero h1{font:900 clamp(62px,7.8vw,120px)/.95 'Barlow Condensed',Impact,sans-serif;letter-spacing:1px;direction:ltr;text-align:right;margin:18px 0 18px;text-shadow:0 4px 25px #0008;white-space:nowrap}.hero h2{font-size:clamp(24px,2.5vw,36px);line-height:1.25;margin-bottom:15px;text-shadow:0 2px 12px #000b}.hero p{max-width:620px;font-size:17px;color:#f0f0f0;text-shadow:0 2px 9px #000;line-height:1.8}.hero .btn{margin-top:12px}.scroll-indicator{position:absolute;bottom:95px;left:50%;transform:translateX(-50%);z-index:2;width:23px;height:39px;border:1px solid #fffd;border-radius:18px;display:grid;place-items:start center;padding-top:8px}.scroll-indicator:after{content:"";width:3px;height:9px;background:white;border-radius:5px;animation:scrollMove 1.7s infinite}@keyframes scrollMove{0%{transform:translateY(0);opacity:1}75%{transform:translateY(12px);opacity:0}100%{opacity:0}}
-.section{padding:90px 0}.section-intro{margin-bottom:32px}.kicker{color:#e5e5e5;justify-content:flex-end;margin-bottom:13px}.section h2,.cta h2{font-size:clamp(31px,3.5vw,48px);line-height:1.2;margin:0 0 14px}.lead{font-size:17px;color:var(--muted);line-height:1.9;max-width:820px}.intro{display:grid;grid-template-columns:1fr 1.1fr;align-items:center;gap:52px}.intro p{font-size:17px;line-height:2;color:#c7ccce}.intro img{width:100%;height:440px;object-fit:cover;border-radius:18px}.stats{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}.pill{padding:9px 15px;border:1px solid #505457;border-radius:8px;color:#dedede;font-size:13px}
-.dark{background:#0d1012}.gallery{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:35px}.tile{display:flex;flex-direction:column;background:#141719;color:white;border:1px solid #303335;border-radius:17px;overflow:hidden;cursor:pointer;padding:0;text-align:right;transition:transform .3s,border-color .3s}.tile:hover{transform:translateY(-5px);border-color:#72777b}.tile img{width:100%;height:245px;object-fit:cover;transition:transform .5s}.tile:hover img{transform:scale(1.035)}.tile .tile-text{padding:18px 20px 22px;flex:1}.tile strong{display:block;font-size:21px;margin:0 0 5px}.tile small{font-size:14px;color:#bfc5c8}.amenities{background:#070809}.amenities .section-intro{text-align:center}.amenities .kicker{justify-content:center}.amenities .lead{margin-left:auto;margin-right:auto}.amenities .gallery{gap:26px}.amenities .tile{background:transparent;border:0;border-radius:0;overflow:visible;text-align:center}.amenities .tile img{height:255px;border-radius:17px;border:1px solid #555;object-fit:cover}.amenities .tile .tile-text{padding:17px 12px 8px}.amenities .tile strong{font-size:24px}.amenities .tile small{font-size:15px}.amenities .tile:hover{border-color:transparent}.amenities .tile:hover img{border-color:#ddd}
-.plans-section{background:#f1f0ed;color:#17191b}.plans-section .kicker{color:#3a3a3a}.plans-section .lead{color:#4e5559}.plans{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:35px}.plan{padding:0;display:flex;flex-direction:column;cursor:pointer;background:#fff;border:1px solid #ddd;border-radius:17px;overflow:hidden;color:#141414;text-align:right;transition:transform .25s,box-shadow .25s}.plan:hover{transform:translateY(-4px);box-shadow:0 16px 35px #0002}.plan img{width:100%;height:260px;object-fit:contain;padding:12px;background:#fff}.plan strong{padding:15px 20px;border-top:1px solid #e8e8e8;font-size:17px}.note{font-size:13px;line-height:1.9;color:#757d82;margin-top:22px}.cta{background:#0b0d0e;text-align:center;padding:95px 5%}.cta .kicker{justify-content:center}.cta p{color:#c5c9cb}.cta .btn{margin-top:15px}.cta .note{color:#94999b}footer{background:#060708;border-top:1px solid #242424;padding:28px 5%;text-align:center;color:#a7abad;font-size:13px;line-height:1.9}
-dialog{border:1px solid #555;border-radius:15px;padding:16px;max-width:min(96vw,1200px);max-height:95vh;background:#0b0d0e;color:#fff}dialog::backdrop{background:#000d}dialog img{max-width:100%;max-height:79vh;object-fit:contain;border-radius:8px}dialog button{background:#fff;color:#111;border:0;border-radius:7px;padding:7px 20px;cursor:pointer;margin-bottom:10px}
-@media(max-width:1000px){.hero{min-height:680px}.hero h1{font-size:clamp(55px,9vw,90px)}.intro{grid-template-columns:1fr}.intro img{height:390px}.gallery,.plans{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){header{height:68px;padding:0 4%}.logo{font-size:24px}header nav{display:none}header .btn{padding:8px 13px;font-size:13px;min-height:38px}.hero{min-height:690px;background-position:55% center}.hero-inner{padding:62px 0 180px}.hero-copy{max-width:100%}.hero h1{font-size:clamp(48px,13vw,75px);white-space:normal}.hero h2{font-size:24px}.hero p{font-size:15px}.eyebrow,.kicker{font-size:12px;letter-spacing:2px}.scroll-indicator{bottom:80px}.section{padding:64px 0}.gallery,.plans{grid-template-columns:1fr}.tile img,.amenities .tile img{height:245px}.plan img{height:255px}.intro img{height:280px}.cta{padding:70px 5%}}
-@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important}}
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="BRABUS Island Baku במתחם Sea Breeze: 592 דירות ו-16 וילות תאומות על חוף הים הכספי. גלריה, תוכניות דירה, שטחים ומחירון בליווי אישי בעברית.">
+<link rel="canonical" href="https://ohayon-baku.co.il/brabus.html">
+<meta name="robots" content="index,follow">
+<meta name="theme-color" content="#081B2D">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="he_IL">
+<meta property="og:site_name" content="OHAYON PROPERTIES | BAKU">
+<meta property="og:title" content="BRABUS Island Baku – דירות ווילות ב-Sea Breeze | OHAYON PROPERTIES BAKU">
+<meta property="og:description" content="BRABUS Island Baku במתחם Sea Breeze: 592 דירות ו-16 וילות תאומות על חוף הים הכספי. גלריה, תוכניות דירה, שטחים ומחירון בליווי אישי בעברית.">
+<meta property="og:url" content="https://ohayon-baku.co.il/brabus.html">
+<meta property="og:image" content="https://ohayon-baku.co.il/assets/img/brabus/hero.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://ohayon-baku.co.il/"}, {"@type": "ListItem", "position": 2, "name": "BRABUS Island Baku", "item": "https://ohayon-baku.co.il/brabus.html"}]}</script>
+<title>BRABUS Island Baku – דירות ווילות ב-Sea Breeze | OHAYON PROPERTIES BAKU</title>
 
-/* BRABUS / Editorial luxury refinement — typography and visual rhythm */
-:root{--black:#090a0b;--panel:#101112;--white:#f5f3ef;--muted:#b7b7b4;--red:#bb142b;--line:#343435}
-body{font-family:'Heebo',Arial,sans-serif;font-weight:300;line-height:1.85;letter-spacing:0;color:var(--white);-webkit-font-smoothing:antialiased}
-header{height:76px;background:rgba(7,8,9,.98);border-bottom:1px solid rgba(255,255,255,.12);padding-inline:5.5%}
-.logo{font:600 30px 'Cormorant Garamond',Georgia,serif;letter-spacing:-.35px}
-nav{gap:34px}nav a{font-size:14px;font-weight:400;letter-spacing:.1px;color:#d6d5d2}
-nav a:hover{color:#fff}
-.btn{min-height:44px;padding:11px 26px;background:transparent;color:#f6f4f0;border:1px solid rgba(255,255,255,.8);border-radius:7px;font-size:14px;font-weight:500;letter-spacing:.1px;box-shadow:none;transition:background .3s,color .3s,transform .3s}
-.btn:hover{background:#f6f4f0;color:#111;transform:translateY(-2px)}
-.hero{min-height:780px;background-position:center 48%;background-image:linear-gradient(90deg,rgba(0,0,0,.02),rgba(0,0,0,.23)),url('SeaBreeze_BRABUS_page/brabus-images/hero.jpg')}
-.hero:after{height:43%;background:linear-gradient(to bottom,rgba(9,10,11,0),rgba(9,10,11,.10) 24%,rgba(9,10,11,.57) 66%,#090a0b 100%)}
-.hero-inner{padding-top:80px}.hero-copy{max-width:720px}
-.eyebrow,.kicker{font-family:'Manrope',Arial,sans-serif;font-weight:500;font-size:11px;letter-spacing:3.1px;gap:15px;color:#e4e2de}
-.eyebrow:before,.kicker:before{width:22px;height:2px;background:var(--red)}
-.hero h1{font-family:'Barlow Condensed','Arial Narrow',sans-serif;font-weight:600;font-size:clamp(65px,7.2vw,108px);letter-spacing:1.8px;line-height:.98;margin:25px 0 23px;text-shadow:0 5px 22px rgba(0,0,0,.24)}
-.hero h2{font-weight:400;font-size:clamp(25px,2.4vw,34px);line-height:1.45;letter-spacing:-.45px;margin-bottom:15px;text-shadow:0 2px 12px #0008}
-.hero p{font-weight:300;font-size:16px;line-height:2;max-width:570px;color:#f1efeb}
-.hero .btn{margin-top:21px}
-.section{padding:112px 0}.section-intro{margin-bottom:42px}
-.section h2,.cta h2{font-family:'Heebo',Arial,sans-serif;font-size:clamp(30px,3.1vw,43px);font-weight:400;line-height:1.4;letter-spacing:-.6px;margin-bottom:20px}
-.lead,.intro p{font-weight:300;font-size:16px;line-height:2.05;color:#c4c4c0}
-.intro{gap:72px}.intro img{border-radius:12px}
-.stats{gap:10px;margin-top:31px}.pill{font-weight:400;font-size:12px;border-color:#464646;border-radius:5px;padding:10px 15px}
-.dark{background:#0d0e0f}
-.gallery,.plans{gap:26px;margin-top:40px}
-.tile{background:#141516;border:1px solid #292b2d;border-radius:13px;transition:transform .35s,border-color .35s,box-shadow .35s}
-.tile:hover{transform:translateY(-3px);border-color:#666;box-shadow:0 16px 35px #0003}
-.tile img{height:265px;transition:transform .65s ease}
-.tile .tile-text{padding:23px 23px 26px}
-.tile strong{font-size:19px;font-weight:400;line-height:1.5;margin-bottom:6px}
-.tile small{font-size:13px;font-weight:300;color:#b8b9b8}
-.amenities{background:#090a0b}
-.amenities .gallery{gap:28px}.amenities .tile{background:transparent;border:0;border-radius:0}
-.amenities .tile img{height:275px;border-radius:13px;border:1px solid rgba(255,255,255,.18)}
-.amenities .tile .tile-text{padding:23px 12px 9px}
-.amenities .tile strong{font-size:22px;font-weight:400}
-.amenities .tile small{font-size:14px}
-.plans-section{background:#efeeeb;color:#202122}
-.plans-section .kicker{color:#525252}.plans-section .lead{color:#57595b}
-.plan{border-radius:13px;border-color:#deddd9;box-shadow:0 9px 25px #0000000b}
-.plan strong{font-weight:400;font-size:16px;padding:18px 20px}
-.note{font-size:12px;font-weight:300;line-height:2}
-.cta{background:#0b0c0d;padding:112px 5%}.cta p{font-weight:300;font-size:16px}
-footer{font-weight:300;font-size:12px;letter-spacing:.1px}
-@media(max-width:1000px){.hero{min-height:700px}.hero h1{font-size:clamp(55px,8.8vw,90px)}.section{padding:82px 0}.intro{gap:38px}}
-@media(max-width:650px){header{height:68px}.logo{font-size:25px}.hero{min-height:680px;background-position:55% center}.hero-inner{padding-top:64px}.hero h1{font-size:clamp(48px,12vw,73px);letter-spacing:.6px;white-space:normal}.hero h2{font-size:24px}.hero p{font-size:15px}.eyebrow,.kicker{font-size:10px;letter-spacing:1.7px}.section{padding:68px 0}.section h2,.cta h2{font-size:30px}.tile img,.amenities .tile img{height:245px}.tile .tile-text{padding:18px}.intro img{height:280px}.cta{padding:78px 5%}}
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;700;800;900&amp;family=Barlow+Condensed:ital,wght@0,500;0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#000;}
+*{box-sizing:border-box;}
+a{color:#fff;text-decoration:none;}a:hover{color:#BDBDBD;}
+.pg{font-family:'Heebo',sans-serif;font-weight:300;color:#EDEDED;background:#000;direction:rtl;overflow-x:hidden;}
+.wrap{max-width:1320px;margin:0 auto;padding:0 48px;}
+.cond{font-family:'Barlow Condensed',sans-serif;direction:ltr;unicode-bidi:isolate;text-transform:uppercase;}
+.red{color:#E10A1E;}
+.kick{display:flex;align-items:center;gap:12px;font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:13px;letter-spacing:.2em;color:#fff;text-transform:uppercase;direction:ltr;justify-content:flex-end;}
+.kick b{color:#fff;font-weight:800;}
+.kick::after{content:"";width:40px;height:1px;background:#5A5A5A;}
+.h2{font-weight:900;font-size:46px;line-height:1.02;letter-spacing:-.02em;margin:16px 0 0;color:#fff;}
+.p{font-size:16px;line-height:1.8;color:#A8A8A8;margin:0;max-width:560px;}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;height:50px;padding:0 28px;font-family:'Heebo',sans-serif;font-size:15px;font-weight:600;letter-spacing:0;transition:all .25s ease;cursor:pointer;border-radius:0;}
+.b-red{background:#C8101E;color:#fff;border:1px solid #C8101E;border-radius:2px;}
+.b-red:hover{background:#A50D18;color:#fff;border-color:#A50D18;}
+.b-white{border:1px solid rgba(255,255,255,.7);border-radius:2px;color:#fff;background:transparent;}
+.b-white:hover{background:#fff;color:#000;}
+.menu-btn{display:none;width:48px;height:48px;align-items:center;justify-content:center;border:1px solid rgba(255,255,255,.6);background:transparent;color:#fff;cursor:pointer;}
+.topbar{height:0;}
+.hdr{position:absolute;top:0;right:0;left:0;z-index:20;}
+.hdr-in{height:88px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.nav{display:flex;gap:32px;font-family:'Barlow Condensed',sans-serif;font-weight:600;font-size:15px;letter-spacing:.14em;text-transform:uppercase;}
+.nav a{color:#fff;}
+.nav a:hover{color:#BDBDBD;}
+/* hero */
+.hero{position:relative;height:940px;min-height:680px;overflow:hidden;background:#000;}
+.hero-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(.35) contrast(1.2) brightness(.62);animation:kb 18s ease-out both;}
+@keyframes kb{from{transform:scale(1.1);}to{transform:scale(1);}}
+.sh{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.7) 0%,rgba(0,0,0,0) 30%,rgba(0,0,0,.2) 55%,#000 100%);}
+.hero-in{position:relative;z-index:2;height:100%;display:flex;flex-direction:column;justify-content:flex-end;padding-bottom:84px;}
+.crumb{font-size:13px;color:#9A9A9A;margin-bottom:26px;}
+.crumb a{color:#9A9A9A;}
+.title{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:148px;line-height:.82;letter-spacing:-.01em;margin:0;color:#fff;direction:ltr;text-align:right;text-transform:uppercase;}
+.title span{display:block;-webkit-text-stroke:1.5px rgba(255,255,255,.9);color:transparent;}
+.slash{display:inline-block;width:72px;height:3px;background:#C8101E;transform:skewX(-20deg);margin:22px 0 0;}
+.htag{font-weight:700;font-size:24px;line-height:1.3;color:#fff;margin:20px 0 28px;max-width:620px;letter-spacing:-.01em;}
+.up{animation:up .9s cubic-bezier(.2,.8,.2,1) both;}
+.d1{animation-delay:.12s;}.d2{animation-delay:.24s;}.d3{animation-delay:.36s;}.d4{animation-delay:.5s;}
+@keyframes up{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:none;}}
+/* data strip */
+.data{border-top:1px solid #262626;border-bottom:1px solid #262626;background:#000;}
+.data-g{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));}
+.di{padding:28px 26px;border-left:1px solid #262626;position:relative;}
+.di:last-child{border-left:0;}
+.di::before{content:"";position:absolute;top:-1px;right:30px;width:22px;height:2px;background:#C8101E;}
+.dn{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:44px;line-height:1;color:#fff;direction:ltr;text-align:right;}
+.dn small{font-size:16px;color:#8A8A8A;margin-left:4px;}
+.dl{font-size:14px;color:#9A9A9A;margin-top:8px;font-weight:400;}
+.dsrc{font-size:12px;color:#6E6E6E;padding:14px 0;text-align:left;direction:rtl;}
+.dsrc a{color:#9A9A9A;text-decoration:underline;}
+/* sections */
+.sec{padding:130px 0;}
+.alt{background:#0B0B0B;}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:48px;margin-bottom:56px;}
+.split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:80px;align-items:center;}
+.ov-img{position:relative;height:480px;clip-path:polygon(0 0,100% 0,100% 100%,60px 100%,0 calc(100% - 60px));}
+.ov-img img{width:100%;height:100%;object-fit:cover;filter:contrast(1.08) saturate(.8);}
+.facts{margin-top:40px;border-top:1px solid #262626;}
+.fr{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-bottom:1px solid #1C1C1C;font-size:15px;}
+.fr span:first-child{color:#8A8A8A;}
+.fr span:last-child{color:#fff;font-weight:500;text-align:left;}
+.pend{color:#BDBDBD !important;font-weight:300 !important;font-style:italic;}
+/* gallery */
+.gmain{position:relative;height:600px;overflow:hidden;background:#111;}
+.gmain img{width:100%;height:100%;object-fit:cover;display:block;filter:contrast(1.08) saturate(.85);animation:fade .5s ease both;}
+@keyframes fade{from{opacity:.2;}to{opacity:1;}}
+.gcap{position:absolute;right:0;bottom:0;left:0;padding:30px 34px;background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.9));display:flex;justify-content:space-between;align-items:flex-end;}
+.gcap strong{font-weight:700;font-size:20px;color:#fff;}
+.gnum{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:15px;letter-spacing:.12em;color:#BDBDBD;direction:ltr;}
+.garr{display:flex;gap:0;}
+.garr button{width:56px;height:56px;border:1px solid rgba(255,255,255,.6);background:#000;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;margin-right:-2px;transition:all .2s ease;}
+.garr button:hover{background:#fff;color:#000;border-color:#fff;}
+.thumbs{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));gap:6px;margin-top:6px;}
+.th{height:84px;padding:0;border:0;cursor:pointer;overflow:hidden;background:#111;position:relative;}
+.th img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.6);transition:all .25s ease;}
+.th:hover img{filter:none;}
+/* units */
+.tabs{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid #262626;margin-bottom:40px;}
+.tab{height:54px;background:#000;border:0;border-left:1px solid #262626;font-family:'Heebo',sans-serif;font-size:14px;font-weight:600;color:#8A8A8A;cursor:pointer;transition:all .2s ease;}
+.tab:last-child{border-left:0;}
+.tab:hover{color:#fff;}
+.unit{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:48px;align-items:stretch;}
+.plan{background:#F2F2F2;padding:28px;height:440px;display:flex;align-items:center;justify-content:center;position:relative;}
+.plan::before{content:"";position:absolute;top:0;right:0;width:56px;height:3px;background:#C8101E;}
+.plan img{max-width:100%;max-height:100%;object-fit:contain;}
+.sheet{border:1px solid #262626;padding:34px;display:flex;flex-direction:column;}
+.un{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:32px;line-height:1;color:#fff;direction:ltr;text-align:right;margin:0;text-transform:uppercase;}
+.uh{font-weight:400;font-size:17px;color:#BDBDBD;margin:8px 0 18px;}
+.row{display:flex;justify-content:space-between;gap:16px;padding:12px 0;border-bottom:1px solid #1F1F1F;font-size:14px;}
+.row span:first-child{color:#8A8A8A;}
+.row span:last-child{color:#fff;font-weight:500;}
+.src{font-size:12px;color:#6E6E6E;margin:16px 0 0;line-height:1.6;}
+/* amenities */
+.am{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;}
+.amc{position:relative;height:400px;overflow:hidden;background:#111;}
+.amc img{width:100%;height:100%;object-fit:cover;filter:grayscale(.5) contrast(1.15) brightness(.7);transition:all .8s ease;}
+.amc:hover img{filter:none;transform:scale(1.05);}
+.amc div{position:absolute;right:0;left:0;bottom:0;padding:28px 30px;}
+.amc .n{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:42px;line-height:1;color:transparent;-webkit-text-stroke:1px rgba(255,255,255,.8);direction:ltr;text-align:right;}
+.amc strong{display:block;font-weight:700;font-size:20px;color:#fff;margin-top:6px;}
+/* pricing */
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:6px;}
+.box{background:#0E0E0E;padding:48px;border-top:2px solid #3A3A3A;}
+.box h3{font-weight:800;font-size:28px;line-height:1.15;color:#fff;margin:16px 0 14px;letter-spacing:-.02em;}
+.lst{list-style:none;margin:22px 0 0;padding:0;display:flex;flex-direction:column;gap:14px;}
+.lst li{display:flex;gap:12px;align-items:flex-start;font-size:15px;line-height:1.6;color:#C8C8C8;}
+.lst i{flex:none;width:10px;height:1px;background:#8A8A8A;margin-top:12px;}
+.draft{display:inline-block;margin-top:24px;font-size:12px;font-weight:700;letter-spacing:.08em;color:#000;background:#fff;padding:6px 12px;}
+/* contact */
+.ct{position:relative;overflow:hidden;}
+.ct-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.25);}
+.ct-in{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,480px);gap:80px;align-items:center;}
+.form{background:rgba(0,0,0,.85);border:1px solid #3A3A3A;padding:44px;display:flex;flex-direction:column;gap:18px;}
+.form label{display:flex;flex-direction:column;gap:6px;font-size:12px;color:#9A9A9A;font-weight:500;letter-spacing:0;}
+.form input,.form select{height:48px;padding:0 4px;background:transparent;border:0;border-bottom:1px solid #444;color:#fff;font-family:'Heebo',sans-serif;font-size:16px;font-weight:400;border-radius:0;}
+.form select option{color:#000;}
+.form input:focus,.form select:focus{outline:none;border-bottom-color:#fff;}
+.small{font-size:12px;line-height:1.6;color:#7A7A7A;margin:0;}
+/* related */
+.rel{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:6px;}
+.rc{position:relative;display:block;height:300px;overflow:hidden;background:#111;}
+.rc img{width:100%;height:100%;object-fit:cover;filter:grayscale(1) brightness(.55);transition:all .6s ease;}
+.rc:hover img{filter:none;}
+.rc div{position:absolute;right:0;left:0;bottom:0;padding:24px 28px;}
+.rc strong{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-style:italic;font-size:24px;color:#fff;direction:ltr;display:block;text-align:right;text-transform:uppercase;}
+.ftr{background:#000;border-top:1px solid #262626;padding:56px 0 32px;}
+.legal{display:flex;justify-content:space-between;gap:24px;font-size:12px;color:#6E6E6E;line-height:1.7;margin-top:36px;padding-top:24px;border-top:1px solid #1C1C1C;}
+.fab{position:fixed;left:28px;bottom:28px;z-index:50;width:60px;height:60px;border-radius:50%;background:#fff;color:#000;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 34px rgba(0,0,0,.6);}
+.fab:hover{background:#C8101E;color:#fff;}
+.mbar{display:none;}
+@supports (animation-timeline: view()){.rv{animation:up linear both;animation-timeline:view();animation-range:entry 0% cover 20%;}}
+@media (prefers-reduced-motion: reduce){.hero-img,.up,.rv,.gmain img{animation:none !important;}}
+@media (max-width:1100px){
+.wrap{padding:0 32px;}
+.title{font-size:110px;}
+.data-g{grid-template-columns:repeat(2,minmax(0,1fr));}
+.di:nth-child(2){border-left:0;}
+.di:nth-child(-n+2){border-bottom:1px solid #262626;}
+.split,.unit,.two,.ct-in{grid-template-columns:minmax(0,1fr);gap:48px;}
+.thumbs{grid-template-columns:repeat(4,minmax(0,1fr));}
+.tabs{grid-template-columns:repeat(3,minmax(0,1fr));}
+.tab:nth-child(3){border-left:0;}
+.tab:nth-child(-n+3){border-bottom:1px solid #262626;}
+.am,.rel{grid-template-columns:repeat(2,minmax(0,1fr));}
+}
+@media (max-width:760px){
+.wrap{padding:0 20px;}
+.nav,.hdr .btn{display:none;}
+.menu-btn{display:inline-flex;}
+.hdr-in{height:76px;}
+.hero{height:760px;}
+.hero-in{padding-bottom:56px;}
+.title{font-size:64px;}
+.title span{-webkit-text-stroke:1.5px #fff;}
+.htag{font-size:19px;}
+.ctas{flex-direction:column;align-items:stretch;}
+.di{padding:24px 18px;}
+.di::before{right:18px;}
+.dn{font-size:32px;}
+.dn small{font-size:14px;}
+.sec{padding:84px 0;}
+.h2{font-size:32px;}
+#c-title{font-size:34px !important;}
+#r-title{font-size:28px !important;}
+.head{flex-direction:column;align-items:flex-start;gap:18px;margin-bottom:32px;}
+.ov-img{height:340px;}
+.gmain{height:380px;}
+.gcap{padding:18px;}
+.gcap strong{font-size:17px;}
+.garr button{width:48px;height:48px;}
+.th{height:62px;}
+.tabs{grid-template-columns:repeat(2,minmax(0,1fr));}
+.tab{border-bottom:1px solid #262626;height:54px;}
+.tab:nth-child(odd){border-left:1px solid #262626;}
+.tab:nth-child(even){border-left:0;}
+.plan{height:300px;padding:16px;}
+.sheet{padding:24px 20px;}
+.un{font-size:26px;}
+.box{padding:30px 22px;}
+.box h3{font-size:23px;}
+.am,.rel{grid-template-columns:minmax(0,1fr);}
+.amc{height:340px;}
+.form{padding:28px 20px;}
+.legal{flex-direction:column;}
+.fab{display:none;}
+.mbar{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));position:fixed;bottom:0;right:0;left:0;z-index:50;background:#000;border-top:1px solid #333;}
+.mbar a{display:flex;align-items:center;justify-content:center;gap:8px;min-height:60px;font-size:14px;font-weight:700;color:#fff;}
+.mbar a:first-child{background:#C8101E;}
+.ftr{padding-bottom:100px;}
+}
 </style>
+
+<style>[hidden]{display:none !important}</style>
 </head>
 <body>
-<header><a class="logo" href="./index.html">SeaBreeze <span>IL</span></a><nav><a href="./index.html">דף הבית</a><a href="#gallery">גלריה</a><a href="#amenities">מתקנים</a><a href="#plans">תוכניות</a></nav><a class="btn" href="./index.html#contact">קבלת פרטים</a></header>
-<section class="hero" aria-labelledby="project-title"><div class="hero-inner"><div class="hero-copy"><div class="eyebrow">SEA BREEZE · BAKU · AZERBAIJAN</div><h1 id="project-title">BRABUS ISLAND</h1><h2>אדריכלות נועזת. מגורים יוצאי דופן.</h2><p>פרויקט BRABUS Island Baku במתחם Sea Breeze על חופי הים הכספי. חוויית מגורים בהשראת שפת העיצוב המזוהה עם BRABUS.</p><a class="btn" href="#gallery">לצפייה בפרויקט ←</a></div></div><a class="scroll-indicator" href="#overview" aria-label="גלילה להמשך העמוד"></a></section>
-<section class="section" id="overview"><div class="wrap intro"><div><div class="kicker">01 / THE PROJECT</div><h2>אדריכלות ייחודית לצד הים הכספי</h2><p>BRABUS Island Baku משלב מבנה מגורים בעל חזית מעוגלת, חללים ציבוריים ומגוון יחידות מגורים. הקטלוג מציג דירות סטודיו, דירות עם חדר שינה אחד עד שלושה חדרי שינה, דופלקסים ווילות.</p><div class="stats"><span class="pill">Sea Breeze · Baku</span><span class="pill">דירות · דופלקסים · וילות</span><span class="pill">הדמיות להמחשה</span></div></div><img src="SeaBreeze_BRABUS_page/brabus-images/coast.jpg" alt="הדמיה אדריכלית של BRABUS Island על קו החוף" loading="lazy"></div></section>
-<section class="section dark" id="gallery"><div class="wrap"><div class="section-intro"><div class="kicker">02 / THE GALLERY</div><h2>מבט מקרוב על הפרויקט</h2><p class="lead">הדמיות מתוך הקטלוג שסופק על ידי TREVA. לחצו על תמונה כדי לצפות בה בהגדלה. התמונות להמחשה בלבד.</p></div><div class="gallery"><button class="tile" data-img="garden"><img src="SeaBreeze_BRABUS_page/brabus-images/garden.jpg" alt="גינות וחזית הפרויקט" loading="lazy"><span class="tile-text"><strong>שטחי חוץ ואדריכלות</strong><small>חזיתות הפרויקט והסביבה</small></span></button><button class="tile" data-img="beach"><img src="SeaBreeze_BRABUS_page/brabus-images/beach.jpg" alt="חזית החוף" loading="lazy"><span class="tile-text"><strong>חזית החוף</strong><small>מבט אל קו המים</small></span></button><button class="tile" data-img="living"><img src="SeaBreeze_BRABUS_page/brabus-images/living.jpg" alt="חללי מגורים" loading="lazy"><span class="tile-text"><strong>חללי מגורים</strong><small>עיצוב הפנים בפרויקט</small></span></button></div></div></section>
-<section class="section amenities" id="amenities"><div class="wrap"><div class="section-intro"><div class="kicker">03 / AMENITIES</div><h2>חוויה מעבר לדלת הבית</h2><p class="lead">מגוון מתקנים וחללים משותפים המוצגים בקטלוג הפרויקט.</p></div><div class="gallery"><button class="tile" data-img="pool"><img src="SeaBreeze_BRABUS_page/brabus-images/pool.jpg" alt="בריכת שחייה" loading="lazy"><span class="tile-text"><strong>בריכת שחייה</strong><small>אזור בריכה ומרחבי פנאי</small></span></button><button class="tile" data-img="fitness"><img src="SeaBreeze_BRABUS_page/brabus-images/fitness.jpg" alt="כושר וספא" loading="lazy"><span class="tile-text"><strong>כושר וספא</strong><small>מתקני כושר וחללי בריאות</small></span></button><button class="tile" data-img="lounge"><img src="SeaBreeze_BRABUS_page/brabus-images/lounge.jpg" alt="אזור לאונג'" loading="lazy"><span class="tile-text"><strong>אזור לאונג׳</strong><small>חלל משותף למפגש ולמנוחה</small></span></button></div><p class="note">היקף המתקנים, השירותים והזכויות לשימוש בהם כפופים למסמכי הפרויקט ולהסכמי הרכישה.</p></div></section>
-<section class="section plans-section" id="plans"><div class="wrap"><div class="section-intro"><div class="kicker">04 / FLOOR PLANS</div><h2>תוכניות דירה לדוגמה</h2><p class="lead">תוכניות מתוך הקטלוג. לחצו על תוכנית לצפייה מוגדלת. התוכניות אינן מעידות על מלאי זמין או על שטח מחייב של יחידה מסוימת.</p></div><div class="plans"><button class="plan" data-img="studio-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/studio-plan.jpg" alt="תוכנית סטודיו" loading="lazy"><strong>סטודיו · Type A3</strong></button><button class="plan" data-img="onebed-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/onebed-plan.jpg" alt="תוכנית חדר שינה אחד" loading="lazy"><strong>חדר שינה אחד · Type A1</strong></button><button class="plan" data-img="twobed-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/twobed-plan.jpg" alt="תוכנית שני חדרי שינה" loading="lazy"><strong>שני חדרי שינה · Type A</strong></button><button class="plan" data-img="threebed-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/threebed-plan.jpg" alt="תוכנית שלושה חדרי שינה" loading="lazy"><strong>שלושה חדרי שינה · Type A</strong></button><button class="plan" data-img="duplex-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/duplex-plan.jpg" alt="תוכנית דופלקס" loading="lazy"><strong>דופלקס · Type A5</strong></button><button class="plan" data-img="villa-plan"><img src="SeaBreeze_BRABUS_page/brabus-images/villa-plan.jpg" alt="תוכנית וילה" loading="lazy"><strong>וילה</strong></button></div><p class="note">מקור: קטלוג BRABUS Island Baku, עמודים 22–28. נתוני מחיר, מועדי מסירה, זמינות, תוכניות תשלום ומפרט מסירה אינם מאומתים בשלב זה.</p></div></section>
-<section class="cta"><div class="kicker">PRIVATE CONSULTATION</div><h2>רוצים להכיר את אפשרויות הרכישה?</h2><p>לקבלת מידע על זמינות, מחירון מעודכן ותוכניות נוספות — השאירו פרטים באתר.</p><a class="btn" href="./index.html#contact">לקבלת פרטים ומחירון ←</a><p class="note">טופס האתר הראשי נמצא עדיין בגרסת הדגמה ואינו שולח פניות.</p></section>
-<footer>SeaBreeze IL · אתר שיווק עצמאי בהקמה · אינו האתר הרשמי של BRABUS או Sea Breeze.<br>הדמיות ותוכניות מתוך קטלוג הפרויקט, להמחשה בלבד. אין לראות במידע הצעה מחייבת.</footer>
-<dialog id="viewer" aria-label="תמונה מוגדלת"><button id="close" type="button">סגירה ✕</button><img id="large" alt="תמונה מוגדלת"></dialog>
-<script>const viewer=document.getElementById('viewer'),large=document.getElementById('large');document.querySelectorAll('[data-img]').forEach(el=>el.addEventListener('click',()=>{large.src='SeaBreeze_BRABUS_page/brabus-images/'+el.dataset.img+'.jpg';viewer.showModal()}));document.getElementById('close').onclick=()=>viewer.close();viewer.addEventListener('click',e=>{if(e.target===viewer)viewer.close()});</script>
-</body></html>
+
+
+<div class="pg">
+<div class="topbar"></div>
+<header class="hdr">
+<div class="wrap hdr-in">
+<a href="index.html" aria-label="OHAYON PROPERTIES | BAKU – דף הבית"><img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height: 42px; width: auto; display: block"></a>
+<nav class="nav" aria-label="ניווט בעמוד">
+<a href="#overview">Project</a>
+<a href="#gallery">Gallery</a>
+<a href="#units">Residences</a>
+<a href="#pricing">Pricing</a>
+<a href="#contact">Contact</a>
+</nav>
+<a href="#contact" class="btn b-white" style="height: 46px; padding: 0 22px; font-size: 14px">קבלו מחירון</a>
+<button class="menu-btn" aria-label="פתיחת התפריט">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 7h18M3 12h18M3 17h18"></path></svg>
+</button>
+</div>
+</header>
+
+<section class="hero" aria-labelledby="ptitle">
+<img class="hero-img" src="assets/img/brabus/hero.jpg" alt="BRABUS Island Baku מהאוויר – הדמיה">
+<div class="sh"></div>
+<div class="wrap hero-in">
+<div class="crumb up"><a href="index.html">דף הבית</a> &nbsp;/&nbsp; <a href="index.html">הפרויקטים</a> &nbsp;/&nbsp; BRABUS Island</div>
+<div class="kick up"><span><b>SEA BREEZE</b> · NARDARAN · BAKU</span></div>
+<h1 class="title up d1" id="ptitle">BRABUS<span>ISLAND</span></h1>
+<div class="slash up d2"></div>
+<p class="htag up d2">מגורים בעוצמה מלאה. על קו המים של הים הכספי.</p>
+<div class="ctas up d3" style="display: flex; gap: 14px">
+<a href="#contact" class="btn b-red">קבלו מחירון ותוכניות</a>
+<a href="#contact" class="btn b-white">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>
+WhatsApp
+</a>
+</div>
+</div>
+</section>
+
+<section class="data" aria-label="נתוני הפרויקט">
+<div class="wrap">
+<div class="data-g">
+<div class="di up d3"><div class="dn">592</div><div class="dl">דירות יוקרה, מסטודיו ועד דופלקס</div></div>
+<div class="di up d3"><div class="dn">16</div><div class="dl">וילות תאומות</div></div>
+<div class="di up d4"><div class="dn">~115,000<small>M²</small></div><div class="dl">שטח הפרויקט</div></div>
+<div class="di up d4"><div class="dn">&lt;25<small>MIN</small></div><div class="dl">ממרכז באקו</div></div>
+</div>
+<div class="dsrc">מקור: <a href="https://www.brabus.com/en-be/real-estate/island-baku.html">עמוד הפרויקט באתר BRABUS</a>, נבדק 6.11.2026</div>
+</div>
+</section>
+
+<section class="sec" id="overview" aria-labelledby="ov-title">
+<div class="wrap split">
+<div class="rv">
+<div class="kick"><span><b>01</b> · THE PROJECT</span></div>
+<h2 class="h2" id="ov-title">שחור. נועז.<br>על המים.</h2>
+<p class="p" style="margin-top: 30px">BRABUS Island Baku נמצא בנרדרן, בתוך עיר הנופש Sea Breeze, על חוף הים הכספי. בפרויקט דירות סטודיו, דירות של חדר עד שלושה חדרי שינה, דופלקסים ווילות תאומות, כולם בשפת העיצוב של BRABUS.</p>
+<p class="p" style="margin-top: 16px">[כאן תיכנס פסקה בקול שלך: למי הפרויקט מתאים, ומה ראית בו בשטח.]</p>
+<div class="facts">
+<div class="fr"><span>מיקום</span><span>Nardaran, Sea Breeze</span></div>
+<div class="fr"><span>יזמים</span><span>BRABUS ו-Sabah Investment Group</span></div>
+<div class="fr"><span>מועד מסירה</span><span class="pend">בבירור מול היזם</span></div>
+</div>
+</div>
+<div class="ov-img rv"><img src="assets/img/brabus/coast.jpg" alt="BRABUS Island על קו החוף – הדמיה" loading="lazy"></div>
+</div>
+</section>
+
+<section class="sec alt" id="gallery" aria-labelledby="g-title">
+<div class="wrap">
+<div class="head rv">
+<div>
+<div class="kick"><span><b>02</b> · GALLERY</span></div>
+<h2 class="h2" id="g-title">מבט מקרוב</h2>
+</div>
+<p class="p">הדמיות מתוך קטלוג הפרויקט, להמחשה בלבד.</p>
+</div>
+<div class="gmain rv">
+<img id="gimg" src="" alt="">
+<div class="gcap">
+<div><div class="gnum" id="gcnt"></div><strong id="glab"></strong></div>
+<div class="garr">
+<button aria-label="התמונה הקודמת" onclick="gs(gi-1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></button>
+<button aria-label="התמונה הבאה" onclick="gs(gi+1)"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M19 12H5M11 6l-6 6 6 6"></path></svg></button>
+</div>
+</div>
+</div>
+<div class="thumbs">
+<button class="th" onclick="gs(0)" aria-label="הפרויקט מהאוויר"><img src="assets/img/brabus/hero.jpg" alt=""></button><button class="th" onclick="gs(1)" aria-label="קו החוף והמרינה"><img src="assets/img/brabus/coast.jpg" alt=""></button><button class="th" onclick="gs(2)" aria-label="חזית החוף"><img src="assets/img/brabus/beach.jpg" alt=""></button><button class="th" onclick="gs(3)" aria-label="גינות ושטחי חוץ"><img src="assets/img/brabus/garden.jpg" alt=""></button><button class="th" onclick="gs(4)" aria-label="חלל מגורים"><img src="assets/img/about-interior.jpg" alt=""></button><button class="th" onclick="gs(5)" aria-label="בריכת השחייה"><img src="assets/img/brabus/pool.jpg" alt=""></button><button class="th" onclick="gs(6)" aria-label="כושר וספא"><img src="assets/img/brabus/fitness.jpg" alt=""></button><button class="th" onclick="gs(7)" aria-label="לאונג׳ לדיירים"><img src="assets/img/brabus/lounge.jpg" alt=""></button>
+</div>
+</div>
+</section>
+
+<section class="sec" id="units" aria-labelledby="u-title">
+<div class="wrap">
+<div class="head rv">
+<div>
+<div class="kick"><span><b>03</b> · RESIDENCES</span></div>
+<h2 class="h2" id="u-title">בחרו את הדגם</h2>
+</div>
+<p class="p">שש תוכניות לדוגמה מתוך הקטלוג. השטחים הם של יחידה לדוגמה, ואינם מעידים על מלאי זמין.</p>
+</div>
+<div class="tabs" role="tablist">
+<button class="tab" role="tab" onclick="us(0)">סטודיו</button><button class="tab" role="tab" onclick="us(1)">חדר שינה אחד</button><button class="tab" role="tab" onclick="us(2)">שני חדרי שינה</button><button class="tab" role="tab" onclick="us(3)">שלושה חדרי שינה</button><button class="tab" role="tab" onclick="us(4)">דופלקס</button><button class="tab" role="tab" onclick="us(5)">וילה תאומה</button>
+</div>
+<div class="unit">
+<div class="plan"><img id="uimg" src="" alt="תוכנית דירה"></div>
+<div class="sheet">
+<p class="un" id="ucode"></p>
+<p class="uh" id="uhe"></p>
+<div class="row"><span>שטח פנימי</span><span id="uin"></span></div>
+<div class="row"><span>שטח חיצוני</span><span id="uout"></span></div>
+<div class="row"><span>שטח כולל</span><span id="utot"></span></div>
+<div class="row"><span>מיקום בבניין</span><span id="uwh"></span></div>
+<div class="row"><span>מחיר</span><span>בפנייה</span></div>
+<p class="src">מקור: קטלוג BRABUS Island Baku, עמ׳ 22–28. השטחים משוערים לפי הקטלוג.</p>
+<a href="#contact" class="btn b-red" style="margin-top: auto">קבלו את התוכנית המלאה</a>
+</div>
+</div>
+</div>
+</section>
+
+<section class="sec alt" id="amenities" aria-labelledby="am-title">
+<div class="wrap">
+<div class="head rv">
+<div>
+<div class="kick"><span><b>04</b> · AMENITIES</span></div>
+<h2 class="h2" id="am-title">מעבר לדלת הבית</h2>
+</div>
+<p class="p">מתקנים משותפים שמוצגים בקטלוג. ההיקף והזכויות לשימוש בהם כפופים למסמכי הפרויקט.</p>
+</div>
+<div class="am">
+<div class="amc rv"><img src="assets/img/brabus/pool.jpg" alt="בריכת השחייה – הדמיה" loading="lazy"><div><div class="n">01</div><strong>בריכת שחייה</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/fitness.jpg" alt="חדר הכושר – הדמיה" loading="lazy"><div><div class="n">02</div><strong>כושר וספא</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/lounge.jpg" alt="הלאונג׳ – הדמיה" loading="lazy"><div><div class="n">03</div><strong>לאונג׳ לדיירים</strong></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="pricing" aria-label="מחירים והערכה מקצועית">
+<div class="wrap two">
+<div class="box rv">
+<div class="kick"><span><b>05</b> · PRICING</span></div>
+<h3>מחירון ותוכנית תשלום</h3>
+<p class="p">אנחנו לא מפרסמים מחירים שלא אומתו מול היזם. השאירו פרטים, ונשלח לכם את המחירון ואת תוכנית התשלום העדכניים, עם תאריך העדכון.</p>
+<ul class="lst">
+<li><i></i>מחירון עדכני לפי סוג יחידה</li>
+<li><i></i>פריסת תשלומים מול שלבי הבנייה</li>
+<li><i></i>עלויות נלוות: דמי ניהול, מיסים ועמלות</li>
+</ul>
+<a href="#contact" class="btn b-red" style="margin-top: 32px">שלחו לי מחירון</a>
+</div>
+<div class="box rv" style="border-top-color: #fff">
+<div class="kick"><span><b>06</b> · OHAYON VIEW</span></div>
+<h3>ההערכה שלנו. בלי פילטרים.</h3>
+<div style="display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 28px">
+<div>
+<div style="font-weight: 800; font-size: 15px; color: #fff">מה מושך</div>
+<ul class="lst">
+<li><i style="background: #fff"></i>מותג בינלאומי עם זהות חזקה</li>
+<li><i style="background: #fff"></i>מגוון יחידות, מסטודיו עד וילה</li>
+<li><i style="background: #fff"></i>חזית ים, לפי ההדמיות</li>
+</ul>
+</div>
+<div>
+<div style="font-weight: 800; font-size: 15px; color: #fff">מה לבדוק</div>
+<ul class="lst">
+<li><i></i>לוח זמנים וביטחונות בחוזה</li>
+<li><i></i>פריסת התשלומים מול הבנייה</li>
+<li><i></i>דמי ניהול ועלויות שוטפות</li>
+</ul>
+</div>
+</div>
+<span class="draft">טיוטה – לניסוח סופי שלך</span>
+</div>
+</div>
+</section>
+
+<section class="sec ct" id="contact" aria-labelledby="c-title">
+<img class="ct-bg" src="assets/img/brabus/beach.jpg" alt="">
+<div class="wrap ct-in">
+<div class="rv">
+<div class="kick"><span><b>07</b> · CONTACT</span></div>
+<h2 class="h2" id="c-title" style="font-size: 50px">רוצים להיכנס<br>ל-<span class="cond" style="font-weight: 800; font-style: italic">BRABUS ISLAND</span>?</h2>
+<p class="p" style="margin-top: 26px; color: #C8C8C8">נשלח לכם מחירון ותוכניות עדכניים, ונענה על כל שאלה בשיחה אישית בעברית.</p>
+<a href="#contact" class="btn b-white" style="margin-top: 32px">
+<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>
+WhatsApp: [המספר שלך]
+</a>
+</div>
+<form class="form rv" aria-label="טופס פנייה על BRABUS Island">
+<div style="font-weight: 800; font-size: 22px; color: #fff; margin-bottom: 4px">קבלו מחירון ותוכניות</div>
+<label>שם מלא<input type="text" autocomplete="name"></label>
+<label>טלפון<input type="tel" autocomplete="tel" dir="ltr" style="text-align: right"></label>
+<label>סוג יחידה
+<select>
+<option>עוד לא החלטתי</option>
+<option>סטודיו</option>
+<option>חדר שינה אחד</option>
+<option>שני חדרי שינה</option>
+<option>שלושה חדרי שינה</option>
+<option>דופלקס</option>
+<option>וילה תאומה</option>
+</select>
+</label>
+<button type="button" onclick="alert('הטופס יחובר לקבלת פניות בשלב הבא.')" class="btn b-red" style="margin-top: 12px">שלחו לי מחירון</button>
+<p class="small">הפרויקט נבחר אוטומטית: BRABUS Island. <a href="#contact" style="color: #fff; text-decoration: underline">מדיניות פרטיות</a></p>
+</form>
+</div>
+</section>
+
+<section class="sec alt" style="padding: 96px 0" aria-labelledby="r-title">
+<div class="wrap">
+<div class="head" style="margin-bottom: 32px">
+<div><div class="kick"><span><b>+</b> · MORE PROJECTS</span></div><h2 class="h2" id="r-title" style="font-size: 34px">פרויקטים נוספים</h2></div>
+<a href="index.html" class="btn b-white">לכל הפרויקטים</a>
+</div>
+<div class="rel">
+<a class="rc" href="index.html"><img src="assets/img/projects/panorama-elie-saab.jpg" alt="Panorama by ELIE SAAB – הדמיה" loading="lazy"><div><strong>Panorama</strong></div></a>
+<a class="rc" href="index.html"><img src="assets/img/projects/reportage-heights.jpg" alt="Reportage Heights – הדמיה" loading="lazy"><div><strong>Reportage Heights</strong></div></a>
+<a class="rc" href="index.html"><img src="assets/img/projects/sabah-towers.jpg" alt="Sabah Towers – הדמיה" loading="lazy"><div><strong>Sabah Towers</strong></div></a>
+</div>
+</div>
+</section>
+
+<footer class="ftr">
+<div class="wrap">
+<img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height: 46px; width: auto">
+<div class="legal">
+<span>OHAYON PROPERTIES | BAKU הוא משווק עצמאי, ואינו האתר הרשמי של BRABUS או של היזמים. BRABUS הוא סימן מסחרי של בעליו. הדמיות ותוכניות מתוך קטלוג הפרויקט, להמחשה בלבד. אין לראות במידע הצעה מחייבת.</span>
+<span dir="ltr">© 2026 OHAYON PROPERTIES | BAKU</span>
+</div>
+</div>
+</footer>
+
+<a class="fab" href="#contact" aria-label="שיחה ב-WhatsApp">
+<svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg>
+</a>
+<nav class="mbar" aria-label="יצירת קשר מהירה">
+<a href="#contact">WhatsApp</a>
+<a href="#contact">קבלו מחירון</a>
+</nav>
+</div>
+<div hidden id="plans"><img src="assets/img/brabus/plans/studio.jpg" alt=""><img src="assets/img/brabus/plans/onebed.jpg" alt=""><img src="assets/img/brabus/plans/twobed.jpg" alt=""><img src="assets/img/brabus/plans/threebed.jpg" alt=""><img src="assets/img/brabus/plans/duplex.jpg" alt=""><img src="assets/img/brabus/plans/villa.jpg" alt=""></div>
+<script>function tm(){var m=document.getElementById("mnav");if(m)m.hidden=!m.hidden;}
+var G=["הפרויקט מהאוויר", "קו החוף והמרינה", "חזית החוף", "גינות ושטחי חוץ", "חלל מגורים", "בריכת השחייה", "כושר וספא", "לאונג׳ לדיירים"],U=[["סטודיו", "Studio · A3", "72a5893ef475eb8c58d13fea3e0f7048", "כ-40 מ״ר", "משתנה", "כ-48 מ״ר", "בניין C, קומות 3–13"], ["חדר שינה אחד", "1 Bedroom · A1", "26a4e14c9d68f57d3892411e6fdd12e2", "כ-75 מ״ר", "משתנה", "כ-91 מ״ר", "בניינים A ו-B, קומות 3–13"], ["שני חדרי שינה", "2 Bedroom · A", "4412a2f83de7ac8aab80fc4a1cfd378f", "כ-123 מ״ר", "כ-21 מ״ר", "כ-145 מ״ר", "בניין B, קומות 5–13"], ["שלושה חדרי שינה", "3 Bedroom · A", "6f065186bcd6578a173d37fe3b917320", "כ-228 מ״ר", "כ-79 מ״ר", "כ-308 מ״ר", "בניין A, קומות 3–11"], ["דופלקס", "Duplex · A5", "5211e3c80c859ade07f22b10c3cccf89", "כ-138 מ״ר", "כ-77 מ״ר", "כ-215 מ״ר", "קומות 1–2"], ["וילה תאומה", "Twin Villa", "5f583a41c191dd282ce231716c2d8a99", "כ-327 מ״ר", "כ-115 מ״ר", "כ-442 מ״ר", "שלוש קומות"]],gi=0,P=[];
+function gs(i){gi=(i+G.length)%G.length;var t=document.querySelectorAll(".th");document.getElementById("gimg").src=t[gi].querySelector("img").src;document.getElementById("glab").textContent=G[gi];document.getElementById("gcnt").textContent=String(gi+1).padStart(2,"0")+" / "+String(G.length).padStart(2,"0");t.forEach(function(e,k){e.setAttribute("style",k==gi?"box-shadow:inset 0 -2px 0 #C8101E":"filter:none");e.querySelector("img").setAttribute("style",k==gi?"box-shadow:none":"filter:grayscale(1) brightness(.6)");});}
+function us(i){var u=U[i];document.getElementById("uimg").src=P[i];document.getElementById("ucode").textContent=u[1];document.getElementById("uhe").textContent=u[0];document.getElementById("uin").textContent=u[3];document.getElementById("uout").textContent=u[4];document.getElementById("utot").textContent=u[5];document.getElementById("uwh").textContent=u[6];document.querySelectorAll(".tab").forEach(function(e,k){e.setAttribute("style",k==i?"background:#fff;color:#000":"background:#000;color:#8A8A8A");});}
+P=[].map.call(document.querySelectorAll("#plans img"),function(i){return i.src});gs(0);us(0);</script>
+</body>
+</html>
