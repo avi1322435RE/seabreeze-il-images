@@ -28,6 +28,25 @@ h1 span{display:block;color:#E4D3B4}
 .e h1{font-family:'David Libre',serif;font-weight:400}.e h1 span{font-weight:400}
 @media (max-width:640px){.opt{padding:34px 22px;min-height:380px}}
 </style>
+<style id="langs-css">
+.langs{display:flex;gap:2px;align-items:center;font-family:'Heebo',Arial,sans-serif;font-size:12px;letter-spacing:.06em;direction:ltr}
+.langs a{color:inherit;opacity:.72;padding:6px 7px;border-radius:999px;text-decoration:none}
+.langs a:hover{opacity:1}
+.langs a[aria-current]{opacity:1;color:#081B2D;background:#CBB089}
+.hdr .langs{color:#F4EFE6}
+.mnav .langs,#mnav .langs{margin-top:22px;justify-content:center;color:#F4EFE6;font-size:14px}
+@media (max-width:860px){.hdr .langs{display:none}}
+.lang-m{display:none;position:relative;margin-inline-start:auto;margin-inline-end:10px;color:#F4EFE6;font-family:'Heebo',Arial,sans-serif;direction:ltr}
+.lang-m summary{list-style:none;display:flex;align-items:center;gap:6px;height:40px;padding:0 13px;border:1px solid rgba(203,176,137,.55);border-radius:999px;font-size:13px;letter-spacing:.08em;cursor:pointer;background:rgba(8,27,45,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lang-m summary::-webkit-details-marker{display:none}
+.lang-m summary svg{color:#CBB089}
+.lang-m[open] summary{border-color:#CBB089}
+.lm-list{position:absolute;top:calc(100% + 8px);inset-inline-end:0;display:flex;flex-direction:column;min-width:76px;padding:6px;border-radius:16px;background:#081B2D;border:1px solid rgba(203,176,137,.35);box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:80}
+.lm-list a{color:#F4EFE6;text-decoration:none;text-align:center;font-size:14px;letter-spacing:.08em;padding:9px 12px;border-radius:10px}
+.lm-list a[aria-current]{background:#CBB089;color:#081B2D}
+@media (max-width:860px){.lang-m{display:block}}
+</style>
+<script id="langs-js">document.addEventListener('click',function(e){document.querySelectorAll('details.lang-m[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});</script>
 </head>
 <body>
 <p class="intro">תצוגה פנימית לבחירת הגופן של הכותרת הראשית (לא מקושרת מהאתר ולא מופיעה בגוגל). גללו והשוו, ואז כתבו לי את האות של האפשרות שאהבתם.</p>
