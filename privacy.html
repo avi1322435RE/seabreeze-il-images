@@ -175,6 +175,15 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 @media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 @media (max-width:860px){.a11y-btn{bottom:96px;right:12px;width:42px;height:42px}.a11y-pan{bottom:150px;right:14px}.mbar{left:12px!important;right:12px!important;bottom:calc(12px + env(safe-area-inset-bottom,0px))!important;border-radius:24px;overflow:hidden;padding:6px;gap:6px;border:1px solid rgba(203,176,137,.4)!important;box-shadow:0 16px 36px rgba(0,0,0,.38)}.mbar a{border-radius:18px;border-left:0!important;min-height:52px!important}}
 </style>
+<style id="langs-css">
+.langs{display:flex;gap:2px;align-items:center;font-family:'Heebo',Arial,sans-serif;font-size:12px;letter-spacing:.06em;direction:ltr}
+.langs a{color:inherit;opacity:.72;padding:6px 7px;border-radius:999px;text-decoration:none}
+.langs a:hover{opacity:1}
+.langs a[aria-current]{opacity:1;color:#081B2D;background:#CBB089}
+.hdr .langs{color:#F4EFE6}
+.mnav .langs,#mnav .langs{margin-top:22px;justify-content:center;color:#F4EFE6;font-size:14px}
+@media (max-width:860px){.hdr .langs{display:none}}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">דילוג לתוכן הראשי</a>
@@ -192,7 +201,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <a class="mi" href="articles.html"><span class="mi-t">מאמרים ומדריכים</span><span class="mi-e" aria-hidden="true">Journal</span></a>
 <a class="mi" href="index.html#contact"><span class="mi-t">צור קשר</span><span class="mi-e" aria-hidden="true">Contact</span></a>
 <div class="mn-foot"><a class="btn b-gold" href="index.html#contact">השאירו פרטים לשיחת ייעוץ</a><a class="mn-mail" href="mailto:ohayon.baku@gmail.com" dir="ltr">ohayon.baku@gmail.com</a></div>
-</nav>
+<nav class="langs" aria-label="Language"><a href="privacy.html" hreflang="he" lang="he" aria-current="true" title="עברית">HE</a><a href="en/index.html" hreflang="en" lang="en" title="English">EN</a></nav></nav>
 </div>
 <header class="hdr">
 <div class="wrap hdr-in">
@@ -205,6 +214,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <a href="articles.html">מאמרים</a>
 </nav>
 <a href="index.html#contact" class="btn b-line" style="min-height:44px;padding:0 22px">שיחת ייעוץ</a>
+<nav class="langs" aria-label="Language"><a href="privacy.html" hreflang="he" lang="he" aria-current="true" title="עברית">HE</a><a href="en/index.html" hreflang="en" lang="en" title="English">EN</a></nav>
 <button class="menu-btn" aria-controls="mnav" aria-expanded="false" aria-label="פתיחת התפריט" onclick="tm()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 8h16M8 16h12"></path></svg></button>
 </div>
 </header>
