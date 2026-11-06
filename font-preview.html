@@ -71,5 +71,15 @@ h1 span{display:block;color:#E4D3B4}
 <h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
 <p class="note">גרסה מחודשת של "דוד" הקלאסי: מסורתי, רציני ובטוח.</p></div></section>
 <p class="intro" style="padding-bottom:40px">אחרי שתבחר, אתאים גם את הגודל, העובי והריווח, ואבדוק שזה יושב טוב בטלפון.</p>
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
 </body>
 </html>
