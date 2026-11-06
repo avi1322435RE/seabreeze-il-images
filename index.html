@@ -207,6 +207,23 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <style id="contrast-v1">
+.h2{font-weight:300!important}
+.cream .h2{font-weight:300!important}
+.p{font-weight:400}
+.quote{font-weight:300}
+.cd{font-size:15px}
+.wi h3,.st h3{font-weight:500}
+.wi p{font-size:15px}
+.st p{font-size:14px;color:#BDB7AB}
+.htrust{list-style:none;margin:30px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px 26px;font-size:14px;color:#E6E1D8}
+.htrust li{display:flex;align-items:center;gap:9px}
+.htrust li::before{content:"";width:6px;height:6px;border-radius:50%;background:#CBB089;flex:none}
+.pcta{margin-top:44px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;background:#0A2238;border:1px solid rgba(203,176,137,.4);border-radius:22px;padding:26px 32px;color:#F4EFE6}
+.pcta strong{display:block;font-weight:500;font-size:19px;color:#FBF8F2;margin-bottom:4px}
+.pcta span{font-size:15px;color:#C9C3B8}
+.proc-cta{margin-top:56px;text-align:center}
+.proc-cta p{font-size:17px;color:#E6E1D8;margin:0 0 20px;font-weight:300}
+@media (max-width:860px){.htrust{gap:8px 18px;font-size:13px}.pcta{padding:24px 22px}.pcta .btn{width:100%}}
 .eb{font-family:'Cinzel',serif!important;font-weight:600!important;font-size:13px!important;letter-spacing:.24em!important;color:#D9BC85}
 .cream .eb{color:#80591F!important}
 .hero .eb{color:#D9BC85!important;letter-spacing:.24em!important}
@@ -329,6 +346,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 השאירו פרטים
 </a>
 </div>
+<ul class="htrust up d3" aria-label="למה איתנו"><li>10 שנות ניסיון בנדל״ן</li><li>ליווי אישי בעברית</li><li>6 פרויקטים נבחרים ב-Sea Breeze</li></ul>
 </div>
 </div>
 <div class="scroll" aria-hidden="true">SCROLL<i></i></div>
@@ -352,6 +370,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <a class="card rv" href="arabian-ranches.html"><img src="assets/img/projects/arabian-ranches.jpg" alt="Arabian Ranches Baku – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">ARABIAN RANCHES</div><p class="cd">מגורי יוקרה בהשראת אדריכלות מזרחית</p><div class="cl"></div></div></a>
 <a class="card rv" href="marina-village.html"><img src="assets/img/projects/marina-village.jpg" alt="Marina Village – הדמיה" loading="lazy" decoding="async"><div class="cs"></div><div class="cb"><div class="ct">SEA BREEZE</div><div class="cn">MARINA VILLAGE</div><p class="cd">מגורים באווירת חוף ומרינה</p><div class="cl"></div></div></a>
 </div>
+<div class="pcta rv"><div><strong>לא בטוחים איזה פרויקט מתאים לכם?</strong><span>ספרו לנו מה התקציב והמטרה, ונציע את ההתאמה הנכונה.</span></div><a href="#contact" class="btn b-gold">עזרו לי לבחור</a></div>
 <p class="note">הדמיות מתוך קטלוגי היזמים, להמחשה בלבד.</p>
 </div>
 </section>
@@ -368,13 +387,14 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="ln"></div>
 <h2 class="h2" id="about-title" style="margin-bottom: 32px">ההיכרות מתחילה באמון</h2>
 <p class="quote">״אני לא מוכר דירות בבאקו. אני עוזר למשקיעים ישראלים לקבל החלטה נכונה, עם כל המידע מול העיניים.״</p>
-<p class="p">OHAYON PROPERTIES | BAKU היא הזרוע הבינלאומית של משרד תיווך ישראלי ותיק. [כאן ייכנס הסיפור המקצועי שלך בשניים־שלושה משפטים.]</p>
+<p class="p">OHAYON PROPERTIES | BAKU היא הזרוע הבינלאומית של משרד תיווך ישראלי עם ותק של 10 שנים בשוק הנדל״ן. את אותה מקצועיות, אותה שקיפות ואותו ליווי אישי שקיבלו הלקוחות שלנו בישראל, אנחנו מביאים עכשיו לבאקו.</p>
 <div class="trust">
-<div class="ti"><strong>איש מקצוע ישראלי</strong><span>ניסיון בתיווך נדל״ן בישראל</span></div>
+<div class="ti"><strong>10 שנות ניסיון</strong><span>בתיווך נדל״ן בישראל</span></div>
 <div class="ti"><strong>עבודה ישירה עם יזמים</strong><span>ואנשי מקצוע מקומיים בבאקו</span></div>
 <div class="ti"><strong>שקיפות מלאה</strong><span>רק נתונים שנבדקו, כולל הסיכונים</span></div>
 <div class="ti"><strong>נוכחות בשטח</strong><span>סיורים וצילום ב-Sea Breeze</span></div>
 </div>
+<a href="#contact" class="btn b-gold" style="margin-top:34px">לשיחת היכרות אישית</a>
 </div>
 </div>
 </section>
@@ -387,7 +407,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="ln"></div>
 <h2 class="h2" id="why-title">למה דווקא באקו?</h2>
 </div>
-<a href="#why" class="btn b-navy">למדריך המלא למשקיע</a>
+<a href="baku-guide-2026.html" class="btn b-navy">למדריך המלא למשקיע</a>
 </div>
 <div class="why">
 <div class="wi rv"><div class="wn">01</div><h3>כלכלה מתפתחת</h3><p>מעבר הדרגתי מנפט וגז להשקעה בתשתיות, בתיירות ובפיתוח עירוני.</p></div>
@@ -416,6 +436,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="st rv"><div class="dot">V</div><div><h3>רכישה</h3><p>חתימה ותשלום לפי התוכנית</p></div></div>
 <div class="st rv"><div class="dot">VI</div><div><h3>מסירה ואחריה</h3><p>מעקב, מסירה וליווי בהמשך</p></div></div>
 </div>
+<div class="proc-cta rv"><p>הכל מתחיל בשלב I: שיחת היכרות של 20 דקות, בלי התחייבות.</p><a href="#contact" class="btn b-gold">קבעו שיחת היכרות</a></div>
 </div>
 </section>
 
@@ -446,8 +467,8 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <option>Marina Village</option>
 </select>
 </label>
-<button type="button" onclick="sendLead(this)" class="btn b-gold" style="margin-top: 16px; background: #0A2238; color: #F4EFE6; border-color: #0A2238">שליחה</button>
-<p class="small">הפרטים ישמשו ליצירת קשר בלבד. <a href="privacy.html" style="color: #8A6A35; text-decoration: underline">מדיניות פרטיות</a></p>
+<button type="button" onclick="sendLead(this)" class="btn b-gold" style="margin-top: 16px; background: #0A2238; color: #F4EFE6; border-color: #0A2238">שלחו לי מחירון ותוכניות</button>
+<p class="small">נחזור אליכם באופן אישי. הפרטים ישמשו ליצירת קשר בלבד. <a href="privacy.html" style="color: #8A6A35; text-decoration: underline">מדיניות פרטיות</a></p>
 </form>
 </div>
 </section>
