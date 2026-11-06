@@ -204,13 +204,55 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 </style>
 
 <style>[hidden]{display:none !important}</style>
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
+<style id="contrast-v1">
+.cs{background:linear-gradient(180deg,rgba(8,27,45,0) 30%,rgba(8,27,45,.75) 55%,rgba(8,27,45,.94) 100%)}
+.cream .eb,.wn{color:#7A5A28}
+.legal{font-size:13px;color:#B5AFA4}
+.note,.small{color:#5A626C}
+.src{color:#5A626C;border-bottom-color:#8F959C}
+@media (max-width:860px){.sh1{background:linear-gradient(270deg,rgba(8,27,45,.95) 0%,rgba(8,27,45,.86) 60%,rgba(8,27,45,.7) 100%)!important}}
+@media (max-width:860px){.cream{background:linear-gradient(180deg,#081B2D 0px,#0F2132 19px,#213140 38px,#3B4955 57px,#5B666E 76px,#7E858A 95px,#A1A4A5 114px,#C1C1BE 133px,#DBD9D3 152px,#EDE9E1 171px,#F4EFE6 190px,#F4EFE6 calc(100% - 190px),#EDE9E1 calc(100% - 171px),#DBD9D3 calc(100% - 152px),#C1C1BE calc(100% - 133px),#A1A4A5 calc(100% - 114px),#7E858A calc(100% - 95px),#5B666E calc(100% - 76px),#3B4955 calc(100% - 57px),#213140 calc(100% - 38px),#0F2132 calc(100% - 19px),#081B2D calc(100% - 0px))!important}}
+</style>
+<style id="a11y-css">
+.skip{position:fixed;top:-80px;right:16px;z-index:10000;background:#FFFFFF;color:#081B2D;padding:12px 22px;border-radius:999px;font:500 15px 'Heebo',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:top .2s ease;text-decoration:none}
+.skip:focus{top:16px;outline:3px solid #CBB089;outline-offset:2px}
+#main:focus{outline:none}
+.legal-links{display:flex;gap:10px 26px;flex-wrap:wrap;margin:22px 0 0;font-size:14px;line-height:1.6}
+.legal-links a{color:inherit;text-decoration:underline;text-underline-offset:4px}
+.a11y-btn{position:fixed;right:20px;bottom:24px;z-index:70;width:50px;height:50px;border-radius:50%;background:#0B2F6B;color:#FFFFFF;border:2px solid #FFFFFF;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 10px 26px rgba(0,0,0,.3)}
+.a11y-btn:focus-visible{outline:3px solid #CBB089;outline-offset:3px}
+.a11y-pan{position:fixed;right:20px;bottom:86px;z-index:71;width:290px;max-width:calc(100vw - 40px);max-height:calc(100vh - 120px);overflow:auto;background:#FFFFFF;color:#14202C;border-radius:20px;box-shadow:0 24px 60px rgba(0,0,0,.35);padding:20px;font:400 15px/1.5 'Heebo',Arial,sans-serif;direction:rtl;text-align:right}
+.a11y-pan[hidden]{display:none!important}
+.a11y-pan h2{font:500 18px 'Heebo',Arial,sans-serif;margin:0 0 14px;color:#081B2D;letter-spacing:0}
+.a11y-pan .g{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.a11y-pan button{font:500 14px 'Heebo',Arial,sans-serif;background:#F2F4F7;color:#14202C;border:1px solid #C9D0D8;border-radius:14px;padding:12px 8px;cursor:pointer;min-height:48px}
+.a11y-pan button[aria-pressed="true"]{background:#0B2F6B;color:#FFFFFF;border-color:#0B2F6B}
+.a11y-pan button:focus-visible{outline:3px solid #0B2F6B;outline-offset:2px}
+.a11y-pan .row{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:14px;font-size:14px}
+.a11y-pan .row a{color:#0B2F6B;text-decoration:underline}
+.a11y-pan .x{min-height:auto;padding:6px 14px;background:transparent}
+html.a11y-z1 body{zoom:1.12}html.a11y-z2 body{zoom:1.25}
+html.a11y-contrast{filter:contrast(1.35)}
+html.a11y-gray{filter:grayscale(1)}
+html.a11y-contrast.a11y-gray{filter:grayscale(1) contrast(1.35)}
+html.a11y-links a{text-decoration:underline!important;text-underline-offset:4px}
+html.a11y-links a:not(.btn){outline:1px dashed currentColor;outline-offset:2px}
+html.a11y-font body,html.a11y-font body *{font-family:Arial,'Heebo',sans-serif!important;letter-spacing:0!important}
+html.a11y-noanim *,html.a11y-noanim *::before,html.a11y-noanim *::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!important;transform:none!important}
+@media (prefers-reduced-motion: reduce){*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+@media (max-width:860px){.a11y-btn{bottom:84px;right:12px;width:42px;height:42px}.a11y-pan{bottom:140px;right:14px}}
+</style>
 </head>
 <body>
+<a class="skip" href="#main">דילוג לתוכן הראשי</a>
 
 
 <div class="pg">
 
-<div id="mnav" hidden>
+<div id="mnav" role="dialog" aria-label="תפריט ניווט" hidden>
 <nav class="mnav" aria-label="תפריט נייד">
 <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 32px">
 <img src="assets/img/logo-light.png" alt="OHAYON PROPERTIES | BAKU" style="height: 42px; width: auto">
@@ -238,11 +280,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 <a href="articles.html">מאמרים</a>
 </nav>
 <a href="#contact" class="btn b-line" style="height: 46px; padding: 0 24px; font-size: 15px">שיחת ייעוץ</a>
-<button class="menu-btn" aria-label="פתיחת התפריט" onclick="tm()">
+<button class="menu-btn" aria-controls="mnav" aria-expanded="false" aria-label="פתיחת התפריט" onclick="tm()">
 <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M4 8h16M8 16h12"></path></svg>
 </button>
 </div>
 </header>
+<div id="main" tabindex="-1"></div>
 
 <section class="hero" id="top" aria-labelledby="hero-title">
 <img class="hero-img" fetchpriority="high" src="assets/img/hero-baku.jpg" alt="מבט אווירי על חוף באקו והים הכספי – הדמיה">
@@ -368,8 +411,8 @@ WhatsApp
 </div>
 <form class="form rv" aria-label="טופס יצירת קשר">
 <div style="font-weight: 300; font-size: 22px; color: #0A2238; margin-bottom: 6px">קבלו מחירון ותוכניות</div>
-<label>שם מלא<input type="text" autocomplete="name"></label>
-<label>טלפון<input type="tel" autocomplete="tel" dir="ltr" style="text-align: right"></label>
+<label>שם מלא<input type="text" name="name" autocomplete="name" required aria-required="true"></label>
+<label>טלפון<input type="tel" name="phone" autocomplete="tel" required aria-required="true" dir="ltr" style="text-align: right"></label>
 <label>פרויקט מבוקש
 <select>
 <option>עדיין לא החלטתי</option>
@@ -382,7 +425,7 @@ WhatsApp
 </select>
 </label>
 <button type="button" onclick="alert('הטופס יחובר לקבלת פניות בשלב הבא.')" class="btn b-gold" style="margin-top: 16px; background: #0A2238; color: #F4EFE6; border-color: #0A2238">שליחה</button>
-<p class="small">הפרטים ישמשו ליצירת קשר בלבד. <a href="#contact" style="color: #8A6A35; text-decoration: underline">מדיניות פרטיות</a></p>
+<p class="small">הפרטים ישמשו ליצירת קשר בלבד. <a href="privacy.html" style="color: #8A6A35; text-decoration: underline">מדיניות פרטיות</a></p>
 </form>
 </div>
 </section>
@@ -397,9 +440,9 @@ WhatsApp
 <a href="articles.html">מאמרים</a>
 <a href="articles.html">מדריכים</a>
 <a href="#about">אודות</a>
-<a href="#contact">Instagram</a>
 </nav>
 </div>
+<nav class="legal-links" aria-label="מידע משפטי ונגישות"><a href="accessibility.html">הצהרת נגישות</a><a href="privacy.html">מדיניות פרטיות</a><a href="terms.html">תנאי שימוש</a></nav>
 <div class="legal">
 <span>המידע באתר כללי בלבד, ואינו מהווה ייעוץ משפטי, מיסויי או ייעוץ השקעות. הדמיות להמחשה בלבד.</span>
 <span dir="ltr">© 2026 OHAYON PROPERTIES | BAKU</span>
@@ -421,5 +464,31 @@ WhatsApp
 </script>
 <script>(function(){var h=document.querySelector('.hdr');if(!h)return;function f(){h.classList.toggle('solid',window.scrollY>80);}window.addEventListener('scroll',f,{passive:true});f();})();</script>
 <!--ux-v1-->
+<button class="a11y-btn" type="button" aria-controls="a11y-pan" aria-expanded="false" aria-label="תפריט נגישות" onclick="a11yT()"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="4.2" r="1.7" fill="currentColor" stroke="none"/><path d="M5 8.2l7 1.3 7-1.3M12 9.5v5M12 14.5l-3.2 6M12 14.5l3.2 6"/></svg></button>
+<div class="a11y-pan" id="a11y-pan" role="dialog" aria-label="תפריט נגישות" hidden>
+<h2>התאמות נגישות</h2>
+<div class="g">
+<button type="button" data-a="z" aria-pressed="false">הגדלת טקסט</button>
+<button type="button" data-a="contrast" aria-pressed="false">ניגודיות גבוהה</button>
+<button type="button" data-a="gray" aria-pressed="false">גווני אפור</button>
+<button type="button" data-a="links" aria-pressed="false">הדגשת קישורים</button>
+<button type="button" data-a="font" aria-pressed="false">גופן קריא</button>
+<button type="button" data-a="noanim" aria-pressed="false">עצירת אנימציות</button>
+</div>
+<div class="row"><a href="accessibility.html">הצהרת נגישות</a><button type="button" class="x" data-a="reset">איפוס</button><button type="button" class="x" onclick="a11yT()" aria-label="סגירת תפריט הנגישות">סגירה</button></div>
+</div>
+<script>(function(){
+var H=document.documentElement,K='ohy-a11y',S={};
+try{S=JSON.parse(localStorage.getItem(K)||'{}')||{};}catch(e){S={};}
+function save(){try{localStorage.setItem(K,JSON.stringify(S));}catch(e){}}
+function apply(){['contrast','gray','links','font','noanim'].forEach(function(k){H.classList.toggle('a11y-'+k,!!S[k]);});
+H.classList.toggle('a11y-z1',S.z==1);H.classList.toggle('a11y-z2',S.z==2);
+document.querySelectorAll('#a11y-pan [data-a]').forEach(function(b){var k=b.getAttribute('data-a');if(k=='reset')return;b.setAttribute('aria-pressed',k=='z'?String(!!S.z):String(!!S[k]));if(k=='z')b.textContent=S.z==2?'הגדלת טקסט ×2':(S.z==1?'הגדלת טקסט ×1':'הגדלת טקסט');});}
+window.a11yT=function(){var p=document.getElementById('a11y-pan'),b=document.querySelector('.a11y-btn');if(!p)return;var o=p.hidden;p.hidden=!o;b.setAttribute('aria-expanded',String(o));if(o){var f=p.querySelector('button');f&&f.focus();}else{b.focus();}};
+document.addEventListener('click',function(e){var b=e.target.closest&&e.target.closest('#a11y-pan [data-a]');if(!b)return;var k=b.getAttribute('data-a');if(k=='reset'){S={};}else if(k=='z'){S.z=((S.z||0)+1)%3;}else{S[k]=!S[k];}save();apply();});
+var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(!m){_tm&&_tm();return;}var o=m.hidden;m.hidden=!o;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded',String(o));});if(o){var f=m.querySelector('a,button');f&&f.focus();}else if(m.contains(document.activeElement)&&document.activeElement.tagName=='BUTTON'){var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}};
+document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
+apply();})();</script>
+<!--a11y-v1-->
 </body>
 </html>
