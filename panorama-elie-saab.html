@@ -21,10 +21,10 @@
 <link rel="preload" as="image" href="assets/img/panorama/hero.jpg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bellefair&family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Noto+Sans+Hebrew:wght@200;300;400;500&amp;display=swap" rel="stylesheet">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "BreadcrumbList", "itemListElement": [{"@type": "ListItem", "position": 1, "name": "דף הבית", "item": "https://ohayon-baku.co.il/"}, {"@type": "ListItem", "position": 2, "name": "Panorama by ELIE SAAB", "item": "https://ohayon-baku.co.il/panorama-elie-saab.html"}]}</script>
 <style>
-:root{--btn-radius:999px;--img-radius:0;--img-radius-b:0;--gal-radius:0;--card-radius:0;--tstyle:normal;--ttransform:uppercase;--bg:#F8F3EC;--alt:#EFE5D6;--ink:#2A231D;--muted:#6E6257;--accent:#7F5B36;--accent-ink:#FFFFFF;--dark:#2A231D;--dark-ink:#F5EDE2;--data-num:#E2C79C;--line:rgba(42,35,29,.14);--card:#FFFDF9;--bweight:400;--hfont:'Bellefair',serif;--bfont:'Bona Nova',serif;--lfont:'Cormorant Garamond',serif;--hweight:400;--tweight:300;--tsize:128px;--tspacing:.14em;--hero-shade:linear-gradient(180deg,rgba(42,35,29,.5) 0%,rgba(42,35,29,0) 30%,rgba(42,35,29,.12) 55%,rgba(42,35,29,.9) 100%)}
+:root{--btn-radius:999px;--img-radius:0;--img-radius-b:0;--gal-radius:0;--card-radius:0;--tstyle:normal;--ttransform:uppercase;--bg:#F8F3EC;--alt:#EFE5D6;--ink:#2A231D;--muted:#6E6257;--accent:#7F5B36;--accent-ink:#FFFFFF;--dark:#2A231D;--dark-ink:#F5EDE2;--data-num:#E2C79C;--line:rgba(42,35,29,.14);--card:#FFFDF9;--bweight:300;--hfont:'Noto Sans Hebrew',sans-serif;--bfont:'Noto Sans Hebrew',sans-serif;--lfont:'Bodoni Moda',serif;--hweight:200;--tweight:400;--tsize:112px;--tspacing:.12em;--hero-shade:linear-gradient(180deg,rgba(42,35,29,.5) 0%,rgba(42,35,29,0) 30%,rgba(42,35,29,.12) 55%,rgba(42,35,29,.9) 100%)}
 *{box-sizing:border-box;}
 body{margin:0;background:var(--bg);}
 a{color:inherit;text-decoration:none;}
@@ -146,7 +146,7 @@ a{color:inherit;text-decoration:none;}
 .thumbs{grid-template-columns:repeat(4,minmax(0,1fr));}
 .cards{grid-template-columns:repeat(2,minmax(0,1fr));}
 .am,.rel{grid-template-columns:repeat(2,minmax(0,1fr));}
-.title{font-size:calc(var(--tsize) * .72);}
+.title{font-size:min(calc(var(--tsize) * .72),10vw);}
 }
 @media (max-width:760px){
 .wrap{padding:0 20px;}
@@ -155,7 +155,7 @@ a{color:inherit;text-decoration:none;}
 .hdr-in{height:74px;}
 .hero{height:720px;}
 .hero-in{padding-bottom:60px;}
-.title{font-size:calc(var(--tsize) * .46);}
+.title{font-size:min(calc(var(--tsize) * .46),10.5vw);}
 .htag{font-size:19px;}
 .ctas{flex-direction:column;align-items:stretch;}
 .di{padding:22px 16px;}
