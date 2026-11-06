@@ -236,6 +236,10 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta http-equiv="Content-Security-Policy" content="object-src 'none'; base-uri 'self'; upgrade-insecure-requests">
 <style id="contrast-v1">
+.title{font-size:76px!important;line-height:.88}
+.kick{margin-bottom:6px}
+.htag{max-width:540px}
+@media (max-width:860px){.title{font-size:46px!important}.kick{font-size:11px;letter-spacing:.12em}}
 .kick{width:fit-content;background:rgba(0,0,0,.45);padding:6px 14px;border-radius:999px}
 .gcap{background:linear-gradient(180deg,rgba(0,0,0,0),rgba(0,0,0,.5) 35%,rgba(0,0,0,.84))!important}.gnum{color:#DADADA}
 .crumb{display:inline-block;align-self:flex-start;background:rgba(0,0,0,.5);padding:6px 16px;border-radius:999px;color:#D0D0D0;font-size:14px}
@@ -338,7 +342,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div class="wrap split">
 <div class="rv">
 <div class="kick"><span><b>01</b> · THE PROJECT</span></div>
-<h2 class="h2" id="ov-title">שחור. נועז.<br>על המים.</h2>
+<h2 class="h2" id="ov-title">שחור. נועז. על המים.</h2>
 <p class="p" style="margin-top: 30px">BRABUS Island Baku נמצא בנרדרן, בתוך עיר הנופש Sea Breeze, על חוף הים הכספי. בפרויקט דירות סטודיו, דירות של חדר עד שלושה חדרי שינה, דופלקסים ווילות תאומות, כולם בשפת העיצוב של BRABUS.</p>
 <p class="p" style="margin-top: 16px">[כאן תיכנס פסקה בקול שלך: למי הפרויקט מתאים, ומה ראית בו בשטח.]</p>
 <div class="facts">
@@ -376,11 +380,28 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 </div>
 </section>
 
-<section class="sec" id="units" aria-labelledby="u-title">
+<section class="sec" id="amenities" aria-labelledby="am-title">
 <div class="wrap">
 <div class="head rv">
 <div>
-<div class="kick"><span><b>03</b> · RESIDENCES</span></div>
+<div class="kick"><span><b>03</b> · AMENITIES</span></div>
+<h2 class="h2" id="am-title">מעבר לדלת הבית</h2>
+</div>
+<p class="p">מתקנים משותפים שמוצגים בקטלוג. ההיקף והזכויות לשימוש בהם כפופים למסמכי הפרויקט.</p>
+</div>
+<div class="am">
+<div class="amc rv"><img src="assets/img/brabus/pool.jpg" alt="בריכת השחייה – הדמיה" loading="lazy" decoding="async"><div><div class="n">01</div><strong>בריכת שחייה</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/fitness.jpg" alt="חדר הכושר – הדמיה" loading="lazy" decoding="async"><div><div class="n">02</div><strong>כושר וספא</strong></div></div>
+<div class="amc rv"><img src="assets/img/brabus/lounge.jpg" alt="הלאונג׳ – הדמיה" loading="lazy" decoding="async"><div><div class="n">03</div><strong>לאונג׳ לדיירים</strong></div></div>
+</div>
+</div>
+</section>
+
+<section class="sec alt" id="units" aria-labelledby="u-title">
+<div class="wrap">
+<div class="head rv">
+<div>
+<div class="kick"><span><b>04</b> · RESIDENCES</span></div>
 <h2 class="h2" id="u-title">בחרו את הדגם</h2>
 </div>
 <p class="p">שש תוכניות לדוגמה מתוך הקטלוג. השטחים הם של יחידה לדוגמה, ואינם מעידים על מלאי זמין.</p>
@@ -401,23 +422,6 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <p class="src">מקור: קטלוג BRABUS Island Baku, עמ׳ 22–28. השטחים משוערים לפי הקטלוג.</p>
 <a href="#contact" class="btn b-red" style="margin-top: auto">קבלו את התוכנית המלאה</a>
 </div>
-</div>
-</div>
-</section>
-
-<section class="sec alt" id="amenities" aria-labelledby="am-title">
-<div class="wrap">
-<div class="head rv">
-<div>
-<div class="kick"><span><b>04</b> · AMENITIES</span></div>
-<h2 class="h2" id="am-title">מעבר לדלת הבית</h2>
-</div>
-<p class="p">מתקנים משותפים שמוצגים בקטלוג. ההיקף והזכויות לשימוש בהם כפופים למסמכי הפרויקט.</p>
-</div>
-<div class="am">
-<div class="amc rv"><img src="assets/img/brabus/pool.jpg" alt="בריכת השחייה – הדמיה" loading="lazy" decoding="async"><div><div class="n">01</div><strong>בריכת שחייה</strong></div></div>
-<div class="amc rv"><img src="assets/img/brabus/fitness.jpg" alt="חדר הכושר – הדמיה" loading="lazy" decoding="async"><div><div class="n">02</div><strong>כושר וספא</strong></div></div>
-<div class="amc rv"><img src="assets/img/brabus/lounge.jpg" alt="הלאונג׳ – הדמיה" loading="lazy" decoding="async"><div><div class="n">03</div><strong>לאונג׳ לדיירים</strong></div></div>
 </div>
 </div>
 </section>
