@@ -242,7 +242,17 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 .hdr .langs{color:#F4EFE6}
 .mnav .langs,#mnav .langs{margin-top:22px;justify-content:center;color:#F4EFE6;font-size:14px}
 @media (max-width:860px){.hdr .langs{display:none}}
+.lang-m{display:none;position:relative;margin-inline-start:auto;margin-inline-end:10px;color:#F4EFE6;font-family:'Heebo',Arial,sans-serif;direction:ltr}
+.lang-m summary{list-style:none;display:flex;align-items:center;gap:6px;height:40px;padding:0 13px;border:1px solid rgba(203,176,137,.55);border-radius:999px;font-size:13px;letter-spacing:.08em;cursor:pointer;background:rgba(8,27,45,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lang-m summary::-webkit-details-marker{display:none}
+.lang-m summary svg{color:#CBB089}
+.lang-m[open] summary{border-color:#CBB089}
+.lm-list{position:absolute;top:calc(100% + 8px);inset-inline-end:0;display:flex;flex-direction:column;min-width:76px;padding:6px;border-radius:16px;background:#081B2D;border:1px solid rgba(203,176,137,.35);box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:80}
+.lm-list a{color:#F4EFE6;text-decoration:none;text-align:center;font-size:14px;letter-spacing:.08em;padding:9px 12px;border-radius:10px}
+.lm-list a[aria-current]{background:#CBB089;color:#081B2D}
+@media (max-width:860px){.lang-m{display:block}}
 </style>
+<script id="langs-js">document.addEventListener('click',function(e){document.querySelectorAll('details.lang-m[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});</script>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -256,6 +266,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <nav class="nav" aria-label="Page navigation"><a href="#overview">The project</a><a href="#gallery">Gallery</a><a href="#pricing">Prices</a><a href="#contact">Contact</a><a href="index.html#projects">All projects</a></nav>
 <a href="#contact" class="btn b-ghost" style="height:44px;padding:0 22px;color:#fff">Get the price list</a>
 <nav class="langs" aria-label="Language"><a href="../marina-village.html" hreflang="he" lang="he" title="עברית">HE</a><a href="../en/marina-village.html" hreflang="en" lang="en" aria-current="true" title="English">EN</a><a href="../ru/marina-village.html" hreflang="ru" lang="ru" title="Русский">RU</a><a href="../ar/marina-village.html" hreflang="ar" lang="ar" title="العربية">AR</a><a href="../az/marina-village.html" hreflang="az" lang="az" title="Azərbaycanca">AZ</a></nav>
+<details class="lang-m"><summary aria-label="Language"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.6 3.8 5.6 3.8 9s-1.3 6.4-3.8 9c-2.5-2.6-3.8-5.6-3.8-9S9.5 5.6 12 3z"/></svg><span>EN</span></summary><div class="lm-list"><a href="../marina-village.html" hreflang="he" lang="he" title="עברית">HE</a><a href="../en/marina-village.html" hreflang="en" lang="en" aria-current="true" title="English">EN</a><a href="../ru/marina-village.html" hreflang="ru" lang="ru" title="Русский">RU</a><a href="../ar/marina-village.html" hreflang="ar" lang="ar" title="العربية">AR</a><a href="../az/marina-village.html" hreflang="az" lang="az" title="Azərbaycanca">AZ</a></div></details>
 <button class="menu-btn" aria-controls="mnav" aria-expanded="false" aria-label="Open menu" onclick="tm()"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" aria-hidden="true"><path d="M4 8h16M8 16h12"></path></svg></button>
 </div></header>
 <div id="main" tabindex="-1"></div>
