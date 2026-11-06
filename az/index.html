@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="he" dir="ltr">
+<html lang="az" dir="ltr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -325,6 +325,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .ftr-brand p{margin:14px 0 6px;font-size:14px;color:#C9C3B8;max-width:340px;line-height:1.7}
 .ftr-brand a{font-size:14px;color:#E4D3B4;text-decoration:underline;text-underline-offset:4px}
 .mi-t{font-size:20px!important}.mi-e{font-size:10px!important;letter-spacing:.16em!important}.mnav a.mi{padding:16px 0!important}
+
+#proj-title{white-space:nowrap}
+@media (max-width:640px){#proj-title{font-size:clamp(20px,6.6vw,30px);letter-spacing:-.01em}}
+
+@media (max-width:640px){html[lang=ru] #proj-title{font-size:clamp(18px,5.75vw,26px)}}
+@media (max-width:860px) and (prefers-reduced-motion:no-preference){
+.card.zm{transform:scale(.92);opacity:.7;transition:transform 1.1s cubic-bezier(.2,.7,.2,1),opacity 1s ease,box-shadow .6s ease}
+.card.zm img{transform:scale(1.16);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.card.zm.zin{transform:scale(1);opacity:1}
+.card.zm.zin img{transform:scale(1)}
+}
+html.a11y-noanim .card.zm,html.a11y-noanim .card.zm img{transform:none!important;opacity:1!important}
 </style>
 <style id="a11y-css">
 .skip{position:fixed;top:-80px;left:16px;z-index:10000;background:#FFFFFF;color:#081B2D;padding:12px 22px;border-radius:999px;font:500 15px 'Montserrat',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:top .2s ease;text-decoration:none}
@@ -452,7 +464,7 @@ Müraciət edin
 <div>
 <div class="eb">The Collection</div>
 <div class="ln"></div>
-<h2 class="h2" id="proj-title">Altı layihə. Bir standart.</h2>
+<h2 class="h2" id="proj-title">Altı layihə – bir standart</h2>
 </div>
 <p class="p">Sea Breeze-in lüks layihələri, o cümlədən Sabah Investment Group və Reportage Group-un flaqman layihələri, birbaşa satışda. Hər layihənin qalereya, planlar və developer məlumatı olan ayrıca səhifəsi var.</p>
 </div>
@@ -646,5 +658,6 @@ var body='Ad: '+n+'\nTelefon: '+t+(extra?'\n'+extra:'')+'\nSəhifə: '+document.
 location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('Saytdan yeni sorğu – '+document.title)+'&body='+encodeURIComponent(body);
 m.textContent='E-poçt tətbiqi məlumatlarınızla açılır. Sorğunu tamamlamaq üçün "Göndər" düyməsini basın və ya bizə birbaşa yazın: ohayon.baku@gmail.com';}</script>
 <!--golive-v1-->
+<script id="card-zoom">(function(){if(!('IntersectionObserver' in window))return;var mq=window.matchMedia('(max-width:860px)'),rm=window.matchMedia('(prefers-reduced-motion: reduce)');if(!mq.matches||rm.matches)return;var cs=document.querySelectorAll('#projects .card');var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('zin',e.isIntersecting)})},{threshold:.35,rootMargin:'0px 0px -8% 0px'});cs.forEach(function(c){c.classList.remove('rv');c.classList.add('zm');io.observe(c)})})();</script>
 </body>
 </html>

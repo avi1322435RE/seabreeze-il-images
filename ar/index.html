@@ -325,6 +325,18 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .ftr-brand p{margin:14px 0 6px;font-size:14px;color:#C9C3B8;max-width:340px;line-height:1.7}
 .ftr-brand a{font-size:14px;color:#E4D3B4;text-decoration:underline;text-underline-offset:4px}
 .mi-t{font-size:20px!important}.mi-e{font-size:10px!important;letter-spacing:.16em!important}.mnav a.mi{padding:16px 0!important}
+
+#proj-title{white-space:nowrap}
+@media (max-width:640px){#proj-title{font-size:clamp(20px,6.6vw,30px);letter-spacing:-.01em}}
+
+@media (max-width:640px){html[lang=ru] #proj-title{font-size:clamp(18px,5.75vw,26px)}}
+@media (max-width:860px) and (prefers-reduced-motion:no-preference){
+.card.zm{transform:scale(.92);opacity:.7;transition:transform 1.1s cubic-bezier(.2,.7,.2,1),opacity 1s ease,box-shadow .6s ease}
+.card.zm img{transform:scale(1.16);transition:transform 1.8s cubic-bezier(.2,.7,.2,1)}
+.card.zm.zin{transform:scale(1);opacity:1}
+.card.zm.zin img{transform:scale(1)}
+}
+html.a11y-noanim .card.zm,html.a11y-noanim .card.zm img{transform:none!important;opacity:1!important}
 </style>
 <style id="a11y-css">
 .skip{position:fixed;top:-80px;right:16px;z-index:10000;background:#FFFFFF;color:#081B2D;padding:12px 22px;border-radius:999px;font:500 15px 'Tajawal',Arial,sans-serif;box-shadow:0 10px 30px rgba(0,0,0,.35);transition:top .2s ease;text-decoration:none}
@@ -451,7 +463,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <div>
 <div class="eb">The Collection</div>
 <div class="ln"></div>
-<h2 class="h2" id="proj-title">ستة مشاريع. معيار واحد.</h2>
+<h2 class="h2" id="proj-title">ستة مشاريع – معيار واحد</h2>
 </div>
 <p class="p">مشاريع Sea Breeze الفاخرة، ومنها المشاريع الرائدة لـ Sabah Investment Group وReportage Group، بتسويق مباشر. لكل مشروع صفحة كاملة تضم معرض صور ومخططات ومعلومات المطوّر.</p>
 </div>
@@ -645,5 +657,6 @@ var body='الاسم: '+n+'\nالهاتف: '+t+(extra?'\n'+extra:'')+'\nالصف
 location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('استفسار جديد من الموقع – '+document.title)+'&body='+encodeURIComponent(body);
 m.textContent='يتم فتح تطبيق البريد الإلكتروني مع بياناتك. يرجى الضغط على "إرسال" لإكمال الاستفسار، أو راسلنا مباشرة: ohayon.baku@gmail.com';}</script>
 <!--golive-v1-->
+<script id="card-zoom">(function(){if(!('IntersectionObserver' in window))return;var mq=window.matchMedia('(max-width:860px)'),rm=window.matchMedia('(prefers-reduced-motion: reduce)');if(!mq.matches||rm.matches)return;var cs=document.querySelectorAll('#projects .card');var io=new IntersectionObserver(function(es){es.forEach(function(e){e.target.classList.toggle('zin',e.isIntersecting)})},{threshold:.35,rootMargin:'0px 0px -8% 0px'});cs.forEach(function(c){c.classList.remove('rv');c.classList.add('zm');io.observe(c)})})();</script>
 </body>
 </html>
