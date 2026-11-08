@@ -1,1 +1,0 @@
-# seabreeze-il-images
