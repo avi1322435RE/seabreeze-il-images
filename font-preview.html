@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>בחירת גופן לכותרת – תצוגה פנימית</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@200;300;500&family=Frank+Ruhl+Libre:wght@300;400;500&family=Bellefair&family=Noto+Serif+Hebrew:wght@300;400&family=David+Libre:wght@400;500&family=Cinzel:wght@600&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0}
+body{background:#081B2D;color:#FBF8F2;font-family:'Heebo',sans-serif}
+.intro{padding:28px 22px 10px;max-width:1100px;margin:0 auto;font-size:15px;color:#d8d2c6;line-height:1.7}
+.opt{position:relative;margin:22px auto;max-width:1100px;min-height:440px;border-radius:22px;overflow:hidden;display:flex;align-items:center;padding:48px 44px}
+.opt::before{content:"";position:absolute;inset:0;background:url(assets/img/hero-baku.jpg) center/cover}
+.opt::after{content:"";position:absolute;inset:0;background:linear-gradient(270deg,rgba(8,27,45,.86) 0%,rgba(8,27,45,.55) 55%,rgba(8,27,45,.25) 100%)}
+.in{position:relative;z-index:1}
+.tag{display:inline-block;background:#CBB089;color:#081B2D;font-weight:500;font-size:14px;padding:6px 14px;border-radius:999px;margin-bottom:22px}
+.eb{font-family:'Cinzel',serif;font-weight:600;font-size:12px;letter-spacing:.2em;color:#D9BC85;margin-bottom:26px;direction:ltr;text-align:right}
+h1{font-size:clamp(30px,5.4vw,60px);line-height:1.18;color:#FBF8F2}
+h1 span{display:block;color:#E4D3B4}
+.note{margin-top:20px;font-size:14px;color:#cfc8bb;max-width:520px;line-height:1.6}
+.a h1{font-family:'Heebo',sans-serif;font-weight:300;letter-spacing:-.015em}.a h1 span{font-weight:200}
+.b h1{font-family:'Frank Ruhl Libre',serif;font-weight:400;letter-spacing:0}.b h1 span{font-weight:300}
+.c h1{font-family:'Bellefair',serif;font-weight:400;letter-spacing:.005em;line-height:1.14}
+.d h1{font-family:'Noto Serif Hebrew',serif;font-weight:300}.d h1 span{font-weight:300}
+.e h1{font-family:'David Libre',serif;font-weight:400}.e h1 span{font-weight:400}
+@media (max-width:640px){.opt{padding:34px 22px;min-height:380px}}
+</style>
+<style id="langs-css">
+.langs{display:flex;gap:2px;align-items:center;font-family:'Heebo',Arial,sans-serif;font-size:12px;letter-spacing:.06em;direction:ltr}
+.langs a{color:inherit;opacity:.72;padding:6px 7px;border-radius:999px;text-decoration:none}
+.langs a:hover{opacity:1}
+.langs a[aria-current]{opacity:1;color:#081B2D;background:#CBB089}
+.hdr .langs{color:#F4EFE6}
+.mnav .langs,#mnav .langs{margin-top:22px;justify-content:center;color:#F4EFE6;font-size:14px}
+@media (max-width:860px){.hdr .langs{display:none}}
+.lang-m{display:none;position:relative;margin-inline-start:auto;margin-inline-end:10px;color:#F4EFE6;font-family:'Heebo',Arial,sans-serif;direction:ltr}
+.lang-m summary{list-style:none;display:flex;align-items:center;gap:6px;height:40px;padding:0 13px;border:1px solid rgba(203,176,137,.55);border-radius:999px;font-size:13px;letter-spacing:.08em;cursor:pointer;background:rgba(8,27,45,.35);-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.lang-m summary::-webkit-details-marker{display:none}
+.lang-m summary svg{color:#CBB089}
+.lang-m[open] summary{border-color:#CBB089}
+.lm-list{position:absolute;top:calc(100% + 8px);inset-inline-end:0;display:flex;flex-direction:column;min-width:76px;padding:6px;border-radius:16px;background:#081B2D;border:1px solid rgba(203,176,137,.35);box-shadow:0 12px 30px rgba(0,0,0,.35);z-index:80}
+.lm-list a{color:#F4EFE6;text-decoration:none;text-align:center;font-size:14px;letter-spacing:.08em;padding:9px 12px;border-radius:10px}
+.lm-list a[aria-current]{background:#CBB089;color:#081B2D}
+@media (max-width:860px){.lang-m{display:block}.hdr-in{gap:10px!important}.hdr-in>a:first-child{flex:0 1 auto;min-width:0;margin-inline-end:auto}.hdr-in>a:first-child img{height:auto!important;max-height:44px;max-width:min(150px,38vw)!important}.lang-m{margin:0!important;flex:0 0 auto}.lang-m summary{height:44px;padding:0 12px}.menu-btn{flex:0 0 auto;width:52px!important;height:52px!important;border:1px solid rgba(228,211,180,.65)!important}.menu-btn svg{width:28px;height:28px;stroke-width:1.9}.mbar a{text-align:center;line-height:1.15;padding:4px 2px}.lang-m summary{width:52px;height:52px!important;padding:0!important;justify-content:center;border-radius:50%;border:1px solid rgba(228,211,180,.65)}.lang-m summary span{display:none}.lang-m summary svg{width:27px;height:27px;color:#F4EFE6;stroke-width:1.6}.a11y-btn{right:auto!important;left:auto!important;inset-inline-end:12px!important;width:40px!important;height:40px!important}}
+</style>
+<script id="langs-js">document.addEventListener('click',function(e){document.querySelectorAll('details.lang-m[open]').forEach(function(d){if(!d.contains(e.target))d.open=false})});</script>
+</head>
+<body>
+<p class="intro">תצוגה פנימית לבחירת הגופן של הכותרת הראשית (לא מקושרת מהאתר ולא מופיעה בגוגל). גללו והשוו, ואז כתבו לי את האות של האפשרות שאהבתם.</p>
+
+<section class="opt a"><div class="in"><div class="tag">A · הנוכחי (Heebo)</div><div class="eb">LUXURY RESIDENCES | SEA BREEZE | BAKU</div>
+<h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
+<p class="note">נקי ומודרני, אבל כמו שאמרת: קצת פשוט.</p></div></section>
+
+<section class="opt b"><div class="in"><div class="tag">B · Frank Ruhl Libre</div><div class="eb">LUXURY RESIDENCES | SEA BREEZE | BAKU</div>
+<h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
+<p class="note">סריף קלאסי עם ניגוד עדין בין קווים עבים לדקים. תחושה של מגזין יוקרה ומותג ותיק.</p></div></section>
+
+<section class="opt c"><div class="in"><div class="tag">C · Bellefair</div><div class="eb">LUXURY RESIDENCES | SEA BREEZE | BAKU</div>
+<h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
+<p class="note">דק, גבוה ואלגנטי, בסגנון בתי אופנה. הכי "יוקרתי־אופנתי" מבין האפשרויות.</p></div></section>
+
+<section class="opt d"><div class="in"><div class="tag">D · Noto Serif Hebrew</div><div class="eb">LUXURY RESIDENCES | SEA BREEZE | BAKU</div>
+<h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
+<p class="note">סריף מודרני ומאוזן: מכובד, אבל עדיין נקי וקריא מאוד בטלפון.</p></div></section>
+
+<section class="opt e"><div class="in"><div class="tag">E · David Libre</div><div class="eb">LUXURY RESIDENCES | SEA BREEZE | BAKU</div>
+<h1>השקעות נדל״ן<br>על חוף הים הכספי<span>ביעד החם בעולם – באקו</span></h1>
+<p class="note">גרסה מחודשת של "דוד" הקלאסי: מסורתי, רציני ובטוח.</p></div></section>
+<p class="intro" style="padding-bottom:40px">אחרי שתבחר, אתאים גם את הגודל, העובי והריווח, ואבדוק שזה יושב טוב בטלפון.</p>
+<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
+function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
+var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
+var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
+if(!n||!t){m.textContent='נא למלא שם וטלפון.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
+var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
+var body='שם: '+n+'\nטלפון: '+t+(extra?'\n'+extra:'')+'\nעמוד: '+document.title;
+location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('פנייה חדשה מהאתר – '+document.title)+'&body='+encodeURIComponent(body);
+m.textContent='נפתחת אפליקציית הדוא״ל עם הפרטים שלכם. נא ללחוץ "שליחה" כדי להשלים את הפנייה, או לכתוב לנו ישירות: ohayon.baku@gmail.com';}</script>
+<!--golive-v1-->
+</body>
+</html>
