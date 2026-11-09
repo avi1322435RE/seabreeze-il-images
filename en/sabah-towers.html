@@ -351,11 +351,11 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <p class="p" style="margin-top:22px">We'll send you up-to-date prices and floor plans, and answer every question in a personal conversation.</p>
 <a href="#contact" class="btn b-main" style="margin-top:28px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> Leave your details</a>
 </div>
-<form onsubmit="sendLead(this.querySelector('button'));return false" class="form rv" aria-label="Enquiry form for Sabah Towers">
+<form class="form rv" aria-label="Enquiry form for Sabah Towers">
 <div style="font-family:var(--hfont);font-weight:var(--hweight);font-size:24px;margin-bottom:4px">Get prices and floor plans</div>
 <label>Full name<input type="text" name="name" autocomplete="name" required aria-required="true"></label>
 <label>Phone<input type="tel" name="phone" autocomplete="tel" required aria-required="true" dir="ltr" style="text-align:left"></label>
-<label>Unit type<select><option>Not decided yet</option><option>Small apartment</option><option>Family apartment</option><option>I'd like a recommendation</option></select></label>
+<label>Unit type<select name="project"><option>Not decided yet</option><option>Small apartment</option><option>Family apartment</option><option>I'd like a recommendation</option></select></label>
 <button type="button" class="btn b-main" style="margin-top:10px" onclick="sendLead(this)">Send me the price list</button>
 <p class="small">Project selected automatically: Sabah Towers.</p>
 </form>
@@ -407,15 +407,7 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
-<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
-function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
-var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
-var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
-if(!n||!t){m.textContent='Please enter your name and phone number.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
-var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
-var body='Name: '+n+'\nPhone: '+t+(extra?'\n'+extra:'')+'\nPage: '+document.title;
-location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('New website enquiry – '+document.title)+'&body='+encodeURIComponent(body);
-m.textContent='Your email app is opening with your details. Please press "Send" to complete your enquiry, or write to us directly: ohayon.baku@gmail.com';}</script>
+<script src="../assets/js/lead.js" defer></script>
 <!--golive-v1-->
 </body>
 </html>

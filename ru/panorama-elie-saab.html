@@ -366,11 +366,11 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 <p class="p" style="margin-top:22px">Мы пришлём актуальные цены и планировки и ответим на все вопросы в личной беседе.</p>
 <a href="#contact" class="btn b-main" style="margin-top:28px"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path></svg> Оставить заявку</a>
 </div>
-<form onsubmit="sendLead(this.querySelector('button'));return false" class="form rv" aria-label="Форма заявки по Panorama by ELIE SAAB">
+<form class="form rv" aria-label="Форма заявки по Panorama by ELIE SAAB">
 <div style="font-family:var(--hfont);font-weight:var(--hweight);font-size:24px;margin-bottom:4px">Получить цены и планировки</div>
 <label>Полное имя<input type="text" name="name" autocomplete="name" required aria-required="true"></label>
 <label>Телефон<input type="tel" name="phone" autocomplete="tel" required aria-required="true" dir="ltr" style="text-align:left"></label>
-<label>Тип юнита<select><option>Пока не решил(а)</option><option>Одна спальня</option><option>Две спальни</option><option>Дуплекс с 4 спальнями</option><option>Пентхаус</option></select></label>
+<label>Тип юнита<select name="project"><option>Пока не решил(а)</option><option>Одна спальня</option><option>Две спальни</option><option>Дуплекс с 4 спальнями</option><option>Пентхаус</option></select></label>
 <button type="button" class="btn b-main" style="margin-top:10px" onclick="sendLead(this)">Отправьте мне прайс-лист</button>
 <p class="small">Проект выбран автоматически: Panorama by ELIE SAAB.</p>
 </form>
@@ -422,15 +422,7 @@ var _tm=window.tm;window.tm=function(){var m=document.getElementById('mnav');if(
 document.addEventListener('keydown',function(e){if(e.key!=='Escape')return;var p=document.getElementById('a11y-pan');if(p&&!p.hidden){a11yT();return;}var m=document.getElementById('mnav');if(m&&!m.hidden){m.hidden=true;document.querySelectorAll('.hdr .menu-btn').forEach(function(x){x.setAttribute('aria-expanded','false');});var hb=document.querySelector('.hdr .menu-btn');hb&&hb.focus();}});
 apply();})();</script>
 <!--a11y-v1-->
-<script>function sendLead(btn){var f=btn.closest('form')||btn.closest('.form');if(!f)return;
-function v(s){var e=f.querySelector(s);return e?e.value.trim():'';}
-var n=v('input[autocomplete=name]'),t=v('input[type=tel]');
-var m=f.querySelector('.fmsg');if(!m){m=document.createElement('p');m.className='fmsg';m.setAttribute('role','status');m.style.cssText='margin:14px 0 0;font-size:15px;line-height:1.6';btn.insertAdjacentElement('afterend',m);}
-if(!n||!t){m.textContent='Пожалуйста, укажите имя и телефон.';var fe=f.querySelector(n?'input[type=tel]':'input[autocomplete=name]');fe&&fe.focus();return;}
-var extra=[].slice.call(f.querySelectorAll('select,textarea')).map(function(e){var l=e.closest('label');var k=l?(l.textContent.replace(e.textContent,'').trim().split('\n')[0]):'';return (k?k+': ':'')+e.value;}).filter(function(x){return x.trim();}).join('\n');
-var body='Имя: '+n+'\nТелефон: '+t+(extra?'\n'+extra:'')+'\nСтраница: '+document.title;
-location.href='mailto:ohayon.baku@gmail.com?subject='+encodeURIComponent('Новая заявка с сайта – '+document.title)+'&body='+encodeURIComponent(body);
-m.textContent='Открывается почтовое приложение с вашими данными. Нажмите «Отправить», чтобы завершить заявку, или напишите нам напрямую: ohayon.baku@gmail.com';}</script>
+<script src="../assets/js/lead.js" defer></script>
 <!--golive-v1-->
 </body>
 </html>
