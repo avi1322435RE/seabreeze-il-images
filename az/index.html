@@ -229,6 +229,12 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .hero .ctas .btn{width:100%}
 .hero .h1{font-size:30px!important;line-height:1.22!important;letter-spacing:-.02em!important}
 }
+@media (max-width:860px){
+.hero .htrust{display:flex!important;margin:20px 0 0!important;gap:6px 18px!important;font-size:12.5px!important}
+.hero .htrust li:nth-child(-n+2){display:none}
+}
+@media (min-width:761px) and (max-width:1100px){#projects .head{flex-direction:column;align-items:flex-start;gap:20px}#projects .head>.p{max-width:640px}}
+@media (max-width:860px){#proj-title{white-space:normal!important;text-wrap:balance}html[lang=ru] .hero .h1,html[lang=az] .hero .h1{font-size:26px!important}}
 .card .cs{background:linear-gradient(180deg,rgba(8,27,45,0) 40%,rgba(8,27,45,.35) 70%,rgba(8,27,45,.55) 100%)!important}
 .card .cb{background:linear-gradient(180deg,rgba(8,27,45,.55),rgba(8,27,45,.82));-webkit-backdrop-filter:blur(12px) saturate(1.15);backdrop-filter:blur(12px) saturate(1.15);border-top:1px solid rgba(203,176,137,.4);padding:22px 28px 24px!important}
 .card .ct{color:#D9BC85!important;font-family:'Cinzel',serif;font-weight:600;letter-spacing:.2em}
@@ -308,7 +314,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{ou
 .card .cb{padding:10px 20px 11px!important}
 .card .ct{font-size:10px!important;letter-spacing:.16em!important;line-height:1.3!important}
 .card .cn{font-size:18px!important;margin:2px 0 0!important;line-height:1.2!important}
-.card .cd{font-size:13.5px!important;line-height:1.45!important;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.card .cd{font-size:13.5px!important;line-height:1.45!important;white-space:normal;overflow:hidden;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:2;line-clamp:2}
 .card .cl{display:none!important}
 .hero{height:100vh!important;min-height:640px!important;max-height:980px}
 .hero-in{justify-content:center!important;padding-top:40px!important;padding-bottom:120px!important}
@@ -348,7 +354,7 @@ html.a11y-noanim .card.zm,html.a11y-noanim .card.zm img{transform:none!important
 @media (max-width:860px){.cream{--f:190px;padding:200px 0!important}}
 .ctd{background:linear-gradient(180deg,#081B2D 0,rgba(8,27,45,.85) 90px,rgba(8,27,45,.45) 200px,rgba(8,27,45,0) 320px),radial-gradient(120% 90% at 85% 10%,#13304D 0%,#0A2238 45%,#081B2D 100%)!important}
 /* mobile: tighten hero -> collection gap; stronger section eyebrows */
-@media (max-width:860px){.hero{height:auto!important;min-height:0!important}.hero-in{height:auto!important;padding-top:104px!important;padding-bottom:64px!important}.hero .eb{margin-bottom:calc(var(--ebmb,60px) + 31px)!important}#projects{--f:190px;padding-top:200px!important}}
+@media (max-width:860px){.hero{height:auto!important;min-height:0!important}.hero-in{height:auto!important;padding-top:104px!important;padding-bottom:64px!important}.hero .eb{margin-bottom:calc(var(--ebmb,60px) + 31px)!important}#projects{--f:140px;padding-top:150px!important}}
 .sec .eb,.cream .eb{font-weight:600;font-size:14px!important;letter-spacing:.24em!important;color:#7A531A!important;-webkit-text-stroke:.35px currentColor}
 .sec:not(.cream) .eb{color:#D9BC85!important}
 
@@ -453,7 +459,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 </button>
 </div>
 </header>
-<div id="main" tabindex="-1"></div>
+<main id="main" tabindex="-1">
 
 <section class="hero" id="top" aria-labelledby="hero-title">
 <img class="hero-img" fetchpriority="high" src="../assets/img/hero-baku.jpg" alt="Bakı sahilinin və Xəzər dənizinin havadan görünüşü – vizualizasiya">
@@ -472,7 +478,7 @@ html.a11y-noanim .rv,html.a11y-noanim .up,html.a11y-noanim .hero-img{opacity:1!i
 Tanışlıq zəngi təyin edin
 </a>
 </div>
-<ul class="htrust up d3" aria-label="Niyə biz"><li>İsraildə daşınmaz əmlak sahəsində 10 illik təcrübə</li><li>Birbaşa developerdən</li><li>Developerin rəsmi qiymət siyahısı, vasitəçilik haqqı yoxdur</li><li>Fərdi, birə-bir müşayiət</li></ul>
+<ul class="htrust up d3" aria-label="Niyə biz"><li>İsraildə daşınmaz əmlak sahəsində 10 illik təcrübə</li><li>Satış ofisi ilə birbaşa iş</li><li>Developerin rəsmi qiymət siyahısı, vasitəçilik haqqı yoxdur</li><li>Fərdi, birə-bir müşayiət</li></ul>
 </div>
 </div>
 <div class="scroll" aria-hidden="true">SCROLL<i></i></div>
@@ -608,6 +614,7 @@ Tanışlıq zəngi təyin edin
 </div>
 </section>
 
+</main>
 <footer class="ftr">
 <div class="wrap">
 <div class="ftr-g">
