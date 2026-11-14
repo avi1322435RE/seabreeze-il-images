@@ -271,8 +271,29 @@
       mail.parentNode.insertBefore(a1, mail); mail.parentNode.insertBefore(a2, mail);
     });
   }
+
+  // Mobile reveal: the CSS scroll-driven animation (.rv) can leave blocks half-painted on Android Chrome.
+  // On small screens it is replaced by a simple fade-in that is triggered once and then left alone.
+  function reveal() {
+    if (!window.matchMedia('(max-width:860px)').matches) return;
+    var els = [].slice.call(document.querySelectorAll('.rv')); if (!els.length) return;
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    var st = document.createElement('style');
+    st.textContent = '@media (max-width:860px){.rv{animation:none!important}' +
+      (reduce || !('IntersectionObserver' in window) ? '' :
+      'html.rvjs .rv:not(.card){opacity:0;transform:translateY(16px);transition:opacity .6s ease,transform .6s ease}html.rvjs .rv.rv-on:not(.card){opacity:1;transform:none}') + '}';
+    document.head.appendChild(st);
+    if (reduce || !('IntersectionObserver' in window)) return;
+    document.documentElement.classList.add('rvjs');
+    var io = new IntersectionObserver(function (en) {
+      en.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('rv-on'); io.unobserve(e.target); } });
+    }, { rootMargin: '0px 0px -6% 0px', threshold: 0.01 });
+    els.forEach(function (e) { io.observe(e); });
+    setTimeout(function () { els.forEach(function (e) { var r = e.getBoundingClientRect(); if (r.top < innerHeight) e.classList.add('rv-on'); }); }, 1200);
+  }
   function init() {
     try { contactLinks(); } catch (e) {}
+    try { reveal(); } catch (e) { document.documentElement.classList.remove('rvjs'); }
     [].slice.call(document.querySelectorAll('form.form')).forEach(function (f) {
       if (!field(f, 'input[type=tel]')) return;
       f.setAttribute('novalidate', '');
