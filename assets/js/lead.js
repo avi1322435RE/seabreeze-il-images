@@ -12,6 +12,10 @@
   if (/^(localhost|127\.0\.0\.1)$/.test(location.hostname) && window.LEAD_TEST_ENDPOINT !== undefined) LEAD_ENDPOINT = window.LEAD_TEST_ENDPOINT;
   var TIMEOUT_MS = window.LEAD_TEST_TIMEOUT || 15000;
   var EMAIL = 'ohayon.baku@gmail.com';
+  // Business phone / WhatsApp. To change the number, edit ONLY the next line (digits, country code first, no +).
+  var PHONE = '972526560743';
+  var PHONE_SHOWN = '+972 52-656-0743';
+  var WA = { he: ['וואטסאפ', 'טלפון', 'שלום, אשמח לקבל פרטים על פרויקטי Sea Breeze בבאקו.'], en: ['WhatsApp', 'Phone', 'Hello, I would like details about the Sea Breeze projects in Baku.'], ru: ['WhatsApp', 'Телефон', 'Здравствуйте, хочу получить информацию о проектах Sea Breeze в Баку.'], ar: ['واتساب', 'هاتف', 'مرحباً، أودّ الحصول على تفاصيل عن مشاريع Sea Breeze في باكو.'], az: ['WhatsApp', 'Telefon', 'Salam, Bakıdakı Sea Breeze layihələri haqqında məlumat almaq istəyirəm.'] };
 
   var T = {
     he: {
@@ -202,7 +206,52 @@
     }
     return false;
   }
+
+  var WA_ICON = '<path d="M21 12a9 9 0 0 1-13.2 7.9L3 21l1.2-4.6A9 9 0 1 1 21 12z"></path><path d="M9.3 8.2c-.3 3.4 3.1 6.8 6.5 6.5l.7-1.6-1.9-1-.9.8c-.9-.5-1.6-1.2-2.1-2.1l.8-.9-1-1.9z"></path>';
+  var TEL_ICON = '<path d="M6.5 3.5h3l1.5 4-2 1.5a12 12 0 0 0 6 6l1.5-2 4 1.5v3a2 2 0 0 1-2 2A16 16 0 0 1 4.5 5.5a2 2 0 0 1 2-2z"></path>';
+  function svg(inner, size) { return '<svg width="' + size + '" height="' + size + '" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" aria-hidden="true">' + inner + '</svg>'; }
+  function contactLinks() {
+    if (!PHONE) return;
+    var w = WA[lang] || WA.en;
+    var waHref = 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(w[2]);
+    function ext(a) { a.href = waHref; a.target = '_blank'; a.rel = 'noopener'; }
+    // floating button (desktop) -> WhatsApp
+    var fab = document.querySelector('a.fab');
+    if (fab) { ext(fab); fab.setAttribute('aria-label', w[0]); fab.innerHTML = svg(WA_ICON, 24); }
+    // mobile bar: the e-mail slot becomes WhatsApp
+    var mb = document.querySelector('.mbar a[href^="mailto:"]');
+    if (mb) { ext(mb); mb.innerHTML = svg(WA_ICON, 20) + w[0]; }
+    // pages without a WhatsApp entry point (articles; project pages on mobile): small floating button
+    if (!mb) {
+      var hasBar = !!document.querySelector('.mbar');
+      var st = document.createElement('style');
+      st.textContent = '.wa-float{position:fixed;left:24px;bottom:24px;z-index:49;width:54px;height:54px;border-radius:50%;background:#CBB089;color:#081B2D;display:flex;align-items:center;justify-content:center;box-shadow:0 12px 28px rgba(0,0,0,.35)}' +
+        '@media (max-width:860px){.wa-float{left:auto;right:12px;width:50px;height:50px;bottom:calc(20px + env(safe-area-inset-bottom,0px))}.wa-float.has-bar{bottom:calc(96px + env(safe-area-inset-bottom,0px))}}' +
+        (fab ? '@media (min-width:861px){.wa-float{display:none}}' : '') + '@media print{.wa-float{display:none}}';
+      document.head.appendChild(st);
+      var fl = document.createElement('a'); fl.className = 'wa-float' + (hasBar ? ' has-bar' : ''); ext(fl);
+      fl.setAttribute('aria-label', w[0]); fl.innerHTML = svg(WA_ICON, 24); document.body.appendChild(fl);
+    }
+    // contact section: WhatsApp + phone rows before the e-mail row
+    [].slice.call(document.querySelectorAll('a.wa[href^="mailto:"]')).forEach(function (mail) {
+      if (mail.previousElementSibling && mail.previousElementSibling.classList.contains('wa')) return;
+      function row(href, icon, label, isExt) {
+        var a = mail.cloneNode(true); a.href = href;
+        if (isExt) { a.target = '_blank'; a.rel = 'noopener'; }
+        var ic = a.querySelector('.wa-ic'); if (ic) ic.innerHTML = svg(icon, 22);
+        var st = a.querySelector('strong'); if (st) st.textContent = label;
+        var num = st && st.nextElementSibling; if (num) { num.textContent = PHONE_SHOWN; num.setAttribute('dir', 'ltr'); }
+        a.style.marginTop = '0'; a.style.borderTop = '0';
+        return a;
+      }
+      var a1 = row(waHref, WA_ICON, w[0], true), a2 = row('tel:+' + PHONE, TEL_ICON, w[1], false);
+      a1.style.marginTop = getComputedStyle(mail).marginTop; a1.style.borderTop = '';
+      mail.style.marginTop = '0'; mail.style.borderTop = '0';
+      mail.parentNode.insertBefore(a1, mail); mail.parentNode.insertBefore(a2, mail);
+    });
+  }
   function init() {
+    try { contactLinks(); } catch (e) {}
     [].slice.call(document.querySelectorAll('form.form')).forEach(function (f) {
       if (!field(f, 'input[type=tel]')) return;
       f.setAttribute('novalidate', '');
