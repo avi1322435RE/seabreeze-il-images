@@ -19,6 +19,8 @@
 
   var T = {
     he: {
+      waBtn: "שליחת הפרטים בוואטסאפ", waNote: "הלחיצה תפתח את וואטסאפ עם הפרטים שמילאתם. יש ללחוץ שם \"שליחה\" כדי להשלים את הפנייה.",
+      waOpened: "אם נפתח וואטסאפ, יש ללחוץ שם \"שליחה\" כדי להשלים את הפנייה. אם הוא לא נפתח, אפשר לשלוח בדוא״ל: ",
       reqName: 'נא למלא שם מלא (2 תווים לפחות).',
       reqPhone: 'נא למלא מספר טלפון תקין (7–15 ספרות, אפשר עם +).',
       fix: 'יש לתקן את השדות המסומנים.',
@@ -34,6 +36,8 @@
       subject: 'פנייה חדשה מהאתר – ', nameL: 'שם', phoneL: 'טלפון', pageL: 'עמוד'
     },
     en: {
+      waBtn: "Send my details on WhatsApp", waNote: "This button opens WhatsApp with your details. The enquiry is sent only after you press \"Send\" in WhatsApp.",
+      waOpened: "If WhatsApp opened, press \"Send\" there to complete the enquiry. If it did not open, you can send by email: ",
       reqName: 'Please enter your full name (at least 2 characters).',
       reqPhone: 'Please enter a valid phone number (7–15 digits, + allowed).',
       fix: 'Please correct the highlighted fields.',
@@ -49,6 +53,8 @@
       subject: 'New website enquiry – ', nameL: 'Name', phoneL: 'Phone', pageL: 'Page'
     },
     ru: {
+      waBtn: "Отправить данные в WhatsApp", waNote: "Кнопка откроет WhatsApp с вашими данными. Заявка будет отправлена только после того, как вы нажмёте «Отправить» в WhatsApp.",
+      waOpened: "Если WhatsApp открылся, нажмите там «Отправить», чтобы завершить заявку. Если не открылся, можно отправить по e-mail: ",
       reqName: 'Пожалуйста, укажите имя (не менее 2 символов).',
       reqPhone: 'Пожалуйста, укажите корректный номер телефона (7–15 цифр, можно с +).',
       fix: 'Исправьте отмеченные поля.',
@@ -64,6 +70,8 @@
       subject: 'Новая заявка с сайта – ', nameL: 'Имя', phoneL: 'Телефон', pageL: 'Страница'
     },
     az: {
+      waBtn: "Məlumatları WhatsApp ilə göndərin", waNote: "Düymə məlumatlarınızla WhatsApp-ı açır. Sorğu yalnız WhatsApp-da \"Göndər\" düyməsini basdıqdan sonra göndərilir.",
+      waOpened: "WhatsApp açıldısa, sorğunu tamamlamaq üçün orada \"Göndər\" basın. Açılmadısa, e-poçtla göndərə bilərsiniz: ",
       reqName: 'Zəhmət olmasa adınızı daxil edin (ən azı 2 simvol).',
       reqPhone: 'Zəhmət olmasa düzgün telefon nömrəsi daxil edin (7–15 rəqəm, + ola bilər).',
       fix: 'Qeyd olunan sahələri düzəldin.',
@@ -79,6 +87,8 @@
       subject: 'Saytdan yeni sorğu – ', nameL: 'Ad', phoneL: 'Telefon', pageL: 'Səhifə'
     },
     ar: {
+      waBtn: "إرسال بياناتي عبر واتساب", waNote: "يفتح هذا الزر واتساب مع بياناتك. لا يُرسل الاستفسار إلا بعد الضغط على \"إرسال\" في واتساب.",
+      waOpened: "إذا فُتح واتساب، اضغط \"إرسال\" هناك لإتمام الاستفسار. إذا لم يُفتح، يمكنك الإرسال عبر البريد: ",
       reqName: 'يرجى إدخال الاسم الكامل (حرفان على الأقل).',
       reqPhone: 'يرجى إدخال رقم هاتف صحيح (من 7 إلى 15 رقمًا، ويمكن استخدام +).',
       fix: 'يرجى تصحيح الحقول المحددة.',
@@ -141,6 +151,12 @@
       '\n' + L.pageL + ': ' + document.title + '\n' + location.href;
     return 'mailto:' + EMAIL + '?subject=' + encodeURIComponent(L.subject + document.title) + '&body=' + encodeURIComponent(body);
   }
+  function waLeadHref(d) {
+    var body = L.subject.replace(/\s*[–-]\s*$/, '') + '\n' + L.nameL + ': ' + d.name + '\n' + L.phoneL + ': ' + d.phone +
+      d.extra.map(function (x) { return '\n' + (x.label ? x.label + ': ' : '') + x.value; }).join('') +
+      '\n' + L.pageL + ': ' + document.title;
+    return 'https://wa.me/' + PHONE + '?text=' + encodeURIComponent(body);
+  }
   function mailLink(href, text) {
     var a = document.createElement('a'); a.href = href; a.textContent = text; a.setAttribute('dir', 'ltr'); return a;
   }
@@ -164,6 +180,11 @@
     var d = { name: v.name, phone: v.phone, extra: extras(f) };
     var href = mailHref(d);
 
+    if (!LEAD_ENDPOINT && PHONE) {
+      try { window.open(waLeadHref(d), '_blank', 'noopener'); } catch (e) {}
+      m.textContent = L.waOpened; m.appendChild(mailLink(href, L.mailLink));
+      return false;
+    }
     if (!LEAD_ENDPOINT) {
       location.href = href;
       m.textContent = L.mailOpened; m.appendChild(mailLink('mailto:' + EMAIL, EMAIL));
@@ -267,9 +288,9 @@
       }
       if (LEAD_ENDPOINT) { btn.textContent = L.sendBtn; }
       if (!LEAD_ENDPOINT) {
-        btn.textContent = L.mailBtn;
+        btn.textContent = PHONE ? L.waBtn : L.mailBtn;
         if (!f.querySelector('.lead-note')) {
-          var n = document.createElement('p'); n.className = 'lead-note'; n.textContent = L.mailNote;
+          var n = document.createElement('p'); n.className = 'lead-note'; n.textContent = PHONE ? L.waNote : L.mailNote;
           btn.insertAdjacentElement('beforebegin', n);
         }
       }
