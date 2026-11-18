@@ -107,7 +107,8 @@
   var lang = (document.documentElement.lang || 'he').slice(0, 2).toLowerCase();
   var L = T[lang] || T.he;
 
-  var css = '.lead-err{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--lead-err,#A3302B);font-weight:400}' +
+  var css = '@media (max-width:860px){html,body{overflow-x:clip;max-width:100%}}' +
+    '.lead-err{display:block;margin-top:6px;font-size:14px;line-height:1.5;color:var(--lead-err,#A3302B);font-weight:400}' +
     '.form input[aria-invalid=true]{border-bottom-color:var(--lead-err,#A3302B)!important}' +
     '.lead-note{margin:12px 0 0;font-size:14px;line-height:1.6;opacity:.85}' +
     '.fmsg.lead-bad{color:var(--lead-err,#A3302B)}.fmsg a{text-decoration:underline;color:inherit}' +
@@ -304,7 +305,7 @@
       if (!field(f, 'input[name=website]')) {
         var hp = document.createElement('input');
         hp.type = 'text'; hp.name = 'website'; hp.tabIndex = -1; hp.autocomplete = 'off'; hp.setAttribute('aria-hidden', 'true');
-        hp.style.cssText = 'position:absolute;left:-9999px;width:1px;height:1px;opacity:0';
+        hp.style.cssText = 'position:absolute;top:0;left:0;width:1px;height:1px;margin:-1px;padding:0;border:0;overflow:hidden;clip:rect(0 0 0 0);clip-path:inset(50%);white-space:nowrap;opacity:0;pointer-events:none';
         f.appendChild(hp);
       }
       if (LEAD_ENDPOINT) { btn.textContent = L.sendBtn; }
